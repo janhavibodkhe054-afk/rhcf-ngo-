@@ -1,0 +1,77 @@
+import React from "react";
+
+const SupportCause = () => {
+  const causes = [
+    {
+      title: "SHIKSHA SETU",
+      image: "/img8.jpeg",
+      description:
+        "Through Shiksha Setu, we bring school dropouts back into classrooms, ensuring 100% literacy in our adopted villages by 2030 and giving every child a second chance at education.",
+    },
+    {
+      title: "SANJEEVANI HEALTH",
+      image: "/img9.jpeg",
+      description:
+        "Our Mobile Health Vans deliver essential medical care to remote Thar Desert communities, reducing maternal and infant mortality through localized interventions.",
+    },
+    {
+      title: "WOMEN EMPOWERMENT",
+      image: "/img2.jpeg",
+      description:
+        "We are training 50,000 women in vocational skills, transforming them into financially independent leaders and primary breadwinners of their families.",
+    },
+    {
+      title: "SUSTAINABLE LIVELIHOODS",
+      image: "/img12.jpeg",
+      description:
+        "From skill development to micro-enterprises, we replace dependency with dignity by building sustainable, community-owned economic models.",
+    },
+  ];
+
+  return (
+    <section className="bg-[#f4f4f4] py-16 sm:py-20 lg:py-24 px-4 sm:px-6">
+      <div className="max-w-7xl mx-auto">
+
+        {/* Heading */}
+        <h2 className="text-center text-2xl sm:text-3xl md:text-4xl font-extrabold uppercase mb-12 sm:mb-16 tracking-wide">
+          Support A Cause
+        </h2>
+
+        {/* Responsive Grid */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-10">
+
+          {causes.map((cause, index) => (
+            <div key={index} className="group">
+
+              {/* Image Card */}
+              <div className="relative rounded-2xl overflow-hidden shadow-md">
+                <img
+                  src={cause.image}
+                  alt={cause.title}
+                  className="w-full h-64 sm:h-72 md:h-80 lg:h-[380px] object-cover transform group-hover:scale-105 transition duration-500"
+                />
+
+                {/* Overlay */}
+                <div className="absolute inset-0 bg-black/30 group-hover:bg-black/50 transition duration-300"></div>
+
+                {/* Title */}
+                <h3 className="absolute bottom-4 left-4 sm:bottom-6 sm:left-6 text-white text-lg sm:text-xl md:text-2xl font-extrabold uppercase leading-tight pr-4">
+                  {cause.title}
+                </h3>
+              </div>
+
+              {/* Description */}
+              <p className="text-gray-700 text-sm sm:text-base mt-5 leading-relaxed">
+                {cause.description}
+              </p>
+
+            </div>
+          ))}
+
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default SupportCause;
