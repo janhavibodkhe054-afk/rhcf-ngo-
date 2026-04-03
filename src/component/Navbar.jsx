@@ -12,106 +12,93 @@ const Navbar = () => {
       title: "ABOUT US",
       basePath: "/about",
       items: [
-        { name: "About Us", path: "/about#about" },
-        { name: "Vision & Mission", path: "/about#vision" },
-        { name: "Our Team", path: "/about#team" },
-        { name: "Our Journey", path: "/about#journey" },
+        { name: "About Us", path: "/aboutus" },
+        { name: "Vision & Mission", path: "/vision" },
+        { name: "Our Team", path: "/team" },
+        { name: "Our Journey", path: "/journey" },
       ],
     },
     {
       title: "OUR WORK",
       basePath: "/work",
       items: [
-        { name: "Education", path: "/work#education" },
-        { name: "Health Care Program", path: "/work#health" },
-        { name: "Women Empowerment", path: "/work#women" },
-        { name: "Skill Development", path: "/work#skill" },
-        { name: "Child Welfare", path: "/work#child" },
-        { name: "Community Development", path: "/work#community" },
+        { name: "Education", path: "/education" },
+        { name: "Health Care Program", path: "/health" },
+        { name: "Women Empowerment", path: "/women" },
+        { name: "Skill Development", path: "/skill" },
+        { name: "Child Welfare", path: "/child" },
+        { name: "Community Development", path: "/community" },
       ],
-    },
-    {
-      title: "CAMPAIGNS",
-      basePath: "/camp",
-      items: [{ name: "Ongoing Campaigns", path: "/camp" }],
     },
     {
       title: "MEDIA CENTRE",
       basePath: "/media",
       items: [
-        { name: "Our Impact", path: "/media#impact" },
-        { name: "Success Stories", path: "/media#stories" },
-        { name: "Testimonials", path: "/media#testimonials" },
-        { name: "Photo Gallery", path: "/media#photo" },
-        { name: "News & Events", path: "/media#news" },
+        { name: "Our Impact", path: "/impact" },
+        { name: "Success Stories", path: "/stories" },
+        { name: "Testimonials", path: "/testimonials" },
+        { name: "Photo Gallery", path: "/photo" },
       ],
     },
     {
       title: "RESOURCE CENTER",
       basePath: "/center",
       items: [
-        { name: "Annual Reports", path: "/center#reports" },
-        { name: "Publications", path: "/center#publications" },
-        { name: "Policies", path: "/center#policies" },
+        { name: "Annual Reports", path: "/reports" },
+        { name: "Publications", path: "/publications" },
+        { name: "Policies", path: "/policies" },
+        { name: "Newsletter", path: "/newspaper" },
       ],
-    },
-    {
-      title: "CONTACT US",
-      basePath: "/contact",
-      path: "/contact",
     },
   ];
 
+  const navbarHeight = 70;
+
   return (
-    <header className="sticky top-0 z-50 bg-white shadow-md w-full">
-      <div className="flex items-center justify-between px-4 md:px-6 lg:px-10 h-[90px]">
-        {/* Logo */}
-        <NavLink to="/" className="flex items-center">
-          <img src="/logo.png" alt="Logo" className="h-20 md:h-28" />
-        </NavLink>
+    <>
+      {/* HEADER */}
+      <header
+        className="fixed top-0 left-0 w-full z-50 
+        bg-white shadow-md backdrop-blur-md"
+        style={{ height: `${navbarHeight}px` }}
+      >
+        <div className="flex items-center justify-between px-4 sm:px-6 md:px-10 lg:px-16 h-full">
+          
+          {/* LOGO */}
+          <NavLink to="/" className="flex items-center h-full">
+            <img
+              src="/logo.png"
+              alt="Logo"
+              className="h-16 sm:h-16 md:h-20 lg:h-20 object-contain"
+            />
+          </NavLink>
 
-        {/* ================= DESKTOP ================= */}
-        <nav className="hidden lg:flex items-center gap-6 text-[13px] font-semibold text-gray-700">
-          {menus.map((menu, index) => {
-            const isParentActive = location.pathname.startsWith(menu.basePath);
+          {/* DESKTOP MENU */}
+          <nav className="hidden lg:flex items-center gap-8 font-semibold text-gray-700">
+            {menus.map((menu, index) => {
+              const isActive = location.pathname.startsWith(menu.basePath);
 
-            return (
-              <div
-                key={index}
-                className="relative"
-                onMouseEnter={() => setOpenMenu(index)}
-                onMouseLeave={() => setOpenMenu(null)}
-              >
-                {menu.path ? (
-                  <NavLink
-                    to={menu.path}
-                    className={({ isActive }) =>
-                      `transition pb-1 ${
-                        isActive
-                          ? "text-[#ff6f00] border-b-2 border-[#ff6f00]"
-                          : "hover:text-[#7cb342]"
-                      }`
-                    }
-                  >
-                    {menu.title}
-                  </NavLink>
-                ) : (
+              return (
+                <div
+                  key={index}
+                  className="relative"
+                  onMouseEnter={() => setOpenMenu(index)}
+                  onMouseLeave={() => setOpenMenu(null)}
+                >
                   <button
-                    className={`flex items-center gap-1 pb-1 transition ${
-                      isParentActive
-                        ? "text-[#ff6f00] border-b-2 border-[#ff6f00]"
+                    className={`flex items-center gap-1 transition ${
+                      isActive
+                        ? "text-[#7cb342]"
                         : "hover:text-[#7cb342]"
                     }`}
                   >
                     {menu.title}
                     <ChevronDown size={14} />
                   </button>
-                )}
 
-                {/* Dropdown */}
-                {menu.items && (
+                  {/* DROPDOWN */}
                   <div
-                    className={`absolute left-0 top-full w-56 bg-white border shadow-xl mt-2 py-2 transition-all duration-200 ${
+                    className={`absolute left-0 top-full w-[260px] bg-white shadow-xl rounded-xl mt-3 p-3 transition-all duration-300 ${
                       openMenu === index
                         ? "opacity-100 visible translate-y-0"
                         : "opacity-0 invisible -translate-y-2"
@@ -122,10 +109,10 @@ const Navbar = () => {
                         key={i}
                         to={item.path}
                         className={({ isActive }) =>
-                          `block px-4 py-2 text-sm transition ${
+                          `block px-3 py-2 rounded-md text-sm transition ${
                             isActive
-                              ? "bg-[#f1f8e9] text-[#7cb342] font-semibold"
-                              : "hover:bg-gray-50 hover:text-[#7cb342]"
+                              ? "bg-[#f1f8e9] text-[#7cb342]"
+                              : "hover:bg-gray-100 hover:text-[#7cb342]"
                           }`
                         }
                       >
@@ -133,112 +120,95 @@ const Navbar = () => {
                       </NavLink>
                     ))}
                   </div>
-                )}
-              </div>
-            );
-          })}
+                </div>
+              );
+            })}
 
-          {/* Connect Button */}
-          <NavLink
-            to="/contact"
-            className={({ isActive }) =>
-              `ml-4 px-5 py-2 rounded-full text-sm transition ${
-                isActive
-                  ? "bg-[#ff6f00] text-white"
-                  : "bg-[#7cb342] text-white hover:bg-[#689f38]"
-              }`
-            }
+            <NavLink to="/contact" className="hover:text-[#7cb342]">
+              CONNECT
+            </NavLink>
+
+            <NavLink
+              to="/donate"
+              className="px-5 py-2 rounded-full text-white font-semibold
+              bg-gradient-to-r from-[#7cb342] to-[#9ccc65]
+              hover:scale-105 transition"
+            >
+              DONATE
+            </NavLink>
+          </nav>
+
+          {/* MOBILE BUTTON */}
+          <button
+            className="lg:hidden z-[60]"
+            onClick={() => setMobileOpen(!mobileOpen)}
           >
-            Connect
-          </NavLink>
-        </nav>
+            {mobileOpen ? <X size={24} /> : <Menu size={24} />}
+          </button>
+        </div>
+      </header>
 
-        {/* Mobile Toggle */}
-        <button
-          className="lg:hidden"
-          onClick={() => setMobileOpen(!mobileOpen)}
-        >
-          {mobileOpen ? <X size={28} /> : <Menu size={28} />}
-        </button>
-      </div>
+      {/* MOBILE MENU */}
+      <div
+        className={`fixed top-[70px] left-0 w-full h-[calc(100vh-70px)] 
+        bg-white z-40 transform transition-transform duration-300 lg:hidden ${
+          mobileOpen ? "translate-x-0" : "translate-x-full"
+        }`}
+      >
+        <div className="p-6 space-y-5 overflow-y-auto h-full">
+          {menus.map((menu, index) => (
+            <div key={index}>
+              <button
+                className="flex justify-between w-full font-semibold py-2"
+                onClick={() =>
+                  setOpenMenu(openMenu === index ? null : index)
+                }
+              >
+                {menu.title}
+                <ChevronDown
+                  size={16}
+                  className={`transition ${
+                    openMenu === index ? "rotate-180" : ""
+                  }`}
+                />
+              </button>
 
-      {/* ================= MOBILE ================= */}
-      {/* ================= MOBILE ================= */}
-      {mobileOpen && (
-        <div className="lg:hidden bg-white border-t px-4 py-4 space-y-3">
-          {menus.map((menu, index) => {
-            const isParentActive = location.pathname.startsWith(menu.basePath);
-
-            return (
-              <div key={index}>
-                {menu.path ? (
-                  <NavLink
-                    to={menu.path}
-                    onClick={() => setMobileOpen(false)}
-                    className={({ isActive }) =>
-                      `block py-2 font-semibold ${
-                        isActive ? "text-[#ff6f00]" : ""
-                      }`
-                    }
-                  >
-                    {menu.title}
-                  </NavLink>
-                ) : (
-                  <>
-                    <button
-                      className={`flex justify-between w-full font-semibold py-2 ${
-                        isParentActive ? "text-[#ff6f00]" : ""
-                      }`}
-                      onClick={() =>
-                        setOpenMenu(openMenu === index ? null : index)
-                      }
+              {openMenu === index && (
+                <div className="pl-4 mt-2 space-y-2">
+                  {menu.items.map((item, i) => (
+                    <NavLink
+                      key={i}
+                      to={item.path}
+                      onClick={() => setMobileOpen(false)}
+                      className="block text-gray-600 hover:text-[#7cb342]"
                     >
-                      {menu.title}
-                      <ChevronDown
-                        size={16}
-                        className={`transition-transform ${
-                          openMenu === index ? "rotate-180" : ""
-                        }`}
-                      />
-                    </button>
+                      {item.name}
+                    </NavLink>
+                  ))}
+                </div>
+              )}
+            </div>
+          ))}
 
-                    {openMenu === index && (
-                      <div className="pl-4 space-y-2">
-                        {menu.items.map((item, i) => (
-                          <NavLink
-                            key={i}
-                            to={item.path}
-                            onClick={() => setMobileOpen(false)}
-                            className={({ isActive }) =>
-                              `block text-sm ${
-                                isActive
-                                  ? "text-[#7cb342] font-semibold"
-                                  : "text-gray-600"
-                              }`
-                            }
-                          >
-                            {item.name}
-                          </NavLink>
-                        ))}
-                      </div>
-                    )}
-                  </>
-                )}
-              </div>
-            );
-          })}
-
-          {/* ✅ Mobile Connect Button */}
+          {/* CTA */}
           <NavLink
             to="/contact"
             onClick={() => setMobileOpen(false)}
-            className="block mt-4 text-center bg-[#7cb342] text-white py-3 rounded-full font-semibold hover:bg-[#689f38] transition"
+            className="block pt-4 font-semibold"
           >
-            Connect
+            CONNECT
+          </NavLink>
+
+          <NavLink
+            to="/donate"
+            onClick={() => setMobileOpen(false)}
+            className="block text-center py-3 bg-[#7cb342] text-white rounded-full font-semibold"
+          >
+            DONATE
           </NavLink>
         </div>
-      )}
-    </header>
+      </div>
+    </>
   );
 };
 

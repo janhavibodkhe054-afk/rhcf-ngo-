@@ -4,13 +4,13 @@ const SupportCause = () => {
   const causes = [
     {
       title: "SHIKSHA SETU",
-      image: "/img8.jpeg",
+      image: "/support1.jpg",
       description:
         "Through Shiksha Setu, we bring school dropouts back into classrooms, ensuring 100% literacy in our adopted villages by 2030 and giving every child a second chance at education.",
     },
     {
       title: "SANJEEVANI HEALTH",
-      image: "/img9.jpeg",
+      image: "/support2.jpeg",
       description:
         "Our Mobile Health Vans deliver essential medical care to remote Thar Desert communities, reducing maternal and infant mortality through localized interventions.",
     },
@@ -52,7 +52,7 @@ const SupportCause = () => {
                 />
 
                 {/* Overlay */}
-                <div className="absolute inset-0 bg-black/30 group-hover:bg-black/50 transition duration-300"></div>
+                <div className="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition duration-300"></div>
 
                 {/* Title */}
                 <h3 className="absolute bottom-4 left-4 sm:bottom-6 sm:left-6 text-white text-lg sm:text-xl md:text-2xl font-extrabold uppercase leading-tight pr-4">
@@ -61,7 +61,7 @@ const SupportCause = () => {
               </div>
 
               {/* Description */}
-              <p className="text-gray-700 text-sm sm:text-base mt-5 leading-relaxed">
+              <p className="text-gray-700 text-base sm:text-lg md:text-lg mt-5 leading-relaxed">
                 {cause.description}
               </p>
 

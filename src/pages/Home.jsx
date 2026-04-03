@@ -6,6 +6,7 @@ import OurPrograms from "../component/Home/OurPrograms";
 import SupportCause from "../component/Home/SupportCause";
 import Recognition from "../component/Home/Recognition";
 import SDGSection from "../component/Home/SDGSection";
+import NgoInfoSection from "../component/Home/NgoInfoSection";
 
 const Home = () => {
   return (
@@ -14,6 +15,7 @@ const Home = () => {
       <AboutImpact />
       <OurPrograms />
       <SDGSection/>
+      <NgoInfoSection/>
       <Recognition/>
       
       <SupportCause/>

@@ -1,150 +1,122 @@
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay, Pagination } from "swiper/modules";
-import "swiper/css";
-import "swiper/css/pagination";
+import { motion } from "framer-motion";
+import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 
 const slides = [
   {
-    id: 1,
-    image: "/img1.jpeg",
-    whiteText: "BRINGING SMILES",
-    greenText: "THROUGH EDUCATION & EMPOWERMENT",
+    image: "/hero1.png",
+    title: "FEED AND EDUCATE",
+    desc: "Rajasthan Human Care Foundation is dedicated to ensuring that no child sleeps hungry or remains deprived of education. Through our initiatives, we provide nutritious meals, access to quality learning, and a safe environment for growth. Our efforts aim to break the cycle of poverty by empowering children with knowledge and opportunities. Together, we nurture hope and build a foundation for a brighter and more secure future.",
   },
   {
-    id: 2,
-    image: "/img7.jpeg",
-    whiteText: "EMPOWERING CHILDREN",
-    greenText: "WITH QUALITY EDUCATION",
+    image: "/hero2.png",
+    title: "EMPOWER EVERY CHILD",
+    desc: "We believe every child deserves the chance to dream, learn, and succeed in life. Our programs focus on holistic development, including education, health, and emotional well-being. By supporting children with the right resources and guidance, we help them unlock their true potential. Our mission is to create confident individuals who can shape a better tomorrow for themselves and their communities.",
   },
   {
-    id: 3,
-    image: "/img10.jpeg",
-    whiteText: "SUPPORTING DREAMS",
-    greenText: "BUILDING BRIGHT FUTURES",
+    image: "/hero3.png",
+    title: "SUPPORT COMMUNITIES",
+    desc: "Our work extends beyond individuals to uplift entire communities through sustainable development. We focus on improving access to clean water, healthcare, education, and livelihood opportunities. By working closely with local communities, we ensure long-term impact and self-reliance. Together, we build stronger, healthier, and more resilient societies for future generations.",
   },
   {
-    id: 4,
-    image: "/img4.jpeg",
-    whiteText: "SPREADING HOPE",
-    greenText: "THROUGH COMMUNITY CARE",
-  },
-  {
-    id: 5,
-    image: "/img5.jpeg",
-    whiteText: "CREATING IMPACT",
-    greenText: "FOR GENERATIONS TO COME",
+    image: "/hero4.jpg",
+    title: "SPREAD HOPE",
+    desc: "Hope is the driving force behind every positive change we create. Through compassion, collaboration, and dedicated efforts, we bring light into the lives of those in need. Our initiatives aim to restore dignity, inspire confidence, and create new opportunities. Together, we can build a world where every individual has the chance to live with respect, purpose, and hope.",
   },
 ];
 
 export default function HeroSlider() {
-const navigate = useNavigate();
+  const [current, setCurrent] = useState(0);
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrent((prev) => (prev + 1) % slides.length);
+    }, 4000);
+    return () => clearInterval(interval);
+  }, []);
 
   return (
-    <section className="w-full">
-      <Swiper
-        modules={[Autoplay, Pagination]}
-        loop={true}
-        autoplay={{
-          delay: 4000,
-          disableOnInteraction: false,
-        }}
-        pagination={{ clickable: true }}
-        className="w-full"
-      >
-        {slides.map((slide) => (
-          <SwiperSlide key={slide.id}>
-            <div className="relative w-full 
-              h-[70vh] 
-              sm:h-[75vh] 
-              md:h-[85vh] 
-              lg:h-screen">
+    <section className="relative w-full h-[85vh] sm:h-[90vh] md:h-[95vh] overflow-hidden">
 
-              {/* Background Image */}
-              <img
-                src={slide.image}
-                alt="hero"
-                className="absolute inset-0 w-full h-full object-cover"
-              />
+      {/* Slides */}
+      {slides.map((slide, index) => (
+        <div
+          key={index}
+          className={`absolute inset-0 transition-opacity duration-1000 ${
+            index === current ? "opacity-100 z-10" : "opacity-0 z-0"
+          }`}
+        >
+          {/* Background */}
+          <div
+            className="w-full h-full bg-cover bg-center"
+            style={{ backgroundImage: `url(${slide.image})` }}
+          />
 
-              {/* Dark Overlay for better readability */}
-              <div className="absolute inset-0 bg-black/30"></div>
+          {/* Overlay */}
+          <div className="absolute inset-0 bg-black/30"></div>
 
-              {/* Content */}
-              <div className="relative z-10 flex items-center h-full">
-                <div className="w-full px-4 sm:px-6 lg:px-10">
-                  
-                  {/* Responsive Layout */}
-                  <div className="grid grid-cols-1 md:grid-cols-2 items-center">
-                    
-                    {/* Empty column for desktop spacing */}
-                    <div className="hidden md:block"></div>
+          {/* Content */}
+          <div className="absolute inset-0 flex items-center 
+          justify-center md:justify-end px-5 sm:px-8 md:px-16">
 
-                    {/* Text Content */}
-                    <div className="text-center md:text-left">
+            <div className="
+              w-full 
+              max-w-md sm:max-w-lg md:max-w-xl 
+              text-center md:text-right
+            ">
 
-                      <h1 className="uppercase font-bold leading-tight tracking-wide">
+              {/* Title */}
+              <motion.h1
+                key={slide.title}
+                initial={{ opacity: 0, x: 80 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.8 }}
+                className="text-white text-2xl sm:text-3xl md:text-5xl font-bold leading-tight"
+              >
+                {slide.title}
+              </motion.h1>
 
-                        {/* White Text */}
-                        <span className="
-                          block text-white
-                          text-xl 
-                          sm:text-2xl 
-                          md:text-3xl 
-                          lg:text-4xl 
-                          xl:text-5xl
-                        ">
-                          {slide.whiteText}
-                        </span>
+              {/* Description */}
+              <motion.p
+                key={slide.desc}
+                initial={{ opacity: 0, x: 50 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ delay: 0.3 }}
+                className="text-white mt-3 sm:mt-4 text-sm sm:text-base md:text-xl leading-relaxed"
+              >
+                {slide.desc}
+              </motion.p>
 
-                        {/* Green Text */}
-                        <span className="
-                          block text-[#7cb342]
-                          text-2xl 
-                          sm:text-3xl 
-                          md:text-4xl 
-                          lg:text-5xl 
-                          xl:text-6xl
-                          mt-1 sm:mt-2
-                        ">
-                          {slide.greenText}
-                        </span>
+              {/* Buttons */}
+              <motion.div
+                initial={{ opacity: 0, scale: 0.9 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ delay: 0.5 }}
+                className="flex 
+                  justify-center md:justify-end 
+                  gap-3 sm:gap-4 
+                  mt-5 sm:mt-6 flex-wrap"
+              >
+                <button
+                  onClick={() => navigate("/donate")}
+                  className="bg-[#7cb342] hover:bg-[#689f38] text-white px-5 sm:px-6 py-2.5 sm:py-3 rounded-full font-semibold shadow-lg transition"
+                >
+                  Donate Now
+                </button>
 
-                      </h1>
-
-                      {/* Button */}
-                      <button 
-                      onClick={() => navigate("/work#education")}
-                      className="
-                        mt-6 
-                        inline-flex 
-                        items-center 
-                        justify-center
-                        gap-2
-                        text-white 
-                        text-base 
-                        sm:text-lg 
-                        md:text-xl 
-                        font-medium 
-                        tracking-wide 
-                        hover:gap-4 
-                        transition-all 
-                        duration-300
-                      ">
-                        Know More
-                        <span className="text-xl sm:text-2xl">›</span>
-                      </button>
-
-                    </div>
-                  </div>
-
-                </div>
-              </div>
+                <button
+                  onClick={() => navigate("/about")}
+                  className="bg-white text-black px-5 sm:px-6 py-2.5 sm:py-3 rounded-full font-semibold shadow-lg transition"
+                >
+                  About Us
+                </button>
+              </motion.div>
 
             </div>
-          </SwiperSlide>
-        ))}
-      </Swiper>
+          </div>
+        </div>
+      ))}
     </section>
   );
 }

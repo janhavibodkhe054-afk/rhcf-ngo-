@@ -25,12 +25,10 @@ const VisitUs = () => {
   };
 
   return (
-    <section className="w-full bg-white pt-20">
-
+    <section className="w-full bg-white">
       {/* Inner Container (content centered) */}
-      <div className="max-w-7xl mx-auto px-6">
-
-        {/* ===== VISIT US ===== */}
+      {/* <div className="max-w-7xl mx-auto px-6">
+        
         <motion.h2
           initial={{ opacity: 0, y: -30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -41,29 +39,41 @@ const VisitUs = () => {
           VISIT US HERE
         </motion.h2>
 
-        {/* ===== HEAD OFFICE ===== */}
+        
         <div className="space-y-4 text-gray-800 mb-14">
-          <h3 className="font-bold text-lg">HEAD OFFICE</h3>
-          <p>
-           21, Champa Nagar, Gurjar ki thadi, New Sanganer Road, Jaipur, Rajasthan, 302019.
+          <h3 className="font-bold text-base sm:text-lg md:text-xl">
+            HEAD OFFICE
+          </h3>
+          <p className="text-base sm:text-lg md:text-xl">
+            21, Champa Nagar, Gurjar ki thadi, New Sanganer Road, Jaipur,
+            Rajasthan, 302019.
           </p>
-          <p>
-            <span className="font-semibold">Phone:</span> +91-6378920544,
-            
+          <p className="text-base sm:text-lg md:text-xl">
+            <span className="font-semibold text-base sm:text-lg md:text-xl">
+              Phone:
+            </span>{" "}
+            +91-6378920544,
           </p>
-          <p>
-            <span className="font-semibold">Email:</span>{" "}
+          <p className="text-base sm:text-lg md:text-xl">
+            <span className="font-semibold text-base sm:text-lg md:text-xl">
+              Email:
+            </span>{" "}
             rhcfoffice@gmail.com
           </p>
 
-          <h4 className="font-bold mt-6">Regd. Office:</h4>
-          <p>V-11, Level 1, Green Park Extension, New Delhi – 110016</p>
+          <h4 className="font-bold mt-6 text-base sm:text-lg md:text-xl">
+            Regd. Office:
+          </h4>
+          <p className="text-base sm:text-lg md:text-xl">
+            21, Champa Nagar, Gurjar Ki Thadi New Sanganer Road Jaipur,
+            Rajasthan – 302019
+          </p>
         </div>
 
-        {/* ===== REGIONAL OFFICES ===== */}
+        
         <h3 className="text-2xl font-bold mb-6">REGIONAL OFFICES</h3>
 
-        {/* Tabs */}
+       
         <div className="flex flex-wrap gap-4 mb-12">
           {Object.keys(offices).map((city) => (
             <button
@@ -80,7 +90,7 @@ const VisitUs = () => {
           ))}
         </div>
 
-        {/* Cards Container */}
+        
         <motion.div
           key={activeCity}
           initial={{ opacity: 0, y: 40 }}
@@ -88,50 +98,49 @@ const VisitUs = () => {
           transition={{ duration: 0.5 }}
           className="grid md:grid-cols-3 gap-10 border border-gray-200 rounded-xl p-10"
         >
-          {/* ADDRESS */}
+         
           <div className="relative bg-gray-50 p-10 rounded-xl shadow-sm text-center">
             <div className="absolute -top-7 left-1/2 -translate-x-1/2 bg-white p-4 rounded-lg shadow-md">
               <MapPin className="text-green-600" size={22} />
             </div>
-            <h4 className="font-bold mt-8 mb-4 tracking-wide">ADDRESS</h4>
-            <p className="text-gray-700 text-sm leading-relaxed">
+            <h4 className="font-bold mt-8 mb-4 tracking-wide ">ADDRESS</h4>
+            <p className="text-gray-700 text-sm leading-relaxed text-base sm:text-lg md:text-xl">
               {offices[activeCity].address}
             </p>
           </div>
 
-          {/* PHONE */}
+        
           <div className="relative bg-gray-50 p-10 rounded-xl shadow-sm text-center">
             <div className="absolute -top-7 left-1/2 -translate-x-1/2 bg-white p-4 rounded-lg shadow-md">
               <Phone className="text-green-600" size={22} />
             </div>
             <h4 className="font-bold mt-8 mb-4 tracking-wide">PHONE</h4>
-            <p className="text-gray-700 text-sm">
+            <p className="text-gray-700 text-base sm:text-lg md:text-xl">
               {offices[activeCity].phone}
             </p>
           </div>
 
-          {/* EMAIL */}
+          
           <div className="relative bg-gray-50 p-10 rounded-xl shadow-sm text-center">
             <div className="absolute -top-7 left-1/2 -translate-x-1/2 bg-white p-4 rounded-lg shadow-md">
               <Mail className="text-green-600" size={22} />
             </div>
             <h4 className="font-bold mt-8 mb-4 tracking-wide">EMAIL</h4>
-            <p className="text-gray-700 text-sm break-words">
+            <p className="text-gray-700 text-base sm:text-lg md:text-xl break-words">
               {offices[activeCity].email}
             </p>
           </div>
         </motion.div>
-
+      </div> */}
+      <div className="w-full h-[450px] md:h-[550px]">
+        <iframe
+          title="Rajasthan Human Care Foundation Location"
+          src="https://www.google.com/maps?q=21,Champa+Nagar,Gurjar+ki+Thadi,New+Sanganer+Road,Jaipur,Rajasthan,302019&output=embed"
+          className="w-full h-full border-0"
+          loading="lazy"
+          allowFullScreen
+        ></iframe>
       </div>
-      <div className="w-full h-[450px] md:h-[550px] pt-20">
-    <iframe
-            title="Rajasthan Human Care Foundation Location"
-            src="https://www.google.com/maps?q=21,Champa+Nagar,Gurjar+ki+Thadi,New+Sanganer+Road,Jaipur,Rajasthan,302019&output=embed"
-            className="w-full h-full border-0"
-            loading="lazy"
-            allowFullScreen
-          ></iframe>
-  </div>
     </section>
   );
 };

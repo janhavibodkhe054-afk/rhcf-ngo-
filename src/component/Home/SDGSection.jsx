@@ -8,98 +8,95 @@ import {
   Handshake,
 } from "lucide-react";
 
+const goals = [
+  { icon: HeartPulse, title: "Good Health & Well-being", number: "SDG #3" },
+  { icon: Users, title: "Gender Equality", number: "SDG #5" },
+  { icon: GraduationCap, title: "Quality Education", number: "SDG #4" },
+  { icon: TrendingUp, title: "Decent Work & Economic Growth", number: "SDG #8" },
+  { icon: BarChart3, title: "Reduced Inequalities", number: "SDG #10" },
+  { icon: Handshake, title: "Partnerships for the Goals", number: "SDG #17" },
+];
+
 const SDGSection = () => {
-  const goals = [
-    {
-      icon: <HeartPulse className="w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12" />,
-      title: "GOOD HEALTH & WELL-BEING",
-      number: "#3",
-      color: "from-purple-300 to-purple-600",
-    },
-    {
-      icon: <Users className="w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12" />,
-      title: "GENDER EQUALITY",
-      number: "#5",
-      color: "from-pink-300 to-pink-600",
-    },
-    {
-      icon: <GraduationCap className="w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12" />,
-      title: "QUALITY EDUCATION",
-      number: "#4",
-      color: "from-yellow-300 to-yellow-600",
-    },
-    {
-      icon: <TrendingUp className="w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12" />,
-      title: "DECENT WORK & ECONOMIC GROWTH",
-      number: "#8",
-      color: "from-green-300 to-green-600",
-    },
-    {
-      icon: <BarChart3 className="w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12" />,
-      title: "REDUCED INEQUALITIES",
-      number: "#10",
-      color: "from-indigo-300 to-indigo-600",
-    },
-    {
-      icon: <Handshake className="w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12" />,
-      title: "PARTNERSHIPS FOR THE GOALS",
-      number: "#17",
-      color: "from-lime-300 to-lime-600",
-    },
-  ];
-
   return (
-    <section className="bg-[#f4f4f4] py-16 sm:py-20 lg:py-24 px-4 sm:px-6 text-center">
-      <div className="max-w-7xl mx-auto">
+    <section className="relative py-16 px-4 sm:px-6 text-white overflow-hidden">
+      
+      {/* Background */}
+      <div
+        className="absolute inset-0 bg-cover bg-center"
+        style={{
+          backgroundImage:
+            "url('/sdg1.avif')",
+        }}
+      ></div>
 
-        {/* Small Heading */}
-        <p className="text-base sm:text-lg font-extrabold uppercase tracking-widest text-black mb-3">
-          Towards Achieving
-        </p>
+      {/* Overlay */}
+      <div className="absolute inset-0 bg-[#0b2545]/85"></div>
 
-        {/* Main Heading */}
-        <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold uppercase mb-12 sm:mb-16">
-          Sustainable Development Goals
-        </h2>
+      {/* Content */}
+      <div className="relative z-10 max-w-7xl mx-auto grid lg:grid-cols-2 gap-10 items-center">
 
-        {/* Responsive Hexagon Grid */}
-        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 gap-6 sm:gap-8 justify-items-center">
+        {/* LEFT */}
+        <div>
+          <h2 className="text-3xl sm:text-4xl font-bold leading-snug">
+            Sustainable Goal & Development
+          </h2>
 
-          {goals.map((goal, index) => (
-            <div
-              key={index}
-              className={`w-32 h-32 sm:w-36 sm:h-36 md:w-40 md:h-40 bg-gradient-to-br ${goal.color}
-              text-white flex flex-col items-center justify-center
-              clip-hexagon shadow-lg hover:scale-105 transition duration-300`}
-            >
-              <div className="mb-2 sm:mb-3">{goal.icon}</div>
-              <p className="text-[10px] sm:text-xs font-semibold px-2 leading-tight">
-                {goal.title}
-              </p>
-              <p className="mt-1 sm:mt-2 font-bold text-sm sm:text-base">
-                {goal.number}
-              </p>
-            </div>
-          ))}
+          <p className="text-white/80 mt-4 text-base sm:text-lg max-w-md">
+            Rajasthan Human Care Foundation aligns its grassroots initiatives
+            with the United Nations Sustainable Development Goals (SDGs),
+            ensuring that every action contributes to a more inclusive,
+            equitable, and sustainable future for all.
+          </p>
+        </div>
+
+        {/* RIGHT */}
+        <div className="grid grid-cols-2 sm:grid-cols-3 gap-5">
+
+          {goals.map((goal, index) => {
+            const Icon = goal.icon;
+            return (
+              <div
+                key={index}
+                className="group relative bg-white/95 backdrop-blur-md text-gray-800 
+                rounded-xl px-4 py-4 flex items-center gap-3 
+                shadow-md transition-all duration-300 
+                hover:shadow-2xl hover:-translate-y-2 hover:bg-white"
+              >
+                {/* ICON FLIP */}
+                <div className="w-10 h-10 flex items-center justify-center 
+                rounded-full bg-[#f1f8e9] transition-transform duration-500 
+                group-hover:rotate-y-180">
+                  
+                  <Icon className="w-5 h-5 text-[#7cb342]" />
+                </div>
+
+                {/* TEXT */}
+                <div>
+                  <p className="text-xs font-semibold leading-tight group-hover:text-[#7cb342] transition">
+                    {goal.title}
+                  </p>
+                  <p className="text-[11px] text-gray-500">
+                    {goal.number}
+                  </p>
+                </div>
+
+                {/* GLOW EFFECT */}
+                <div className="absolute inset-0 rounded-xl opacity-0 group-hover:opacity-100 transition duration-300 
+                bg-gradient-to-r from-[#7cb342]/10 to-transparent"></div>
+              </div>
+            );
+          })}
 
         </div>
       </div>
 
-      {/* Custom Hexagon Shape */}
-      <style>
-        {`
-          .clip-hexagon {
-            clip-path: polygon(
-              25% 6%,
-              75% 6%,
-              100% 50%,
-              75% 94%,
-              25% 94%,
-              0% 50%
-            );
-          }
-        `}
-      </style>
+      {/* EXTRA STYLE FOR 3D FLIP */}
+      <style jsx>{`
+        .group-hover\\:rotate-y-180:hover {
+          transform: rotateY(180deg);
+        }
+      `}</style>
     </section>
   );
 };

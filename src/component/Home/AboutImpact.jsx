@@ -1,104 +1,140 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
+import {
+  FaMapMarkedAlt,
+  FaHome,
+  FaProjectDiagram,
+  FaUsers,
+} from "react-icons/fa";
 
 const AboutImpact = () => {
   const navigate = useNavigate();
 
+  const stats = [
+    {
+      number: "10+",
+      label: "Districts",
+      desc: "Driving sustainable development across diverse regions of Rajasthan.",
+      icon: <FaMapMarkedAlt />,
+    },
+    {
+      number: "150+",
+      label: "Villages",
+      desc: "Adopted and empowered through community-led transformation.",
+      icon: <FaHome />,
+    },
+    {
+      number: "50+",
+      label: "Projects",
+      desc: "Focused on water, agriculture, livelihoods, and social upliftment.",
+      icon: <FaProjectDiagram />,
+    },
+    {
+      number: "25K+",
+      label: "Lives Impacted",
+      desc: "Enabling dignity, opportunity, and sustainable futures.",
+      icon: <FaUsers />,
+    },
+    {
+      number: "5+",
+      label: "States Covered",
+      desc: "Expanding impact across multiple regions of India.",
+      icon: <FaMapMarkedAlt />,
+    },
+  ];
+
   return (
     <>
-      {/* ================= TOP DESCRIPTION SECTION ================= */}
-      <section className="bg-[#f5f5f5] py-12 sm:py-16 md:py-20 px-4">
-        <div className="max-w-4xl mx-auto text-center">
-          
-          <p className="text-gray-700 text-base sm:text-lg md:text-xl leading-relaxed mb-6 sm:mb-8">
-            Rajasthan Human Care Foundation is a grassroots movement dedicated
-            to transforming the lives of the most vulnerable communities across
-            the desert state. Through integrated programs in education,
-            healthcare, and sustainable livelihoods, we turn the cycle of
-            poverty into a journey of self-reliance.
-          </p>
+      {/* ================= IMPACT SECTION ================= */}
+      <section className="relative z-20 px-4 sm:px-6 md:px-10 lg:px-16 -mt-20 md:-mt-24">
+        <div className="max-w-7xl mx-auto">
+          <div
+            className="
+            grid grid-cols-1 
+            sm:grid-cols-2 
+            md:grid-cols-3 
+            lg:grid-cols-5 
+            gap-5 md:gap-6"
+          >
+            {stats.map((item, index) => (
+              <div
+                key={index}
+                className="group text-center p-5 sm:p-6 rounded-2xl shadow-md hover:shadow-xl transition duration-300 hover:-translate-y-2 bg-white"
+              >
+                {/* Icon */}
+                <div
+                  className="w-12 h-12 sm:w-14 sm:h-14 mx-auto flex items-center justify-center rounded-full 
+                  bg-gradient-to-r from-[#a5d66f] to-[#7cb342] 
+                  text-white text-lg sm:text-xl mb-3 sm:mb-4 group-hover:scale-110 transition"
+                >
+                  {item.icon}
+                </div>
 
-          <p className="text-gray-700 text-base sm:text-lg md:text-xl leading-relaxed">
-            We are a registered non-profit organization working tirelessly to
-            bridge the gap between intent and impact. Our holistic approach
-            ensures that no need goes unnoticed — because sustainable change
-            begins at every level of human life.
-          </p>
+                {/* Number */}
+                <h3 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-gray-800 group-hover:text-[#7cb342] transition">
+                  {item.number}
+                </h3>
 
-          <div className="mt-6 sm:mt-8">
-            <a
-              onClick={() => navigate("/about#about")}
-              className="text-[#7cb342] font-semibold text-sm sm:text-base hover:text-black transition duration-300"
-            >
-              Read More →
-            </a>
+                {/* Label */}
+                <p className="mt-1 sm:mt-2 text-sm sm:text-base font-semibold text-gray-600 uppercase tracking-wide group-hover:text-[#7cb342] transition">
+                  {item.label}
+                </p>
+
+                {/* Description */}
+                <p className="text-gray-500 mt-2 text-xs sm:text-sm leading-relaxed">
+                  {item.desc}
+                </p>
+              </div>
+            ))}
           </div>
-
         </div>
       </section>
 
-      {/* ================= IMPACT SECTION ================= */}
-      <section className="bg-[#ece7e7] py-16 sm:py-20 md:py-24">
-        <div className="max-w-7xl mx-auto px-4 text-center">
+      {/* ================= DESCRIPTION SECTION ================= */}
+      <section className="relative bg-gradient-to-br from-[#f4fbe8] via-white to-[#eef7d6] py-16 sm:py-20 md:py-24 px-4 sm:px-6 md:px-10 lg:px-16 overflow-hidden">
+        
+        {/* Blur Effects */}
+        <div className="absolute top-10 left-10 w-40 sm:w-72 h-40 sm:h-72 bg-[#c5e1a5] rounded-full blur-3xl opacity-30"></div>
+        <div className="absolute bottom-10 right-10 w-40 sm:w-72 h-40 sm:h-72 bg-[#aed581] rounded-full blur-3xl opacity-30"></div>
+
+        <div className="max-w-4xl mx-auto text-center relative z-10">
           
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-12 sm:mb-16 tracking-wide text-black">
-            OUR IMPACT
+          {/* Heading */}
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-800 mb-5 sm:mb-6">
+            Transforming Lives. Strengthening Communities.
           </h2>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 sm:gap-12">
-            
-            {/* CARD 1 */}
-            <div className="group">
-              <h3 className="text-4xl sm:text-5xl md:text-6xl font-extrabold text-[#7cb342] group-hover:text-black transition duration-300">
-                10+
-              </h3>
-              <p className="mt-3 font-semibold text-[#7cb342] group-hover:text-black transition duration-300">
-                DISTRICTS
-              </p>
-              <p className="text-sm sm:text-base text-gray-700 mt-2 max-w-xs mx-auto">
-                Across Rajasthan are actively supported through integrated development programs.
-              </p>
-            </div>
+          {/* Paragraphs */}
+          <p className="text-gray-700 text-base sm:text-lg md:text-xl leading-relaxed mb-6 sm:mb-8">
+            Rajasthan Human Care Foundation (RHCF) is a dedicated not-for-profit
+            organization working at the grassroots level since 2003, committed
+            to uplifting marginalized communities. From adopting villages and
+            improving sanitation to promoting sustainable agriculture, water
+            conservation, and skill development — our work focuses on creating
+            real, measurable change where it matters most.
+          </p>
 
-            {/* CARD 2 */}
-            <div className="group">
-              <h3 className="text-4xl sm:text-5xl md:text-6xl font-extrabold text-[#7cb342] group-hover:text-black transition duration-300">
-                150+
-              </h3>
-              <p className="mt-3 font-semibold text-[#7cb342] group-hover:text-black transition duration-300">
-                VILLAGES
-              </p>
-              <p className="text-sm sm:text-base text-gray-700 mt-2 max-w-xs mx-auto">
-                Reached through education, healthcare, and community welfare initiatives.
-              </p>
-            </div>
+          <p className="text-gray-700 text-base sm:text-lg md:text-xl leading-relaxed mb-6 sm:mb-8">
+            Recognized as a Key Resource Centre by Jal Shakti Mantralay, RHCF
+            leads impactful initiatives in rainwater harvesting, environmental
+            conservation, women empowerment, child education, and livelihood
+            generation.
+          </p>
 
-            {/* CARD 3 */}
-            <div className="group">
-              <h3 className="text-4xl sm:text-5xl md:text-6xl font-extrabold text-[#7cb342] group-hover:text-black transition duration-300">
-                50+
-              </h3>
-              <p className="mt-3 font-semibold text-[#7cb342] group-hover:text-black transition duration-300">
-                PROJECTS
-              </p>
-              <p className="text-sm sm:text-base text-gray-700 mt-2 max-w-xs mx-auto">
-                Focused on sustainable livelihoods, women empowerment, and rural transformation.
-              </p>
-            </div>
+          <p className="text-gray-700 text-base sm:text-lg md:text-xl leading-relaxed">
+            With a strong foundation in community mobilization, transparency,
+            and accountability, we are building a movement that fosters
+            self-reliance, equity, and sustainable development.
+          </p>
 
-            {/* CARD 4 */}
-            <div className="group">
-              <h3 className="text-4xl sm:text-5xl md:text-6xl font-extrabold text-[#7cb342] group-hover:text-black transition duration-300">
-                25K+
-              </h3>
-              <p className="mt-3 font-semibold text-[#7cb342] group-hover:text-black transition duration-300">
-                LIVES IMPACTED
-              </p>
-              <p className="text-sm sm:text-base text-gray-700 mt-2 max-w-xs mx-auto">
-                Beneficiaries supported through long-term capacity building and direct services.
-              </p>
-            </div>
-
+          {/* CTA */}
+          <div className="mt-8 sm:mt-10 md:mt-12">
+            <button
+              onClick={() => navigate("/about#about")}
+              className="bg-[#7cb342] hover:bg-[#689f38] text-white px-6 sm:px-8 py-2.5 sm:py-3 rounded-full font-semibold shadow-md hover:scale-105 transition"
+            >
+              Discover Our Journey →
+            </button>
           </div>
         </div>
       </section>

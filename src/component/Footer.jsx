@@ -1,41 +1,44 @@
 import { Link } from "react-router-dom";
-import { Facebook, Twitter, Youtube, Instagram, Linkedin } from "lucide-react";
+import {
+  Facebook,
+  Youtube,
+  Instagram,
+  Linkedin,
+  Phone,
+  Mail,
+  MapPin,
+  X, // ✅ replace Twitter
+} from "lucide-react";
 
 const Footer = () => {
   const menus = [
     {
       title: "ABOUT US",
       items: [
-        { name: "About Us", path: "/about" },
-        { name: "Vision & Mission", path: "/vision-mission" },
-        { name: "Our Team", path: "/our-team" },
-        { name: "Our Journey", path: "/our-journey" },
+        { name: "About Us", path: "/aboutus" },
+        { name: "Vision & Mission", path: "/vision" },
+        { name: "Our Team", path: "/team" },
+        { name: "Our Journey", path: "/journey" },
       ],
     },
     {
       title: "OUR WORK",
       items: [
         { name: "Education", path: "/education" },
-        { name: "Health Care Program", path: "/health-care" },
-        { name: "Women Empowerment", path: "/women-empowerment" },
-        { name: "Skill Development", path: "/skill-development" },
-        { name: "Child Welfare", path: "/child-welfare" },
-        { name: "Community Development", path: "/community-development" },
+        { name: "Health Care Program", path: "/health" },
+        { name: "Women Empowerment", path: "/women" },
+        { name: "Skill Development", path: "/skill" },
+        { name: "Child Welfare", path: "/child" },
+        { name: "Community Development", path: "/community" },
       ],
-    },
-    {
-      title: "CAMPAIGNS",
-      items: [{ name: "Ongoing Campaigns", path: "/campaigns" }],
     },
     {
       title: "MEDIA CENTRE",
       items: [
         { name: "Our Impact", path: "/impact" },
-        { name: "Success Stories", path: "/success-stories" },
+        { name: "Success Stories", path: "/stories" },
         { name: "Testimonials", path: "/testimonials" },
-        { name: "Photo Gallery", path: "/photo-gallery" },
-        { name: "Video Gallery", path: "/video-gallery" },
-        { name: "News & Events", path: "/news-events" },
+        { name: "Photo Gallery", path: "/photo" },
       ],
     },
     {
@@ -44,34 +47,51 @@ const Footer = () => {
         { name: "Annual Reports", path: "/reports" },
         { name: "Publications", path: "/publications" },
         { name: "Policies", path: "/policies" },
+        { name: "Newsletter", path: "/newspaper" }, // ✅ added
       ],
     },
   ];
 
+  const socialLinks = [
+    {
+      icon: Facebook,
+      url: "https://www.facebook.com/",
+    },
+    {
+      icon: X, // ✅ updated
+      url: "https://twitter.com/", // or your X profile link
+    },
+    {
+      icon: Youtube,
+      url: "https://www.youtube.com/",
+    },
+    {
+      icon: Instagram,
+      url: "https://www.instagram.com/",
+    },
+    {
+      icon: Linkedin,
+      url: "https://www.linkedin.com/",
+    },
+  ];
+
   return (
-    <footer className="bg-[#4a4a4a] text-white pt-16 pb-10">
-      <div className="max-w-7xl mx-auto px-6">
-        {/* ================= MENU GRID ================= */}
-        <div
-          className="grid 
-                        grid-cols-1 
-                        sm:grid-cols-2 
-                        md:grid-cols-3 
-                        lg:grid-cols-5 
-                        gap-10"
-        >
+    <footer className="relative bg-gray-900 text-white pt-16 pb-6 overflow-hidden">
+      <div className="relative max-w-7xl mx-auto px-6 z-10">
+        {/* TOP GRID */}
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-sm mb-12">
           {menus.map((menu, index) => (
             <div key={index}>
-              <h3 className="text-sm font-bold tracking-wider border-b border-gray-500 pb-2 mb-4">
+              <h3 className="text-white font-semibold mb-4 text-sm border-b border-gray-700 pb-1">
                 {menu.title}
               </h3>
 
-              <ul className="space-y-2 text-sm text-gray-200">
+              <ul className="space-y-2 text-gray-400">
                 {menu.items.map((item, i) => (
                   <li key={i}>
                     <Link
                       to={item.path}
-                      className="hover:text-[#8bc34a] transition duration-300"
+                      className="hover:text-white transition duration-300"
                     >
                       {item.name}
                     </Link>
@@ -82,74 +102,83 @@ const Footer = () => {
           ))}
         </div>
 
-        {/* Divider */}
-        <div className="border-t border-gray-600 my-10"></div>
-
-        {/* ================= BOTTOM SECTION ================= */}
-        <div
-          className="flex 
-                        flex-col 
-                        md:flex-col 
-                        lg:flex-row 
-                        justify-between 
-                        items-start 
-                        lg:items-center 
-                        gap-10"
-        >
-          {/* Contact Info */}
-          <div className="text-sm text-gray-200 max-w-md">
-            <h4 className="font-semibold text-white mb-3 text-base">
+        {/* CONTACT + CTA */}
+        <div className="grid md:grid-cols-2 gap-10 items-center mb-10">
+          {/* LEFT */}
+          <div className="space-y-4 text-gray-400 text-sm">
+            <h3 className="text-xl font-semibold text-white">
               Rajasthan Human Care Foundation
-            </h4>
+            </h3>
 
-            <p className="leading-relaxed">
-              21, Champa Nagar, Gurjar ki thadi, New Sanganer Road, Jaipur,
-              Rajasthan – 302019
-            </p>
+            <div className="flex items-start gap-3">
+              <MapPin size={18} className="text-gray-500 mt-1" />
+              <p>
+                21, Champa Nagar, Gurjar Ki Thadi, New Sanganer Road, Jaipur,
+                Rajasthan – 302019
+              </p>
+            </div>
 
-            <p className="mt-4">
-              Tel: +91-6378920544 <br />
-              Email: rhcfoffice@gmail.com
-            </p>
+            <div className="flex flex-wrap gap-6 mt-3">
+              <div className="flex items-center gap-2">
+                <Phone size={16} className="text-gray-500" />
+                <span>+91-6378920544</span>
+              </div>
+
+              <div className="flex items-center gap-2">
+                <Mail size={16} className="text-gray-500" />
+                <span>rhcfoffice@gmail.com</span>
+              </div>
+            </div>
           </div>
 
-          {/* Right Side */}
-          <div
-            className="flex flex-col 
-                          items-start 
-                          md:items-start 
-                          lg:items-end 
-                          gap-6 w-full lg:w-auto"
-          >
-            {/* Button */}
+          {/* RIGHT CTA */}
+          <div className="bg-white/5 border border-white/10 rounded-2xl p-6 flex flex-col items-start md:items-end gap-5 shadow-lg">
+            <p className="text-gray-400 text-sm md:text-right max-w-sm">
+              Join us in making a difference. Your support can transform lives
+              and bring hope to communities.
+            </p>
+
             <Link
-              to="/contact"
-              className="bg-[#8bc34a] hover:bg-[#7cb342] text-white font-semibold px-6 py-3 rounded-full transition duration-300"
+              to="/donate"
+              className="bg-white text-black font-semibold px-7 py-3 rounded-full transition hover:bg-gray-200"
             >
-              CONTACT US
+              Donate Now
             </Link>
 
-            {/* Social Icons */}
-            <div className="flex gap-4">
-              {[Facebook, Twitter, Youtube, Instagram, Linkedin].map(
-                (Icon, i) => (
+            {/* SOCIAL ICONS */}
+            <div className="flex gap-3">
+              {socialLinks.map((item, i) => {
+                const Icon = item.icon;
+                return (
                   <a
                     key={i}
-                    href="#"
-                    className="bg-black p-3 rounded-full hover:bg-[#8bc34a] transition duration-300"
+                    href={item.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-9 h-9 flex items-center justify-center rounded-full bg-white/10 hover:bg-white hover:text-black transition"
                   >
                     <Icon size={16} />
                   </a>
-                ),
-              )}
+                );
+              })}
             </div>
           </div>
         </div>
 
-        {/* Copyright */}
-        <div className="border-t border-gray-600 mt-10 pt-6 text-center text-sm text-gray-300">
-          © {new Date().getFullYear()} Rajasthan Human Care Foundation. All
-          Rights Reserved.
+        {/* BOTTOM */}
+        <div className="border-t border-gray-800 pt-4 flex flex-col md:flex-row justify-between items-center text-sm text-gray-500 gap-3">
+          <p>
+            © {new Date().getFullYear()} Rajasthan Human Care Foundation. All
+            Rights Reserved.
+          </p>
+
+          {/* ✅ NEW DESIGN CREDIT */}
+          <p className="text-gray-400 text-sm">
+            Design & Developed by{" "}
+            <span className="text-white font-medium">
+              Arraylogic Softwares Pvt. Ltd.
+            </span>
+          </p>
         </div>
       </div>
     </footer>

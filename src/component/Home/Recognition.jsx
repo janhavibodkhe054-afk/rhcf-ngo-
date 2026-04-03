@@ -2,46 +2,64 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 
 const Recognition = () => {
-const navigate = useNavigate();
-  
+  const navigate = useNavigate();
+
   return (
-    <section className="w-full">
-      <div className="grid grid-cols-1 md:grid-cols-2">
+    <section
+      className="relative w-full py-20 md:py-24 bg-cover bg-center"
+      style={{
+        backgroundImage:
+          "url('/recognition1.avif')",
+      }}
+    >
+      {/* Dark Overlay */}
+      <div className="absolute inset-0 bg-black/60"></div>
 
-        {/* LEFT CONTENT */}
-        <div className="bg-[#cbb3a4] flex items-center">
-          <div className="w-full px-6 sm:px-10 md:px-16 lg:px-20 py-14 sm:py-16 md:py-20">
+      <div className="relative max-w-7xl mx-auto px-6 lg:px-10">
 
-            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold text-white uppercase leading-snug md:leading-tight mb-6">
-              Transforming Lives Across Rajasthan –
-              <br className="hidden sm:block" />
-              A Grassroots Movement
+        <div className="grid md:grid-cols-2 gap-10 items-center">
+
+          {/* IMAGE */}
+          <div>
+            <img
+              src="/recognition2.jpg"
+              alt="Rural children NGO"
+              className="w-full h-[320px] sm:h-[400px] md:h-[440px] object-cover rounded-xl shadow-2xl"
+            />
+          </div>
+
+          {/* CONTENT CARD */}
+          <div className="bg-white/95 backdrop-blur-md p-8 md:p-10 lg:p-12 rounded-2xl shadow-2xl">
+
+            <span className="text-[#7cb342] font-semibold uppercase tracking-widest text-sm">
+              Rajasthan Human Care Foundation
+            </span>
+
+            <h2 className="mt-4 text-3xl md:text-4xl lg:text-5xl font-bold text-gray-800 leading-tight">
+              Transforming Lives Across Rajasthan
             </h2>
 
-            <p className="text-white/90 text-sm sm:text-base md:text-lg leading-relaxed mb-8 max-w-xl">
-              Rajasthan Human Care Foundation is dedicated to cultivating hope
-              and harvesting dignity across the desert state. Through integrated
-              programs in education, healthcare, women empowerment, and
-              sustainable livelihoods, we turn poverty into a journey of
-              self-reliance for thousands of families.
+            <h3 className="text-lg md:text-xl text-gray-600 mt-3 font-semibold">
+              A Grassroots Movement
+            </h3>
+
+            <p className="mt-6 text-gray-600 leading-relaxed text-base md:text-lg">
+              Rajasthan Human Care Foundation is committed to uplifting
+              underserved communities through education, healthcare,
+              women empowerment, and sustainable livelihood programs.
+              Our mission is to create lasting change that empowers
+              individuals to build a better future.
             </p>
 
             <button
-            onClick={() => navigate("/about#journey")}
-            className="inline-block bg-white text-[#cbb3a4] px-6 py-3 rounded-full font-semibold tracking-wide text-sm sm:text-base transition duration-300 hover:bg-black hover:text-white">
-              View Our Journey &gt;
+              onClick={() => navigate("/about#journey")}
+              className="mt-8 px-7 py-3 bg-[#7cb342] text-white rounded-full font-semibold shadow-md hover:bg-[#689f38] transition"
+            >
+              View Our Journey →
             </button>
 
           </div>
-        </div>
 
-        {/* RIGHT IMAGE */}
-        <div className="relative w-full h-64 sm:h-80 md:h-auto">
-          <img
-            src="/img5.jpeg"
-            alt="Rajasthan Human Care Foundation"
-            className="w-full h-full object-cover"
-          />
         </div>
 
       </div>
