@@ -12,19 +12,19 @@ const AboutImpact = () => {
 
   const stats = [
     {
-      number: "10+",
+      number: "40+",
       label: "Districts",
       desc: "Driving sustainable development across diverse regions of Rajasthan.",
       icon: <FaMapMarkedAlt />,
     },
     {
-      number: "150+",
+      number: "50+",
       label: "Villages",
       desc: "Adopted and empowered through community-led transformation.",
       icon: <FaHome />,
     },
     {
-      number: "50+",
+      number: "140+",
       label: "Projects",
       desc: "Focused on water, agriculture, livelihoods, and social upliftment.",
       icon: <FaProjectDiagram />,
@@ -130,7 +130,7 @@ const AboutImpact = () => {
           {/* CTA */}
           <div className="mt-8 sm:mt-10 md:mt-12">
             <button
-              onClick={() => navigate("/about#about")}
+              onClick={() => navigate("/journey")}
               className="bg-[#7cb342] hover:bg-[#689f38] text-white px-6 sm:px-8 py-2.5 sm:py-3 rounded-full font-semibold shadow-md hover:scale-105 transition"
             >
               Discover Our Journey →

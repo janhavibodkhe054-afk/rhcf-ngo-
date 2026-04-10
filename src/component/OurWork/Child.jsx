@@ -59,13 +59,18 @@ const Child = () => {
 
             {/* CTA CARD */}
             <div
-              className="mt-8 flex items-center gap-4 bg-white shadow-lg rounded-xl p-4 w-fit mx-auto lg:mx-0 hover:shadow-2xl transition duration-500"
+              onClick={() =>
+                window.open(
+                  "https://wa.me/916378920544?text=Hello%20RHCF,%20I%20want%20to%20join%20your%20upcoming%20campaign.",
+                  "_blank",
+                )
+              }
+              className="mt-8 flex items-center gap-4 bg-white shadow-lg rounded-xl p-4 w-fit mx-auto lg:mx-0 hover:shadow-2xl transition duration-500 cursor-pointer hover:scale-105"
               data-aos="zoom-in"
               data-aos-delay="300"
             >
-              <div className="w-12 h-12 bg-[#e4ece2] flex items-center justify-center rounded-lg">
-                ▶
-              </div>
+              
+
               <div>
                 <h4 className="font-semibold text-[#253525]">
                   Join Our Upcoming Campaign
@@ -109,9 +114,7 @@ const Child = () => {
               <h3 className="text-lg sm:text-xl font-bold text-[#253525]">
                 120+
               </h3>
-              <p className="text-xs sm:text-sm text-gray-500">
-                Happy Child
-              </p>
+              <p className="text-xs sm:text-sm text-gray-500">Happy Child</p>
             </div>
           </div>
         </div>
@@ -161,9 +164,7 @@ const Child = () => {
                     {step.title}
                   </h4>
 
-                  <p className="text-gray-600 text-sm leading-6">
-                    {step.text}
-                  </p>
+                  <p className="text-gray-600 text-sm leading-6">{step.text}</p>
                 </div>
               </div>
             </div>
@@ -190,9 +191,9 @@ const Child = () => {
           </p>
 
           <p className="text-gray-700 leading-7 max-w-3xl mx-auto text-sm sm:text-base">
-            Our approach works across families, schools, healthcare systems,
-            and local governance — strengthening communities so children can
-            thrive within them.
+            Our approach works across families, schools, healthcare systems, and
+            local governance — strengthening communities so children can thrive
+            within them.
           </p>
         </div>
       </div>

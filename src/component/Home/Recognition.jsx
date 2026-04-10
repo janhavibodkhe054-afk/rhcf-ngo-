@@ -1,49 +1,62 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const Recognition = () => {
   const navigate = useNavigate();
 
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+      once: true,
+      easing: "ease-in-out",
+    });
+  }, []);
+
   return (
     <section
-      className="relative w-full py-20 md:py-24 bg-cover bg-center"
+      className="relative w-full py-14 sm:py-16 md:py-20 lg:py-24 bg-cover bg-center bg-no-repeat overflow-hidden"
       style={{
-        backgroundImage:
-          "url('/recognition1.avif')",
+        backgroundImage: "url('/recognition1.avif')",
       }}
     >
       {/* Dark Overlay */}
       <div className="absolute inset-0 bg-black/60"></div>
 
-      <div className="relative max-w-7xl mx-auto px-6 lg:px-10">
-
-        <div className="grid md:grid-cols-2 gap-10 items-center">
-
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 md:px-8 lg:px-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-10 lg:gap-14 items-center">
+          
           {/* IMAGE */}
-          <div>
+          <div
+            data-aos="fade-right"
+            className="overflow-hidden rounded-xl shadow-2xl"
+          >
             <img
               src="/recognition2.jpg"
               alt="Rural children NGO"
-              className="w-full h-[320px] sm:h-[400px] md:h-[440px] object-cover rounded-xl shadow-2xl"
+              className="w-full h-[260px] sm:h-[320px] md:h-[420px] lg:h-[460px] object-cover rounded-xl transition duration-700 ease-in-out hover:scale-110"
             />
           </div>
 
           {/* CONTENT CARD */}
-          <div className="bg-white/95 backdrop-blur-md p-8 md:p-10 lg:p-12 rounded-2xl shadow-2xl">
-
-            <span className="text-[#7cb342] font-semibold uppercase tracking-widest text-sm">
+          <div
+            data-aos="fade-left"
+            className="bg-white/95 backdrop-blur-md p-6 sm:p-8 md:p-10 lg:p-12 rounded-2xl shadow-2xl"
+          >
+            <span className="text-[#7cb342] font-semibold uppercase tracking-widest text-xs sm:text-sm">
               Rajasthan Human Care Foundation
             </span>
 
-            <h2 className="mt-4 text-3xl md:text-4xl lg:text-5xl font-bold text-gray-800 leading-tight">
+            <h2 className="mt-4 text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-800 leading-tight">
               Transforming Lives Across Rajasthan
             </h2>
 
-            <h3 className="text-lg md:text-xl text-gray-600 mt-3 font-semibold">
+            <h3 className="text-base sm:text-lg md:text-xl text-gray-600 mt-3 font-semibold">
               A Grassroots Movement
             </h3>
 
-            <p className="mt-6 text-gray-600 leading-relaxed text-base md:text-lg">
+            <p className="mt-5 sm:mt-6 text-gray-600 leading-relaxed text-sm sm:text-base md:text-lg">
               Rajasthan Human Care Foundation is committed to uplifting
               underserved communities through education, healthcare,
               women empowerment, and sustainable livelihood programs.
@@ -52,16 +65,15 @@ const Recognition = () => {
             </p>
 
             <button
-              onClick={() => navigate("/about#journey")}
-              className="mt-8 px-7 py-3 bg-[#7cb342] text-white rounded-full font-semibold shadow-md hover:bg-[#689f38] transition"
+              onClick={() => navigate("/stories")}
+              className="mt-6 sm:mt-8 px-6 sm:px-7 py-3 bg-[#7cb342] text-white rounded-full font-semibold shadow-md hover:bg-[#689f38] hover:scale-105 transition duration-300"
+              data-aos="zoom-in"
+              data-aos-delay="200"
             >
-              View Our Journey →
+              Explore Our Stories
             </button>
-
           </div>
-
         </div>
-
       </div>
     </section>
   );

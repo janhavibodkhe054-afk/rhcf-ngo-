@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import { useNavigate } from "react-router-dom";
 
 const OurImpact = () => {
   useEffect(() => {
@@ -11,6 +12,8 @@ const OurImpact = () => {
       offset: 100,
     });
   }, []);
+
+  const navigate = useNavigate();
 
   return (
     <div className="font-sans text-gray-800">
@@ -198,7 +201,9 @@ const OurImpact = () => {
           to water is not a privilege, but a basic human right.
         </p>
 
-        <button className="bg-[#7cb342] text-white px-8 py-3 rounded-full font-semibold shadow-lg hover:scale-105 transition duration-300">
+        <button
+        onClick={() => navigate("/contact")}
+        className="bg-[#7cb342] text-white px-8 py-3 rounded-full font-semibold shadow-lg hover:scale-105 transition duration-300">
           Get Involved
         </button>
       </section>

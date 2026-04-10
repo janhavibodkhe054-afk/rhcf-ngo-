@@ -34,7 +34,7 @@ const policies = [
 ];
 
 const HeroSection = () => (
-  <section className="relative h-[60vh] w-full flex items-center justify-center bg-gradient-to-r from-[#7cb342]/40 via-[#a8d56e]/30 to-[#f4f8f2]/40 mb-12">
+  <section className="relative min-h-[85vh] lg:min-h-[70vh] w-full flex items-center justify-center overflow-hidden mb-8 md:mb-12">
     {/* Background Image */}
     <div
       className="absolute inset-0 bg-cover bg-center"
@@ -42,36 +42,85 @@ const HeroSection = () => (
     ></div>
 
     {/* Overlay */}
-    <div className="absolute inset-0 bg-black/30"></div>
+    <div className="absolute inset-0 bg-black/40"></div>
 
     {/* Content */}
-    <div className="relative z-10 max-w-7xl mx-auto flex flex-col md:flex-row items-center px-6 md:px-12 gap-8 mt-40 md:mt-0">
+    <div
+      className="
+        relative z-10 
+        max-w-7xl 
+        mx-auto 
+        flex flex-col lg:flex-row 
+        items-center 
+        justify-between 
+        w-full
+        px-4 sm:px-6 md:px-8 lg:px-12
+        gap-6 sm:gap-8 lg:gap-10
+        pt-10 sm:pt-16 md:pt-20 lg:pt-0
+        pb-10
+      "
+    >
       {/* Left Text */}
-      <div className="flex-1 text-left text-white space-y-4">
-        <h1 className="text-4xl md:text-5xl font-extrabold bg-clip-text text-transparent bg-gradient-to-r from-[#f8f4e3] via-[#9ebdcd] to-[#a8d56e]">
+      <div className="w-full lg:w-1/2 text-center lg:text-left">
+        <h1
+          className="
+           
+            text-3xl 
+            sm:text-4xl 
+            md:text-5xl 
+            lg:text-5xl 
+            xl:text-6xl
+            font-extrabold 
+            leading-tight
+            bg-clip-text 
+            text-transparent 
+            bg-gradient-to-r 
+            from-[#f8f4e3] 
+            via-[#9ebdcd] 
+            to-[#a8d56e]
+          "
+        >
           RHCF Policies & Initiatives
         </h1>
-        <p className="text-lg md:text-xl text-white/90">
+
+        <p
+          className="
+            mt-4
+            text-sm 
+            sm:text-base 
+            md:text-lg 
+            lg:text-xl 
+            text-white/90 
+            leading-relaxed
+            max-w-xl 
+            mx-auto 
+            lg:mx-0
+          "
+        >
           Explore how Rajasthan Human Care Foundation ensures transparency,
           accountability, and community impact through its structured policy
           framework.
         </p>
-        <div className="w-28 h-1 bg-gradient-to-r from-[#9ebdcd] via-[#f8f4e3] to-[#a8d56e] rounded-full mt-4"></div>
+
+        <div className="w-24 sm:w-28 h-1 bg-gradient-to-r from-[#9ebdcd] via-[#f8f4e3] to-[#a8d56e] rounded-full mx-auto lg:mx-0 mt-4"></div>
       </div>
 
       {/* Right Images */}
-      <div className="flex-1 flex flex-col md:flex-row gap-4 md:gap-6">
-        <div className="relative w-full md:w-1/2 h-48 md:h-64 rounded-xl overflow-hidden shadow-lg">
+      <div className="w-full lg:w-1/2 flex flex-col sm:flex-row gap-4 sm:gap-5 md:gap-6">
+        {/* Image 1 */}
+        <div className="relative w-full sm:w-1/2 h-52 sm:h-60 md:h-72 lg:h-64 xl:h-72 rounded-xl overflow-hidden shadow-xl">
           <img
-            src="https://dailypioneer.com/uploads/2026/story/images/big/empowering-rural-communities-2026-01-15.jpg"
+            src="/policy1.jpg"
             alt="Policy Image 1"
             className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent"></div>
         </div>
-        <div className="relative w-full md:w-1/2 h-48 md:h-64 rounded-xl overflow-hidden shadow-lg">
+
+        {/* Image 2 */}
+        <div className="relative w-full sm:w-1/2 h-52 sm:h-60 md:h-72 lg:h-64 xl:h-72 rounded-xl overflow-hidden shadow-xl">
           <img
-            src="https://give.do/blog/wp-content/uploads/2022/12/5-ngo-blog-banner.png"
+            src="/policy2.png"
             alt="Policy Image 2"
             className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
           />
@@ -91,19 +140,19 @@ const Sidebar = ({ active, setActive, isOpen, setIsOpen }) => (
         onClick={() => setIsOpen(false)}
       ></div>
     )}
+
     <aside
       className={`
-    fixed lg:sticky top-0 left-0
-    h-full lg:h-[calc(100vh-0px)]
-    w-72
-    bg-white border-r border-gray-200 p-6
-    transform transition-transform duration-300
-    z-[999] lg:z-auto
-
-    ${isOpen ? "translate-x-0" : "-translate-x-full"}
-
-    lg:translate-x-0
-  `}
+        fixed lg:sticky top-0 left-0
+        h-screen lg:h-screen
+        w-[280px] sm:w-72
+        bg-white border-r border-gray-200 p-4 sm:p-6
+        transform transition-transform duration-300
+        z-[999] lg:z-auto
+        overflow-y-auto
+        ${isOpen ? "translate-x-0" : "-translate-x-full"}
+        lg:translate-x-0
+      `}
     >
       {/* Close Button (Mobile) */}
       <button
@@ -113,7 +162,9 @@ const Sidebar = ({ active, setActive, isOpen, setIsOpen }) => (
         Close ✕
       </button>
 
-      <h1 className="text-xl font-bold text-[#0f172a] mb-8">RHCF Policies</h1>
+      <h1 className="text-lg sm:text-xl font-bold text-[#0f172a] mb-6 sm:mb-8">
+        RHCF Policies
+      </h1>
 
       <nav className="space-y-3 text-sm">
         {policies.map((policy) => (
@@ -121,7 +172,7 @@ const Sidebar = ({ active, setActive, isOpen, setIsOpen }) => (
             key={policy.id}
             onClick={() => {
               setActive(policy.id);
-              setIsOpen(false); // auto close on click
+              setIsOpen(false);
             }}
             className={`block w-full text-left px-3 py-2 rounded-lg transition-all duration-300 ${
               active === policy.id
@@ -139,13 +190,14 @@ const Sidebar = ({ active, setActive, isOpen, setIsOpen }) => (
 
 const Section = ({ title, children }) => (
   <div
-    className="mb-12 bg-white/80 backdrop-blur-lg shadow-lg rounded-2xl p-6 md:p-10 border border-[#e6eef2]"
+    className="mb-8 md:mb-12 bg-white/80 backdrop-blur-lg shadow-lg rounded-2xl p-4 sm:p-6 md:p-10 border border-[#e6eef2]"
     data-aos="fade-up"
   >
-    <h2 className="text-2xl md:text-3xl font-bold text-[#0f172a] mb-6 flex items-center gap-3">
+    <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-[#0f172a] mb-4 md:mb-6 flex items-center gap-3">
       {title}
     </h2>
-    <div className="space-y-4 text-gray-700 text-[15px] leading-relaxed">
+
+    <div className="space-y-4 text-gray-700 text-sm sm:text-[15px] leading-relaxed">
       {children}
     </div>
   </div>
@@ -170,19 +222,19 @@ const PolicyPage = () => {
       />
 
       {/* MAIN CONTENT */}
-      <main className="flex-1 p-6 md:p-12 max-w-6xl mx-auto">
+      <main className="flex-1 w-full p-4 sm:p-6 md:p-8 lg:p-12 max-w-6xl mx-auto">
         <button
           onClick={() => setIsSidebarOpen(true)}
           className="lg:hidden mb-4 px-4 py-2 bg-[#9EBDCD] text-white rounded-lg shadow"
         >
           Open Policies Menu
         </button>
+
         <HeroSection />
 
         {/* CONDITIONAL SECTIONS */}
         {activeSection === "anti" && (
           <section className="mb-24 scroll-mt-24 p-4 md:p-12 space-y-12 shadow-lg rounded-xl border border-gray-100">
-            {/* Heading */}
             <div className="mb-10">
               <h2 className="text-3xl font-bold text-[#0f172a] mb-3 tracking-tight">
                 Anti-Bribery & Anti-Corruption Policy
@@ -190,7 +242,6 @@ const PolicyPage = () => {
               <div className="w-16 h-1 bg-gradient-to-r from-[#9EBDCD] to-transparent rounded-full"></div>
             </div>
 
-            {/* Intro */}
             <div className="bg-gradient-to-br from-white to-[#9EBDCD]/10 border border-[#9EBDCD]/30 p-6 rounded-2xl shadow-sm hover:shadow-lg transition">
               <p className="text-gray-700 text-sm leading-relaxed">
                 RHCF is committed to maintaining the highest standards of
@@ -201,7 +252,6 @@ const PolicyPage = () => {
               </p>
             </div>
 
-            {/* Objective & Scope */}
             <div className="mt-6 grid md:grid-cols-2 gap-6">
               <div className="bg-white border border-[#9EBDCD]/30 p-5 rounded-xl shadow-sm hover:shadow-md transition">
                 <h4 className="font-semibold mb-2 text-[#0f172a]">Objective</h4>
@@ -221,7 +271,6 @@ const PolicyPage = () => {
               </div>
             </div>
 
-            {/* Definitions */}
             <div className="mt-6 bg-white border border-[#9EBDCD]/30 p-5 rounded-xl shadow-sm hover:shadow-md transition">
               <h4 className="font-semibold mb-2 text-[#0f172a]">Definitions</h4>
               <p className="text-sm text-gray-600 leading-relaxed mb-2">
@@ -234,7 +283,6 @@ const PolicyPage = () => {
               </p>
             </div>
 
-            {/* Core Principles */}
             <div className="mt-6 bg-gradient-to-br from-white to-[#9EBDCD]/10 border border-[#9EBDCD]/30 p-5 rounded-2xl shadow-sm hover:shadow-lg transition">
               <h4 className="font-semibold mb-4 text-[#0f172a]">
                 Core Principles
@@ -246,7 +294,6 @@ const PolicyPage = () => {
               </ul>
             </div>
 
-            {/* Prohibited Practices */}
             <div className="mt-6 bg-gradient-to-r from-[#7cb342] to-white text-white p-6 rounded-2xl shadow-xl hover:shadow-2xl transition">
               <h4 className="font-semibold mb-3 text-gray-900">
                 Prohibited Practices
@@ -259,7 +306,6 @@ const PolicyPage = () => {
               </ul>
             </div>
 
-            {/* Gifts & Due Diligence */}
             <div className="mt-6 grid md:grid-cols-2 gap-6">
               <div className="bg-white border border-[#9EBDCD]/30 p-5 rounded-xl shadow-sm hover:shadow-md transition">
                 <h4 className="font-semibold mb-2 text-[#0f172a]">
@@ -283,7 +329,6 @@ const PolicyPage = () => {
               </div>
             </div>
 
-            {/* Reporting */}
             <div className="mt-6 bg-white border border-[#9EBDCD]/30 p-5 rounded-xl shadow-sm hover:shadow-md transition">
               <h4 className="font-semibold mb-2 text-[#0f172a]">
                 Reporting & Action
@@ -307,7 +352,6 @@ const PolicyPage = () => {
             id="data"
             className="mb-24 scroll-mt-24 p-4 md:p-12 space-y-12 shadow-lg rounded-xl border border-gray-100"
           >
-            {/* Heading */}
             <div className="mb-10">
               <h2 className="text-3xl font-bold text-[#0f172a] mb-3 tracking-tight">
                 Data Protection & Confidentiality Policy
@@ -315,7 +359,6 @@ const PolicyPage = () => {
               <div className="w-16 h-1 bg-gradient-to-r from-[#9EBDCD] to-transparent rounded-full"></div>
             </div>
 
-            {/* Intro / Objective */}
             <div className="bg-gradient-to-br from-white to-[#9EBDCD]/10 border border-[#9EBDCD]/30 p-6 rounded-2xl shadow-sm hover:shadow-lg transition">
               <p className="text-gray-700 text-sm leading-relaxed">
                 RHCF is committed to safeguarding the privacy and
@@ -326,7 +369,6 @@ const PolicyPage = () => {
               </p>
             </div>
 
-            {/* Objective & Scope */}
             <div className="mt-6 grid md:grid-cols-2 gap-6">
               <div className="bg-white border border-[#9EBDCD]/30 p-5 rounded-xl shadow-sm hover:shadow-md transition">
                 <h4 className="font-semibold text-[#0f172a] mb-2 flex items-center gap-2">
@@ -362,7 +404,6 @@ const PolicyPage = () => {
               </div>
             </div>
 
-            {/* Definition of Personal Data */}
             <div className="mt-6 bg-[#9EBDCD]/10 border-l-4 border-[#9EBDCD] p-6 rounded-xl shadow-sm hover:shadow-md transition">
               <h4 className="font-semibold text-[#0f172a] mb-3 flex items-center gap-2">
                 <FileText size={18} className="text-[#9EBDCD]" />
@@ -384,7 +425,6 @@ const PolicyPage = () => {
               </ul>
             </div>
 
-            {/* Principles */}
             <div className="mt-6 grid md:grid-cols-2 gap-6">
               <div className="bg-white border border-[#9EBDCD]/30 p-5 rounded-xl shadow-sm hover:shadow-md transition">
                 <h4 className="font-semibold text-[#0f172a] mb-2 flex items-center gap-2">
@@ -405,7 +445,6 @@ const PolicyPage = () => {
                 </ul>
               </div>
 
-              {/* Data Collection Highlight */}
               <div className="bg-gradient-to-r from-[#7cb342] to-white text-gray-800 p-6 rounded-2xl shadow-xl hover:shadow-2xl transition">
                 <h4 className="font-semibold text-gray-800 mb-2 flex items-center gap-2">
                   <FileText size={18} className="text-gray-800" />
@@ -423,7 +462,6 @@ const PolicyPage = () => {
               </div>
             </div>
 
-            {/* Storage, Sharing, Breach, Rights */}
             <div className="mt-6 space-y-6">
               {[
                 {
@@ -509,7 +547,7 @@ const PolicyPage = () => {
             className="mb-24 scroll-mt-24"
           >
             <div className="w-16 h-1 bg-gradient-to-r from-[#9EBDCD] to-transparent rounded-full"></div>
-            {/* Objective */}
+
             <div className="bg-gradient-to-br from-white to-[#7cb342]/10 border border-[#7cb342]/30 p-6 rounded-2xl shadow-sm hover:shadow-lg transition mb-6">
               <p className="text-gray-700 text-sm leading-relaxed">
                 <strong>1. Objective:</strong> To ensure prudent, transparent,
@@ -518,7 +556,6 @@ const PolicyPage = () => {
               </p>
             </div>
 
-            {/* Scope */}
             <div className="bg-white border border-[#9EBDCD]/30 p-6 rounded-2xl shadow-sm hover:shadow-lg transition mb-6">
               <p className="text-gray-700 text-sm leading-relaxed">
                 <strong>2. Scope:</strong> Covers all financial transactions,
@@ -527,7 +564,6 @@ const PolicyPage = () => {
               </p>
             </div>
 
-            {/* Accounting System */}
             <div className="bg-white border border-[#7cb342]/30 p-5 rounded-xl shadow-sm hover:shadow-md transition mb-6">
               <h4 className="font-semibold mb-2 text-[#0f172a]">
                 3. Accounting System
@@ -541,7 +577,6 @@ const PolicyPage = () => {
               </p>
             </div>
 
-            {/* Bank Accounts */}
             <div className="bg-white border border-[#9EBDCD]/30 p-5 rounded-xl shadow-sm hover:shadow-md transition mb-6">
               <h4 className="font-semibold mb-2 text-[#0f172a]">
                 4. Bank Accounts
@@ -554,7 +589,6 @@ const PolicyPage = () => {
               </p>
             </div>
 
-            {/* Budgeting */}
             <div className="bg-white border border-[#7cb342]/30 p-5 rounded-xl shadow-sm hover:shadow-md transition mb-6">
               <h4 className="font-semibold mb-2 text-[#0f172a]">
                 5. Budgeting
@@ -567,7 +601,6 @@ const PolicyPage = () => {
               </p>
             </div>
 
-            {/* Income Sources */}
             <div className="bg-white border border-[#9EBDCD]/30 p-5 rounded-xl shadow-sm hover:shadow-md transition mb-6">
               <h4 className="font-semibold mb-2 text-[#0f172a]">
                 6. Income Sources
@@ -579,7 +612,6 @@ const PolicyPage = () => {
               </p>
             </div>
 
-            {/* Expenditure & Payments */}
             <div className="bg-white border border-[#7cb342]/30 p-5 rounded-xl shadow-sm hover:shadow-md transition mb-6">
               <h4 className="font-semibold mb-2 text-[#0f172a]">
                 7. Expenditure & Payments
@@ -592,7 +624,6 @@ const PolicyPage = () => {
               </ul>
             </div>
 
-            {/* Internal Controls */}
             <div className="bg-white border border-[#9EBDCD]/30 p-5 rounded-xl shadow-sm hover:shadow-md transition mb-6">
               <h4 className="font-semibold mb-2 text-[#0f172a]">
                 8. Internal Controls
@@ -604,7 +635,6 @@ const PolicyPage = () => {
               </p>
             </div>
 
-            {/* Audits */}
             <div className="bg-white border border-[#7cb342]/30 p-5 rounded-xl shadow-sm hover:shadow-md transition mb-6">
               <h4 className="font-semibold mb-2 text-[#0f172a]">9. Audits</h4>
               <p className="text-gray-600 text-sm leading-relaxed">
@@ -614,7 +644,6 @@ const PolicyPage = () => {
               </p>
             </div>
 
-            {/* Statutory Compliance */}
             <div className="bg-white border border-[#9EBDCD]/30 p-5 rounded-xl shadow-sm hover:shadow-md transition mb-6">
               <h4 className="font-semibold mb-2 text-[#0f172a]">
                 10. Statutory Compliance
@@ -626,7 +655,6 @@ const PolicyPage = () => {
               </p>
             </div>
 
-            {/* Fraud & Misuse */}
             <div className="bg-white border border-red-400/50 p-5 rounded-xl shadow-sm hover:shadow-md transition mb-6">
               <h4 className="font-semibold mb-2 text-red-600">
                 11. Fraud & Misuse
@@ -638,7 +666,6 @@ const PolicyPage = () => {
               </p>
             </div>
 
-            {/* Review & Amendment */}
             <div className="bg-white border border-gray-400 p-5 rounded-xl shadow-sm hover:shadow-md transition mb-6">
               <h4 className="font-semibold mb-2 text-[#0f172a]">
                 12. Review & Amendment
@@ -658,7 +685,7 @@ const PolicyPage = () => {
             className="mb-20 scroll-mt-24"
           >
             <div className="w-16 h-1 bg-gradient-to-r from-[#9EBDCD] to-transparent rounded-full"></div>
-            {/* Objective */}
+
             <div className="bg-gradient-to-br from-white to-[#7cb342]/10 border border-[#7cb342]/30 p-6 rounded-2xl shadow-sm hover:shadow-lg transition mb-6">
               <p className="text-gray-700 text-sm leading-relaxed">
                 <strong>1. Objective:</strong> To provide a structured framework
@@ -668,7 +695,6 @@ const PolicyPage = () => {
               </p>
             </div>
 
-            {/* Introduction */}
             <div className="bg-white border border-[#9EBDCD]/30 p-6 rounded-xl shadow-sm hover:shadow-md transition mb-6">
               <p className="text-gray-600 text-sm leading-relaxed">
                 <strong>2. Introduction:</strong> This policy outlines the
@@ -678,7 +704,6 @@ const PolicyPage = () => {
               </p>
             </div>
 
-            {/* Employment Categories */}
             <div className="bg-white border border-[#7cb342]/30 p-5 rounded-xl shadow-sm hover:shadow-md transition mb-6">
               <h4 className="font-semibold mb-2 text-[#0f172a]">
                 3. Employment Categories
@@ -692,7 +717,6 @@ const PolicyPage = () => {
               </ul>
             </div>
 
-            {/* Recruitment & Selection */}
             <div className="bg-white border border-[#9EBDCD]/30 p-5 rounded-xl shadow-sm hover:shadow-md transition mb-6">
               <h4 className="font-semibold mb-2 text-[#0f172a]">
                 4. Recruitment & Selection
@@ -706,7 +730,6 @@ const PolicyPage = () => {
               </p>
             </div>
 
-            {/* Offer Letter & Appointment */}
             <div className="bg-white border border-[#7cb342]/30 p-5 rounded-xl shadow-sm hover:shadow-md transition mb-6">
               <h4 className="font-semibold mb-2 text-[#0f172a]">
                 5. Offer Letter & Appointment
@@ -718,7 +741,6 @@ const PolicyPage = () => {
               </ul>
             </div>
 
-            {/* Working Hours & Attendance */}
             <div className="bg-white border border-[#9EBDCD]/30 p-5 rounded-xl shadow-sm hover:shadow-md transition mb-6">
               <h4 className="font-semibold mb-2 text-[#0f172a]">
                 6. Working Hours & Attendance
@@ -730,7 +752,6 @@ const PolicyPage = () => {
               </p>
             </div>
 
-            {/* Leave Policy */}
             <div className="bg-white border border-[#7cb342]/30 p-5 rounded-xl shadow-sm hover:shadow-md transition mb-6">
               <h4 className="font-semibold mb-2 text-[#0f172a]">
                 7. Leave Policy
@@ -744,7 +765,6 @@ const PolicyPage = () => {
               </ul>
             </div>
 
-            {/* Code of Conduct */}
             <div className="bg-white border border-[#9EBDCD]/30 p-5 rounded-xl shadow-sm hover:shadow-md transition mb-6">
               <h4 className="font-semibold mb-2 text-[#0f172a]">
                 8. Code of Conduct
@@ -757,7 +777,6 @@ const PolicyPage = () => {
               </p>
             </div>
 
-            {/* Performance Appraisal */}
             <div className="bg-white border border-[#7cb342]/30 p-5 rounded-xl shadow-sm hover:shadow-md transition mb-6">
               <h4 className="font-semibold mb-2 text-[#0f172a]">
                 9. Performance Appraisal
@@ -769,7 +788,6 @@ const PolicyPage = () => {
               </p>
             </div>
 
-            {/* Payroll Policy */}
             <div className="bg-white border border-[#9EBDCD]/30 p-5 rounded-xl shadow-sm hover:shadow-md transition mb-6">
               <h4 className="font-semibold mb-2 text-[#0f172a]">
                 10. Payroll Policy
@@ -782,7 +800,6 @@ const PolicyPage = () => {
               </ul>
             </div>
 
-            {/* Training & Development */}
             <div className="bg-white border border-[#7cb342]/30 p-5 rounded-xl shadow-sm hover:shadow-md transition mb-6">
               <h4 className="font-semibold mb-2 text-[#0f172a]">
                 11. Training & Development
@@ -794,7 +811,6 @@ const PolicyPage = () => {
               </p>
             </div>
 
-            {/* Confidentiality & Data Protection */}
             <div className="bg-white border border-[#9EBDCD]/30 p-5 rounded-xl shadow-sm hover:shadow-md transition mb-6">
               <h4 className="font-semibold mb-2 text-[#0f172a]">
                 12. Confidentiality & Data Protection
@@ -806,7 +822,6 @@ const PolicyPage = () => {
               </p>
             </div>
 
-            {/* Review & Amendment */}
             <div className="bg-white border border-gray-400 p-5 rounded-xl shadow-sm hover:shadow-md transition mb-6">
               <h4 className="font-semibold mb-2 text-[#0f172a]">
                 13. Review & Amendment
@@ -824,7 +839,6 @@ const PolicyPage = () => {
             id="procurement"
             className="mb-24 scroll-mt-24 p-4 md:p-12 space-y-12 shadow-lg rounded-xl border border-gray-100"
           >
-            {/* Heading */}
             <div className="mb-10">
               <h2 className="text-3xl font-bold text-[#0f172a] mb-3 tracking-tight">
                 Procurement Policy
@@ -832,7 +846,6 @@ const PolicyPage = () => {
               <div className="w-16 h-1 bg-gradient-to-r from-[#9EBDCD] to-transparent rounded-full"></div>
             </div>
 
-            {/* Intro / Objective */}
             <div className="bg-gradient-to-br from-white to-[#9EBDCD]/10 border border-[#9EBDCD]/30 p-6 rounded-2xl shadow-sm hover:shadow-lg transition">
               <p className="text-gray-700 text-sm leading-relaxed">
                 <strong className="text-[#0f172a]">Objective:</strong> RHCF
@@ -845,7 +858,6 @@ const PolicyPage = () => {
               </p>
             </div>
 
-            {/* Scope + Core Principles */}
             <div className="mt-6 grid md:grid-cols-2 gap-6">
               <div className="bg-white border border-[#9EBDCD]/30 p-5 rounded-xl shadow-sm hover:shadow-md transition">
                 <div className="flex items-center gap-2 mb-2">
@@ -876,7 +888,6 @@ const PolicyPage = () => {
               </div>
             </div>
 
-            {/* Procurement Thresholds Highlight */}
             <div className="mt-6 bg-gradient-to-r from-[#7cb342] to-white text-gray-800 p-6 rounded-2xl shadow-xl hover:shadow-2xl transition">
               <div className="flex items-center gap-3 mb-4">
                 <ShoppingCart className="text-gray-800" />
@@ -892,7 +903,6 @@ const PolicyPage = () => {
               </div>
             </div>
 
-            {/* Vendor & Procurement Process */}
             <div className="mt-6 space-y-6">
               <div className="bg-white border border-[#9EBDCD]/30 p-5 rounded-xl shadow-sm hover:shadow-md transition">
                 <div className="flex items-center gap-2 mb-2">
@@ -926,7 +936,6 @@ const PolicyPage = () => {
               </div>
             </div>
 
-            {/* Committee + Emergency Procurement */}
             <div className="mt-6 grid md:grid-cols-2 gap-6">
               <div className="bg-white border border-[#9EBDCD]/30 p-5 rounded-xl shadow-sm hover:shadow-md transition">
                 <h4 className="font-semibold text-[#0f172a] mb-2">
@@ -951,7 +960,6 @@ const PolicyPage = () => {
               </div>
             </div>
 
-            {/* Conflict of Interest */}
             <div className="mt-6 bg-gradient-to-r from-[#9EBDCD]/20 to-white border border-[#9EBDCD]/40 p-6 rounded-2xl shadow-sm hover:shadow-md transition">
               <div className="flex items-center gap-2 mb-2">
                 <AlertCircle className="text-[#0f172a]" size={18} />
@@ -967,7 +975,6 @@ const PolicyPage = () => {
               </p>
             </div>
 
-            {/* Documentation, Asset Management, Monitoring */}
             <div className="mt-6 space-y-4">
               <div className="bg-white border border-[#9EBDCD]/30 p-5 rounded-xl shadow-sm hover:shadow-md transition">
                 <h4 className="font-semibold mb-2 text-[#0f172a]">
@@ -1010,7 +1017,6 @@ const PolicyPage = () => {
             id="rules"
             className="mb-24 scroll-mt-24 p-4 md:p-12 space-y-12 shadow-lg rounded-xl border border-gray-100"
           >
-            {/* Heading */}
             <div className="mb-10">
               <h2 className="text-3xl font-bold text-[#0f172a] mb-3 tracking-tight">
                 Rules Book
@@ -1018,7 +1024,6 @@ const PolicyPage = () => {
               <div className="w-16 h-1 bg-gradient-to-r from-[#9EBDCD] to-transparent rounded-full"></div>
             </div>
 
-            {/* Intro */}
             <div className="bg-gradient-to-br from-white to-[#9EBDCD]/10 border border-[#9EBDCD]/30 p-6 rounded-2xl shadow-sm hover:shadow-lg transition">
               <p className="text-gray-700 text-sm leading-relaxed">
                 <strong className="text-[#0f172a]">Name:</strong> The
@@ -1032,9 +1037,7 @@ const PolicyPage = () => {
               </p>
             </div>
 
-            {/* Office + Objectives */}
             <div className="mt-8 grid md:grid-cols-2 gap-6">
-              {/* Office */}
               <div className="p-5 rounded-xl border border-[#9EBDCD]/30 bg-white hover:shadow-md transition">
                 <div className="flex items-center gap-2 mb-2">
                   <MapPin className="text-[#9EBDCD]" size={18} />
@@ -1049,7 +1052,6 @@ const PolicyPage = () => {
                 </p>
               </div>
 
-              {/* Objectives */}
               <div className="p-5 rounded-xl border border-[#9EBDCD]/30 bg-white hover:shadow-md transition">
                 <div className="flex items-center gap-2 mb-2">
                   <Target className="text-[#9EBDCD]" size={18} />
@@ -1068,7 +1070,6 @@ const PolicyPage = () => {
               </div>
             </div>
 
-            {/* Membership Section */}
             <div className="mt-10 bg-gradient-to-r from-[#7cb342] to-white text-gray-800 p-7 rounded-3xl shadow-xl hover:shadow-2xl transition">
               <div className="flex items-center gap-3 mb-4">
                 <Users className="text-gray-800" />
@@ -1083,7 +1084,6 @@ const PolicyPage = () => {
               </div>
             </div>
 
-            {/* Governing + General Body */}
             <div className="mt-10 space-y-6">
               <div className="group border-l-4 border-[#9EBDCD] pl-5 hover:pl-7 transition-all duration-300">
                 <div className="flex items-center gap-2 mb-1">
@@ -1113,7 +1113,6 @@ const PolicyPage = () => {
               </div>
             </div>
 
-            {/* Finance Section */}
             <div className="mt-10 grid md:grid-cols-2 gap-6">
               <div className="bg-white border border-[#9EBDCD]/30 p-5 rounded-xl hover:shadow-md transition">
                 <h4 className="font-semibold text-[#0f172a] mb-2">
@@ -1139,7 +1138,6 @@ const PolicyPage = () => {
               </div>
             </div>
 
-            {/* Meetings */}
             <div className="mt-10 bg-gradient-to-r from-[#9EBDCD]/20 to-white border border-[#9EBDCD]/40 p-6 rounded-2xl">
               <div className="flex items-center gap-2 mb-2">
                 <Scale className="text-[#0f172a]" size={18} />
@@ -1155,7 +1153,6 @@ const PolicyPage = () => {
               </p>
             </div>
 
-            {/* Conduct + Legal */}
             <div className="mt-8 space-y-4">
               <p className="text-sm text-gray-600 leading-relaxed">
                 <strong className="text-[#0f172a]">Code of Conduct:</strong> All
@@ -1190,7 +1187,6 @@ const PolicyPage = () => {
 
         {activeSection === "harassment" && (
           <Section id="harassment" className="mb-24 scroll-mt-24">
-            {/* Heading */}
             <div className="mb-10">
               <h2 className="text-3xl font-bold text-[#0f172a] mb-3 tracking-tight">
                 Sexual Harassment Policy
@@ -1198,7 +1194,6 @@ const PolicyPage = () => {
               <div className="w-16 h-1 bg-gradient-to-r from-[#9EBDCD] to-transparent rounded-full"></div>
             </div>
 
-            {/* Objective */}
             <div className="bg-gradient-to-br from-white to-[#9EBDCD]/10 border border-[#9EBDCD]/30 p-6 rounded-2xl shadow-sm hover:shadow-lg transition">
               <p className="text-gray-700 text-sm leading-relaxed">
                 <strong className="text-[#0f172a]">Objective:</strong> To
@@ -1208,7 +1203,6 @@ const PolicyPage = () => {
               </p>
             </div>
 
-            {/* Scope */}
             <div className="mt-8 bg-white border border-[#9EBDCD]/30 p-5 rounded-xl shadow-sm hover:shadow-md transition">
               <div className="flex items-center gap-2 mb-2">
                 <Users className="text-[#9EBDCD]" size={18} />
@@ -1221,7 +1215,6 @@ const PolicyPage = () => {
               </p>
             </div>
 
-            {/* Definition */}
             <div className="mt-6 bg-white border border-[#9EBDCD]/30 p-5 rounded-xl shadow-sm hover:shadow-md transition">
               <div className="flex items-center gap-2 mb-2">
                 <Shield className="text-[#9EBDCD]" size={18} />
@@ -1245,7 +1238,6 @@ const PolicyPage = () => {
               </ul>
             </div>
 
-            {/* Legal */}
             <div className="mt-6 bg-white border border-[#9EBDCD]/30 p-5 rounded-xl shadow-sm hover:shadow-md transition">
               <div className="flex items-center gap-2 mb-2">
                 <BookOpen className="text-[#9EBDCD]" size={18} />
@@ -1259,7 +1251,6 @@ const PolicyPage = () => {
               </p>
             </div>
 
-            {/* ICC */}
             <div className="mt-6 grid md:grid-cols-2 gap-6">
               <div className="bg-white border border-[#9EBDCD]/30 p-5 rounded-xl shadow-sm hover:shadow-md transition">
                 <div className="flex items-center gap-2 mb-2">
@@ -1277,7 +1268,6 @@ const PolicyPage = () => {
                 </ul>
               </div>
 
-              {/* Complaint Mechanism */}
               <div className="bg-white border border-[#9EBDCD]/30 p-5 rounded-xl shadow-sm hover:shadow-md transition">
                 <div className="flex items-center gap-2 mb-2">
                   <FileText className="text-[#9EBDCD]" size={18} />
@@ -1295,7 +1285,6 @@ const PolicyPage = () => {
               </div>
             </div>
 
-            {/* Inquiry + Action */}
             <div className="mt-6 grid md:grid-cols-2 gap-6">
               <div className="bg-white border border-[#9EBDCD]/30 p-5 rounded-xl shadow-sm hover:shadow-md transition">
                 <h4 className="font-semibold text-[#0f172a] mb-2">
@@ -1322,7 +1311,6 @@ const PolicyPage = () => {
               </div>
             </div>
 
-            {/* Protection + Confidentiality */}
             <div className="mt-6 grid md:grid-cols-2 gap-6">
               <div className="bg-gradient-to-r from-[#7cb342] to-white text-gray-800 p-5 rounded-2xl shadow-xl hover:shadow-2xl transition">
                 <h4 className="font-semibold mb-2">
@@ -1343,7 +1331,6 @@ const PolicyPage = () => {
               </div>
             </div>
 
-            {/* Awareness + Record + Reporting + Review */}
             <div className="mt-6 space-y-4">
               <div className="bg-white border border-[#9EBDCD]/30 p-5 rounded-xl shadow-sm hover:shadow-md transition">
                 <h4 className="font-semibold mb-2">Awareness & Training</h4>
@@ -1380,7 +1367,6 @@ const PolicyPage = () => {
 
         {activeSection === "whistle" && (
           <Section>
-            {/* Heading */}
             <div className="mb-10">
               <h2 className="text-3xl font-bold text-[#0f172a] mb-3 tracking-tight">
                 Whistleblower Policy
@@ -1388,7 +1374,6 @@ const PolicyPage = () => {
               <div className="w-16 h-1 bg-gradient-to-r from-[#9EBDCD] to-transparent rounded-full"></div>
             </div>
 
-            {/* Objective */}
             <div className="bg-gradient-to-br from-white to-[#9EBDCD]/10 border border-[#9EBDCD]/30 p-6 rounded-2xl shadow-sm hover:shadow-lg transition">
               <p className="text-gray-700 text-sm leading-relaxed">
                 <strong className="text-[#0f172a]">Objective:</strong> To
@@ -1398,7 +1383,6 @@ const PolicyPage = () => {
               </p>
             </div>
 
-            {/* Scope */}
             <div className="mt-6 bg-white border border-[#9EBDCD]/30 p-5 rounded-xl shadow-sm hover:shadow-md transition">
               <div className="flex items-center gap-2 mb-2">
                 <Users className="text-[#9EBDCD]" size={18} />
@@ -1410,7 +1394,6 @@ const PolicyPage = () => {
               </p>
             </div>
 
-            {/* Definition */}
             <div className="mt-6 bg-white border border-[#9EBDCD]/30 p-5 rounded-xl shadow-sm hover:shadow-md transition">
               <div className="flex items-center gap-2 mb-2">
                 <Shield className="text-[#9EBDCD]" size={18} />
@@ -1425,7 +1408,6 @@ const PolicyPage = () => {
               </p>
             </div>
 
-            {/* Reportable Concerns */}
             <div className="mt-6 bg-white border border-[#9EBDCD]/30 p-5 rounded-xl shadow-sm hover:shadow-md transition">
               <div className="flex items-center gap-2 mb-2">
                 <FileText className="text-[#9EBDCD]" size={18} />
@@ -1443,7 +1425,6 @@ const PolicyPage = () => {
               </ul>
             </div>
 
-            {/* Reporting + Confidentiality */}
             <div className="mt-6 grid md:grid-cols-2 gap-6">
               <div className="bg-white border border-[#9EBDCD]/30 p-5 rounded-xl shadow-sm hover:shadow-md transition">
                 <h4 className="font-semibold mb-2 text-[#0f172a]">
@@ -1471,7 +1452,6 @@ const PolicyPage = () => {
               </div>
             </div>
 
-            {/* Investigation + Protection */}
             <div className="mt-6 grid md:grid-cols-2 gap-6">
               <div className="bg-white border border-[#9EBDCD]/30 p-5 rounded-xl shadow-sm hover:shadow-md transition">
                 <h4 className="font-semibold mb-2 text-[#0f172a]">
@@ -1496,7 +1476,6 @@ const PolicyPage = () => {
               </div>
             </div>
 
-            {/* False Allegations + Action */}
             <div className="mt-6 grid md:grid-cols-2 gap-6">
               <div className="bg-white border border-[#9EBDCD]/30 p-5 rounded-xl shadow-sm hover:shadow-md transition">
                 <h4 className="font-semibold mb-2 text-[#0f172a]">
@@ -1520,7 +1499,6 @@ const PolicyPage = () => {
               </div>
             </div>
 
-            {/* Records + Review */}
             <div className="mt-6 space-y-4">
               <div className="bg-white border border-[#9EBDCD]/30 p-5 rounded-xl shadow-sm hover:shadow-md transition">
                 <h4 className="font-semibold mb-2 text-[#0f172a]">
@@ -1543,8 +1521,6 @@ const PolicyPage = () => {
             </div>
           </Section>
         )}
-
-        {/* FOOTER */}
       </main>
     </div>
   );

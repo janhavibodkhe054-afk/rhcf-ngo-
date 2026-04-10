@@ -3,21 +3,7 @@ import { useLocation, useNavigate } from "react-router-dom";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
-const certificates = [
-  "/certificate.png",
-  "/certificate2.png",
-  "/certificate3.png",
-  "/certificate4.png",
-  "/certificate5.png",
-  "/certificate6.png",
-  "/certificate7.png",
-  "/certificate8.png",
-  "/certificate9.png",
-  "/certificate10.jpeg",
-  "/certificate11.jpeg",
-  "/certificate12.jpeg",
-  "/certificate13.jpeg",
-];
+
 
 const OurTeamLeader = () => {
   const location = useLocation();
@@ -42,7 +28,7 @@ const OurTeamLeader = () => {
     <div>
       <section
         id="team"
-        className="w-full bg-[#f8fafc] py-12 sm:py-16 md:py-20 lg:py-28 px-4 sm:px-6 md:px-10 lg:px-16"
+        className="w-full bg-[#f8fafc] py-12 sm:py-16 md:py-20 lg:pt-28 px-4 sm:px-6 md:px-10 lg:px-16"
       >
         <div className="max-w-7xl mx-auto">
           {/* SECTION HEADER */}
@@ -77,7 +63,7 @@ const OurTeamLeader = () => {
                 data-aos="zoom-in"
               >
                 <img
-                  src="https://via.placeholder.com/300x400"
+                  src="/founder1.jpeg"
                   alt="Dharmender Singh"
                   className="w-64 h-96 mx-auto rounded-2xl object-cover mb-4 transition duration-500 hover:scale-105"
                 />
@@ -101,8 +87,8 @@ const OurTeamLeader = () => {
                 data-aos-delay="200"
               >
                 <img
-                  src="https://via.placeholder.com/300x400"
-                  alt="Vishnu Sakunia"
+                  src="/founder2.jpeg"
+                  alt="Rinku Verma"
                   className="w-64 h-96 mx-auto rounded-2xl object-cover mb-4 transition duration-500 hover:scale-105"
                 />
                 <h4 className="text-lg sm:text-xl font-semibold text-gray-800">
@@ -119,14 +105,8 @@ const OurTeamLeader = () => {
             </div>
           </div>
 
-          {/* CERTIFICATIONS */}
-          <section className="mb-20" data-aos="fade-up">
-            <h3 className="text-xl sm:text-2xl md:text-3xl font-bold text-[#2f855a] mb-10 text-center">
-              Certifications & Recognitions
-            </h3>
-            <CertificateCarousel />
-          </section>
-
+         
+          
           {/* PROGRAM MANAGEMENT */}
           <div className="mb-16 sm:mb-20">
             <h3
@@ -199,14 +179,14 @@ const OurTeamLeader = () => {
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 sm:gap-8 max-w-2xl">
                 {[
                   {
-                    name: "Rohit Shinde",
+                    name: "Harsh Bhabhra",
                     position: "Operations Supervisor",
-                    photo: "https://via.placeholder.com/300x400",
+                    photo: "/founder3.jpeg",
                   },
                   {
-                    name: "Priya Kulkarni",
+                    name: "Naveen Sharma",
                     position: "Program Officer",
-                    photo: "https://via.placeholder.com/300x400",
+                    photo: "/founder4.jpeg",
                   },
                 ].map((member, i) => (
                   <div
@@ -243,73 +223,4 @@ const OurTeamLeader = () => {
 
 export default OurTeamLeader;
 
-const CertificateCarousel = () => {
-  const [current, setCurrent] = useState(0);
 
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrent((prev) => (prev + 1) % certificates.length);
-    }, 4000);
-    return () => clearInterval(interval);
-  }, []);
-
-  const nextSlide = () =>
-    setCurrent((prev) => (prev + 1) % certificates.length);
-
-  const prevSlide = () =>
-    setCurrent(
-      (prev) => (prev - 1 + certificates.length) % certificates.length
-    );
-
-  return (
-    <div
-      className="relative max-w-4xl mx-auto"
-      data-aos="zoom-in"
-    >
-      <div className="overflow-hidden rounded-2xl shadow-xl bg-white">
-        <div
-          className="flex transition-transform duration-700 ease-in-out"
-          style={{ transform: `translateX(-${current * 100}%)` }}
-        >
-          {certificates.map((img, index) => (
-            <div key={index} className="min-w-full p-6 bg-gray-50">
-              <img
-                src={img}
-                alt={`Certificate ${index + 1}`}
-                className="w-full h-[350px] object-contain rounded-xl"
-              />
-            </div>
-          ))}
-        </div>
-      </div>
-
-      {/* Arrows */}
-      <button
-        onClick={prevSlide}
-        className="absolute left-3 top-1/2 -translate-y-1/2 bg-[#2f855a] text-white w-10 h-10 rounded-full flex items-center justify-center shadow-lg hover:scale-110 transition"
-      >
-        ‹
-      </button>
-
-      <button
-        onClick={nextSlide}
-        className="absolute right-3 top-1/2 -translate-y-1/2 bg-[#2f855a] text-white w-10 h-10 rounded-full flex items-center justify-center shadow-lg hover:scale-110 transition"
-      >
-        ›
-      </button>
-
-      {/* Dots */}
-      <div className="flex justify-center mt-6 gap-3">
-        {certificates.map((_, index) => (
-          <button
-            key={index}
-            onClick={() => setCurrent(index)}
-            className={`w-3 h-3 rounded-full transition ${
-              current === index ? "bg-[#2f855a]" : "bg-gray-300"
-            }`}
-          />
-        ))}
-      </div>
-    </div>
-  );
-};

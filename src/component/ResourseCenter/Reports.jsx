@@ -1,10 +1,21 @@
 import React, { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const Reports = () => {
   const location = useLocation();
   const [activeYear, setActiveYear] = useState("2024-25");
   const [visible, setVisible] = useState(false);
+
+  /* ================= AOS INIT ================= */
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+      once: true,
+      easing: "ease-in-out",
+    });
+  }, []);
 
   /* ================= HASH SCROLL ================= */
   useEffect(() => {
@@ -29,8 +40,10 @@ const Reports = () => {
         }
       }
     };
+
     window.addEventListener("scroll", handleScroll);
     handleScroll();
+
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
@@ -131,14 +144,17 @@ const Reports = () => {
       <section className="relative py-28 text-center text-white">
         <div className="absolute inset-0">
           <img
-            src="https://rajivgandhingo.wordpress.com/wp-content/uploads/2017/12/about-us-bal-utsav-bangalore-india.jpg"
+            src="/report.png"
             alt=""
             className="w-full h-full object-cover"
           />
           <div className="absolute inset-0 bg-black/70"></div>
         </div>
 
-        <div className="relative z-10 px-6">
+        <div
+          className="relative z-10 px-6"
+          data-aos="zoom-in"
+        >
           <h1 className="text-5xl font-extrabold text-[#7cb342] mb-6">
             Resource Center
           </h1>
@@ -151,7 +167,10 @@ const Reports = () => {
       {/* REPORTS */}
       <section id="reports" className="py-20 px-6 bg-gray-50">
         <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-14">
+          <div
+            className="text-center mb-14"
+            data-aos="fade-up"
+          >
             <h2 className="text-4xl font-bold mb-4">Annual Reports</h2>
             <p className="text-gray-600 text-lg">
               A comprehensive overview of our impact, programs, and governance.
@@ -159,12 +178,16 @@ const Reports = () => {
           </div>
 
           {/* YEAR BUTTON */}
-          <div className="flex justify-center gap-4 mb-10 flex-wrap">
+          <div
+            className="flex justify-center gap-4 mb-10 flex-wrap"
+            data-aos="fade-up"
+            data-aos-delay="200"
+          >
             {Object.keys(annualReports).map((year) => (
               <button
                 key={year}
                 onClick={() => setActiveYear(year)}
-                className={`px-6 py-2 rounded-full font-semibold ${
+                className={`px-6 py-2 rounded-full font-semibold transition duration-300 hover:scale-105 ${
                   activeYear === year
                     ? "bg-[#7cb342] text-white"
                     : "bg-white border"
@@ -177,8 +200,11 @@ const Reports = () => {
 
           {/* CARD */}
           <div
-            className={`bg-white p-12 rounded-3xl shadow-xl transition ${
-              visible ? "opacity-100" : "opacity-0 translate-y-10"
+            data-aos="zoom-in-up"
+            className={`bg-white p-12 rounded-3xl shadow-xl transition-all duration-700 ${
+              visible
+                ? "opacity-100 translate-y-0"
+                : "opacity-0 translate-y-10"
             }`}
           >
             <h3 className="text-3xl font-bold text-center mb-8">
@@ -196,7 +222,12 @@ const Reports = () => {
             {/* IMPACT */}
             <div className="grid md:grid-cols-3 gap-8 text-center mb-10">
               {annualReports[activeYear].impact.map((i, index) => (
-                <div key={index}>
+                <div
+                  key={index}
+                  data-aos="zoom-in"
+                  data-aos-delay={index * 150}
+                  className="hover:scale-105 transition duration-300"
+                >
                   <h4 className="text-4xl font-bold text-[#7cb342]">
                     {i.number}
                   </h4>
@@ -220,7 +251,9 @@ const Reports = () => {
               {annualReports[activeYear].governance.map((g, i) => (
                 <span
                   key={i}
-                  className="px-4 py-2 bg-[#7cb342]/10 text-[#7cb342] rounded-full"
+                  data-aos="fade-up"
+                  data-aos-delay={i * 100}
+                  className="px-4 py-2 bg-[#7cb342]/10 text-[#7cb342] rounded-full hover:scale-105 transition"
                 >
                   {g}
                 </span>

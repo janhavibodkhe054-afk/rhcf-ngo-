@@ -1,14 +1,13 @@
 import { Link } from "react-router-dom";
 import {
-  Facebook,
-  Youtube,
-  Instagram,
-  Linkedin,
-  Phone,
-  Mail,
-  MapPin,
-  X, // ✅ replace Twitter
-} from "lucide-react";
+  FaFacebookF,
+  FaInstagram,
+  FaLinkedinIn,
+  FaYoutube,
+  FaXTwitter,
+} from "react-icons/fa6";
+
+import { Mail, Phone, MapPin } from "lucide-react";
 
 const Footer = () => {
   const menus = [
@@ -54,27 +53,36 @@ const Footer = () => {
 
   const socialLinks = [
     {
-      icon: Facebook,
-      url: "https://www.facebook.com/",
+      icon: FaFacebookF,
+      url: "https://facebook.com",
+      color: "text-[#1877F2]",
+      hoverBg: "hover:bg-[#1877F2]",
     },
     {
-      icon: X, // ✅ updated
-      url: "https://twitter.com/", // or your X profile link
+      icon: FaInstagram,
+      url: "https://instagram.com",
+      color: "text-[#E4405F]",
+      hoverBg: "hover:bg-[#E4405F]",
     },
     {
-      icon: Youtube,
-      url: "https://www.youtube.com/",
+      icon: FaLinkedinIn,
+      url: "https://linkedin.com",
+      color: "text-[#0A66C2]",
+      hoverBg: "hover:bg-[#0A66C2]",
     },
     {
-      icon: Instagram,
-      url: "https://www.instagram.com/",
+      icon: FaXTwitter,
+      url: "https://twitter.com",
+      color: "text-[#1DA1F2]",
+      hoverBg: "hover:bg-[#1DA1F2]",
     },
     {
-      icon: Linkedin,
-      url: "https://www.linkedin.com/",
+      icon: FaYoutube,
+      url: "https://youtube.com",
+      color: "text-[#FF0000]",
+      hoverBg: "hover:bg-[#FF0000]",
     },
   ];
-
   return (
     <footer className="relative bg-gray-900 text-white pt-16 pb-6 overflow-hidden">
       <div className="relative max-w-7xl mx-auto px-6 z-10">
@@ -149,15 +157,16 @@ const Footer = () => {
             <div className="flex gap-3">
               {socialLinks.map((item, i) => {
                 const Icon = item.icon;
+
                 return (
                   <a
                     key={i}
                     href={item.url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="w-9 h-9 flex items-center justify-center rounded-full bg-white/10 hover:bg-white hover:text-black transition"
+                    className={`w-10 h-10 flex items-center justify-center rounded-full bg-white shadow-md ${item.color} ${item.hoverBg} hover:text-white transition-all duration-300 hover:scale-110`}
                   >
-                    <Icon size={16} />
+                    <Icon size={18} />
                   </a>
                 );
               })}

@@ -1,8 +1,10 @@
 import { motion } from "framer-motion";
 import { Home } from "lucide-react";
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 const Contact = () => {
+  const navigate = useNavigate();
 
   const [formData, setFormData] = useState({
     name: "",
@@ -165,7 +167,9 @@ ${message}
                 empowerment to underserved communities.
               </p>
 
-              <button className="bg-white text-[#7cb342] font-semibold px-5 py-2 rounded-md hover:bg-gray-100 transition">
+              <button
+              onClick={() => navigate("/donate")}
+              className="bg-white text-[#7cb342] font-semibold px-5 py-2 rounded-md hover:bg-gray-100 transition">
                 Donate Now
               </button>
             </div>

@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import { useNavigate } from "react-router-dom";
 
 const Health = () => {
   useEffect(() => {
@@ -10,6 +11,8 @@ const Health = () => {
       easing: "ease-in-out",
     });
   }, []);
+
+  const navigate = useNavigate();
 
   return (
     <div className="font-sans text-gray-900 overflow-hidden">
@@ -33,7 +36,9 @@ const Health = () => {
               health challenges to ensure long-term well-being.
             </p>
 
-            <button className="bg-[#7cb342] text-white px-5 sm:px-6 py-3 rounded-full font-semibold hover:bg-[#689f38] transition duration-300">
+            <button
+            onClick={() => navigate("/contact")}
+            className="bg-[#7cb342] text-white px-5 sm:px-6 py-3 rounded-full font-semibold hover:bg-[#689f38] transition duration-300">
               Contact Now
             </button>
           </div>

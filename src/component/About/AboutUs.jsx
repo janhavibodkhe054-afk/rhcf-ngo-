@@ -168,7 +168,7 @@ const AboutUs = () => {
 
             <button
               onClick={() => navigate("/contact")}
-              className="px-6 py-3 bg-[#7cb342] text-black font-semibold rounded-lg hover:bg-yellow-400 transition"
+              className="px-6 py-3 bg-[#7cb342] text-black font-semibold rounded-lg transition"
             >
               Join Our Mission
             </button>

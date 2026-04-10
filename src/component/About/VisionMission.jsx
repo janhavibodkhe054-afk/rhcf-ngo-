@@ -1,16 +1,28 @@
-import React from "react";
+import React, { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const VisionMission = () => {
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+      once: true,
+      easing: "ease-in-out",
+    });
+  }, []);
+
   return (
     <div>
       <section
         id="about-vision-mission"
-        className="w-full bg-[#f9fafb] py-12 sm:py-16 md:py-20 lg:py-14 px-4 sm:px-6 md:px-10 lg:px-16"
+        className="w-full bg-[#f9fafb] py-12 sm:py-16 md:py-20 lg:py-28 px-4 sm:px-6 md:px-10 lg:px-16"
       >
         <div className="max-w-7xl mx-auto">
-
           {/* ===== SECTION HEADER ===== */}
-          <div className="text-center mb-12 sm:mb-16">
+          <div
+            className="text-center mb-12 sm:mb-16"
+            data-aos="fade-up"
+          >
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-800">
               Building Stronger Communities
             </h2>
@@ -22,13 +34,13 @@ const VisionMission = () => {
             </p>
           </div>
 
-          {/* ===== VISION & MISSION (NEW SECTION) ===== */}
-          <div className="grid md:grid-cols-2 gap-8 sm:gap-10 mb-16 sm:mb-20"
-          
-          >
-
+          {/* ===== VISION & MISSION ===== */}
+          <div className="grid md:grid-cols-2 gap-8 sm:gap-10 mb-16 sm:mb-20">
             {/* VISION */}
-            <div className="bg-white rounded-2xl shadow-md p-6 sm:p-8 hover:shadow-lg transition">
+            <div
+              data-aos="fade-right"
+              className="bg-white rounded-2xl shadow-md p-6 sm:p-8 hover:shadow-lg transition duration-300"
+            >
               <h3 className="text-2xl sm:text-3xl font-bold text-[#2f855a] mb-4">
                 Our Vision
               </h3>
@@ -48,7 +60,10 @@ const VisionMission = () => {
             </div>
 
             {/* MISSION */}
-            <div className="bg-white rounded-2xl shadow-md p-6 sm:p-8 hover:shadow-lg transition">
+            <div
+              data-aos="fade-left"
+              className="bg-white rounded-2xl shadow-md p-6 sm:p-8 hover:shadow-lg transition duration-300"
+            >
               <h3 className="text-2xl sm:text-3xl font-bold text-[#2f855a] mb-4">
                 Our Mission
               </h3>
@@ -74,20 +89,22 @@ const VisionMission = () => {
             </div>
           </div>
 
-          {/* ===== EDUCATION & CHILDREN SECTION ===== */}
+          {/* ===== EDUCATION & CHILDREN ===== */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-10 md:gap-12 items-center mb-16 sm:mb-20">
-            
             {/* Image */}
-            <div>
+            <div
+              data-aos="zoom-in"
+              className="overflow-hidden rounded-2xl"
+            >
               <img
                 src="/school.jpeg"
                 alt="Child Education & Community"
-                className="rounded-2xl shadow-lg w-full h-[240px] sm:h-[320px] md:h-[380px] lg:h-full object-cover"
+                className="rounded-2xl shadow-lg w-full h-[240px] sm:h-[320px] md:h-[380px] lg:h-full object-cover transition duration-700 hover:scale-110"
               />
             </div>
 
             {/* Content */}
-            <div>
+            <div data-aos="fade-left">
               <h3 className="text-xl sm:text-2xl md:text-3xl font-bold text-[#2f855a] mb-4">
                 Empowering Children and Families
               </h3>
@@ -107,11 +124,13 @@ const VisionMission = () => {
             </div>
           </div>
 
-          {/* ===== COMMUNITY IMPACT SECTION ===== */}
+          {/* ===== COMMUNITY IMPACT ===== */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-10 md:gap-12 items-center">
-
             {/* Content */}
-            <div className="order-2 lg:order-1">
+            <div
+              className="order-2 lg:order-1"
+              data-aos="fade-right"
+            >
               <h3 className="text-xl sm:text-2xl md:text-3xl font-bold text-[#2f855a] mb-4">
                 Strengthening Communities
               </h3>
@@ -132,15 +151,17 @@ const VisionMission = () => {
             </div>
 
             {/* Image */}
-            <div className="order-1 lg:order-2">
+            <div
+              className="order-1 lg:order-2 overflow-hidden rounded-2xl"
+              data-aos="zoom-in"
+            >
               <img
                 src="/gallery1.jpeg"
                 alt="Community Engagement & Impact"
-                className="rounded-2xl shadow-lg w-full h-[240px] sm:h-[320px] md:h-[380px] lg:h-full object-cover"
+                className="rounded-2xl shadow-lg w-full h-[240px] sm:h-[320px] md:h-[380px] lg:h-full object-cover transition duration-700 hover:scale-110"
               />
             </div>
           </div>
-
         </div>
       </section>
     </div>

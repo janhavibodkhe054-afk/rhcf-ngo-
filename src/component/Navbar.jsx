@@ -63,14 +63,22 @@ const Navbar = () => {
         style={{ height: `${navbarHeight}px` }}
       >
         <div className="flex items-center justify-between px-4 sm:px-6 md:px-10 lg:px-16 h-full">
-          
           {/* LOGO */}
-          <NavLink to="/" className="flex items-center h-full">
+          <NavLink to="/" className="flex items-center h-full gap-3">
             <img
               src="/logo.png"
               alt="Logo"
               className="h-16 sm:h-16 md:h-20 lg:h-20 object-contain"
             />
+
+            <div className="flex flex-col leading-tight">
+              <span className="text-sm sm:text-base md:text-lg lg:text-xl font-bold text-gray-800">
+                Rajasthan Human Care
+              </span>
+              <span className="text-xs sm:text-sm md:text-base text-gray-600">
+                Foundation
+              </span>
+            </div>
           </NavLink>
 
           {/* DESKTOP MENU */}
@@ -87,9 +95,7 @@ const Navbar = () => {
                 >
                   <button
                     className={`flex items-center gap-1 transition ${
-                      isActive
-                        ? "text-[#7cb342]"
-                        : "hover:text-[#7cb342]"
+                      isActive ? "text-[#7cb342]" : "hover:text-[#7cb342]"
                     }`}
                   >
                     {menu.title}
@@ -160,9 +166,7 @@ const Navbar = () => {
             <div key={index}>
               <button
                 className="flex justify-between w-full font-semibold py-2"
-                onClick={() =>
-                  setOpenMenu(openMenu === index ? null : index)
-                }
+                onClick={() => setOpenMenu(openMenu === index ? null : index)}
               >
                 {menu.title}
                 <ChevronDown

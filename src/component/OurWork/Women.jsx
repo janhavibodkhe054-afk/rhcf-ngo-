@@ -2,9 +2,11 @@ import React, { useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import { useNavigate } from "react-router-dom";
 
 const Women = () => {
   const location = useLocation();
+  const navigate = useNavigate();
 
   useEffect(() => {
     AOS.init({
@@ -111,7 +113,10 @@ const Women = () => {
               </div>
             </div>
 
-            <button className="bg-[#7cb342] text-white px-5 sm:px-6 py-3 rounded-full font-semibold hover:bg-[#689f38] transition duration-300">
+            <button
+              onClick={() => navigate("/donate")}
+              className="bg-[#7cb342] text-white px-5 sm:px-6 py-3 rounded-full font-semibold hover:bg-[#689f38] transition duration-300"
+            >
               Donate Now
             </button>
           </div>

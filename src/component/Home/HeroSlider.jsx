@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 
@@ -32,60 +32,60 @@ export default function HeroSlider() {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrent((prev) => (prev + 1) % slides.length);
-    }, 4000);
+    }, 5000);
+
     return () => clearInterval(interval);
   }, []);
 
   return (
     <section className="relative w-full h-[85vh] sm:h-[90vh] md:h-[95vh] overflow-hidden">
-
-      {/* Slides */}
-      {slides.map((slide, index) => (
-        <div
-          key={index}
-          className={`absolute inset-0 transition-opacity duration-1000 ${
-            index === current ? "opacity-100 z-10" : "opacity-0 z-0"
-          }`}
+      <AnimatePresence mode="wait">
+        <motion.div
+          key={current}
+          className="absolute inset-0"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+          transition={{ duration: 1 }}
         >
-          {/* Background */}
-          <div
-            className="w-full h-full bg-cover bg-center"
-            style={{ backgroundImage: `url(${slide.image})` }}
+          {/* Background Image with Zoom Animation */}
+          <motion.div
+            className="absolute inset-0 w-full h-full bg-cover bg-center"
+            style={{
+              backgroundImage: `url(${slides[current].image})`,
+            }}
+            initial={{ scale: 1 }}
+            animate={{ scale: 1.12 }}
+            transition={{
+              duration: 5,
+              ease: "linear",
+            }}
           />
 
           {/* Overlay */}
           <div className="absolute inset-0 bg-black/30"></div>
 
           {/* Content */}
-          <div className="absolute inset-0 flex items-center 
-          justify-center md:justify-end px-5 sm:px-8 md:px-16">
-
-            <div className="
-              w-full 
-              max-w-md sm:max-w-lg md:max-w-xl 
-              text-center md:text-right
-            ">
-
+          <div className="absolute inset-0 flex items-center justify-center md:justify-end px-5 sm:px-8 md:px-16">
+            <div className="w-full max-w-md sm:max-w-lg md:max-w-xl text-center md:text-right">
               {/* Title */}
               <motion.h1
-                key={slide.title}
                 initial={{ opacity: 0, x: 80 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.8 }}
                 className="text-white text-2xl sm:text-3xl md:text-5xl font-bold leading-tight"
               >
-                {slide.title}
+                {slides[current].title}
               </motion.h1>
 
               {/* Description */}
               <motion.p
-                key={slide.desc}
                 initial={{ opacity: 0, x: 50 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ delay: 0.3 }}
                 className="text-white mt-3 sm:mt-4 text-sm sm:text-base md:text-xl leading-relaxed"
               >
-                {slide.desc}
+                {slides[current].desc}
               </motion.p>
 
               {/* Buttons */}
@@ -93,10 +93,7 @@ export default function HeroSlider() {
                 initial={{ opacity: 0, scale: 0.9 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ delay: 0.5 }}
-                className="flex 
-                  justify-center md:justify-end 
-                  gap-3 sm:gap-4 
-                  mt-5 sm:mt-6 flex-wrap"
+                className="flex justify-center md:justify-end gap-3 sm:gap-4 mt-5 sm:mt-6 flex-wrap"
               >
                 <button
                   onClick={() => navigate("/donate")}
@@ -106,17 +103,16 @@ export default function HeroSlider() {
                 </button>
 
                 <button
-                  onClick={() => navigate("/about")}
+                  onClick={() => navigate("/aboutus")}
                   className="bg-white text-black px-5 sm:px-6 py-2.5 sm:py-3 rounded-full font-semibold shadow-lg transition"
                 >
                   About Us
                 </button>
               </motion.div>
-
             </div>
           </div>
-        </div>
-      ))}
+        </motion.div>
+      </AnimatePresence>
     </section>
   );
 }
