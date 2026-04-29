@@ -64,12 +64,7 @@ const WashHero = () => {
               Donate Now
             </button>
 
-            <button
-              onClick={() => navigate("/about")}
-              className="px-6 py-3 rounded-full border border-[#7cb342] text-[#2e7d32] font-semibold hover:bg-[#e8f5e9] transition"
-            >
-              Learn More
-            </button>
+            
           </div>
         </div>
 

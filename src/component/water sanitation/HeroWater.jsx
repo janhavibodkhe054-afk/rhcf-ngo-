@@ -57,19 +57,7 @@ const HeroWater = () => {
         </p>
 
         {/* Buttons */}
-        <div
-          data-aos="fade-up"
-          data-aos-delay="300"
-          className="mt-6 flex flex-col sm:flex-row gap-3 justify-center"
-        >
-          <button className="px-6 py-2.5 rounded-full bg-[#7cb342] text-white text-sm font-semibold hover:scale-105 transition">
-            Explore Mission
-          </button>
-
-          <button className="px-6 py-2.5 rounded-full border border-white text-white text-sm hover:bg-white hover:text-black transition">
-            Get Involved
-          </button>
-        </div>
+       
       </div>
 
       {/* Bottom fade */}

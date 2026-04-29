@@ -1,6 +1,9 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
 const WashHighlight = () => {
+const navigate = useNavigate();
+
   return (
     <section className="py-20 px-5 md:px-10 bg-gradient-to-br from-[#f1f8e9] via-white to-[#e8f5e9]">
       <div className="max-w-6xl mx-auto">
@@ -34,11 +37,15 @@ const WashHighlight = () => {
 
             {/* Buttons */}
             <div className="flex gap-4 flex-wrap">
-              <button className="px-7 py-3 bg-[#7cb342] text-white rounded-full font-semibold shadow-lg hover:shadow-[#7cb342]/40 hover:scale-105 transition duration-300">
-                Learn More
+              <button
+              onClick={() => navigate("/contact")}
+              className="px-7 py-3 bg-[#7cb342] text-white rounded-full font-semibold shadow-lg hover:shadow-[#7cb342]/40 hover:scale-105 transition duration-300">
+                Connect
               </button>
 
-              <button className="px-7 py-3 border-2 border-[#7cb342] text-[#7cb342] rounded-full font-semibold hover:bg-[#7cb342] hover:text-white transition duration-300">
+              <button
+              onClick={() => navigate("/get-involved")}
+              className="px-7 py-3 border-2 border-[#7cb342] text-[#7cb342] rounded-full font-semibold hover:bg-[#7cb342] hover:text-white transition duration-300">
                 Get Involved
               </button>
             </div>
