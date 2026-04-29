@@ -40,6 +40,8 @@ import Agri from "./pages/Agri";
 import GroundWater from "./pages/GroundWater";
 import SuccessStories from "./pages/SuccessStories";
 
+import TechnicalStrength from "./pages/TechnicalStrength";
+
 
 const App = () => {
   return (
@@ -59,6 +61,7 @@ const App = () => {
         <Route path="/vision" element={<VisionMission />} />
         <Route path="/team" element={<OurTeamLeader />} />
         <Route path="/journey" element={<OurJourney />} />
+        <Route path="/technical" element={<TechnicalStrength />} />
 
         {/* Our Work */}
 

@@ -8,6 +8,7 @@ import Recognition from "../component/Home/Recognition";
 import SDGSection from "../component/Home/SDGSection";
 import NgoInfoSection from "../component/Home/NgoInfoSection";
 import Certificate from "../component/Home/Certificate";
+import FundingPartners from "../component/Home/FundingPartners";
 
 const Home = () => {
   return (
@@ -20,6 +21,7 @@ const Home = () => {
       <NgoInfoSection/>
       <Recognition/>
       <SupportCause/>
+      <FundingPartners/>
     </div>
   );
 };

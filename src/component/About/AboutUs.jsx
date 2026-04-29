@@ -79,7 +79,7 @@ const AboutUs = () => {
             <p className="text-gray-700 leading-relaxed mb-6 text-sm sm:text-base md:text-lg lg:text-xl">
               Since 2003, RHCF has been working at the grassroots level to
               empower underserved communities across Rajasthan, Madhya Pradesh,
-              Zharkhand, and Uttar Pradesh. Our work includes adopting villages,
+              Jharkhand, and Uttar Pradesh. Our work includes adopting villages,
               improving health and sanitation, organizing awareness camps, and
               promoting rainwater harvesting and environmental conservation.
             </p>

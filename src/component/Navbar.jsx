@@ -16,6 +16,7 @@ const Navbar = () => {
         { name: "Vision & Mission", path: "/vision" },
         { name: "Our Team", path: "/team" },
         { name: "Our Journey", path: "/journey" },
+        { name: "Technical Strength", path: "/technical" },
       ],
     },
     {

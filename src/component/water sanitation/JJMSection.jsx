@@ -44,7 +44,7 @@ const JJMSection = () => {
           {/* IMAGE */}
           <div className="rounded-2xl overflow-hidden shadow-lg">
             <img
-              src="/water1.jpg"
+              src="https://img.manoramayearbook.in/content/dam/yearbook/learn/current-affairs/india/images/2025/3/25/jal-jeevan-mission-25a.jpg"
               alt="Water Mission"
               className="w-full h-full object-cover"
             />
