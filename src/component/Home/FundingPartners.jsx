@@ -22,6 +22,11 @@ const partners = [
   { img: "/doc19.png" },
 ];
 
+// 👉 split into 2 rows
+const half = Math.ceil(partners.length / 2);
+const row1 = partners.slice(0, half);
+const row2 = partners.slice(half);
+
 const FundingPartners = () => {
   return (
     <section className="relative py-20 overflow-hidden bg-white">
@@ -43,34 +48,30 @@ const FundingPartners = () => {
           </p>
         </div>
 
-        {/* 🔷 SCROLLER */}
-        <div className="relative">
-
-          {/* FADE EDGES */}
-          <div className="absolute left-0 top-0 w-28 h-full bg-gradient-to-r from-[#f0fdf4] to-transparent z-10"></div>
-          <div className="absolute right-0 top-0 w-28 h-full bg-gradient-to-l from-[#fdf2f8] to-transparent z-10"></div>
+        {/* 🔷 ROW 1 (LEFT → RIGHT) */}
+        <div className="relative mb-10">
+          <div className="absolute left-0 top-0 w-24 h-full bg-gradient-to-r from-white to-transparent z-10"></div>
+          <div className="absolute right-0 top-0 w-24 h-full bg-gradient-to-l from-white to-transparent z-10"></div>
 
           <div className="flex overflow-hidden group">
             <div className="flex animate-marquee gap-12 group-hover:[animation-play-state:paused]">
-
-              {[...partners, ...partners].map((item, index) => (
-                <div
-                  key={index}
-                  className="min-w-[220px] h-[150px] flex items-center justify-center 
-                  bg-white/70 backdrop-blur-lg border border-white/40
-                  rounded-2xl shadow-lg transition duration-500
-                  hover:scale-110 hover:-rotate-1
-                  hover:shadow-[0_10px_40px_rgba(0,0,0,0.15)]"
-                >
-                  <img
-                    src={item.img}
-                    alt="partner"
-                    className="max-h-30  object-contain transition duration-500 
-                    "
-                  />
-                </div>
+              {[...row1, ...row1].map((item, index) => (
+                <Card key={index} img={item.img} />
               ))}
+            </div>
+          </div>
+        </div>
 
+        {/* 🔷 ROW 2 (RIGHT → LEFT) */}
+        <div className="relative">
+          <div className="absolute left-0 top-0 w-24 h-full bg-gradient-to-r from-white to-transparent z-10"></div>
+          <div className="absolute right-0 top-0 w-24 h-full bg-gradient-to-l from-white to-transparent z-10"></div>
+
+          <div className="flex overflow-hidden group">
+            <div className="flex animate-marquee-reverse gap-12 group-hover:[animation-play-state:paused]">
+              {[...row2, ...row2].map((item, index) => (
+                <Card key={index} img={item.img} />
+              ))}
             </div>
           </div>
         </div>
@@ -85,12 +86,40 @@ const FundingPartners = () => {
             100% { transform: translateX(-50%); }
           }
 
+          @keyframes marqueeReverse {
+            0% { transform: translateX(-50%); }
+            100% { transform: translateX(0); }
+          }
+
           .animate-marquee {
-            animation: marquee 35s linear infinite;
+            animation: marquee 30s linear infinite;
+          }
+
+          .animate-marquee-reverse {
+            animation: marqueeReverse 30s linear infinite;
           }
         `}
       </style>
     </section>
+  );
+};
+
+// 🔷 CARD COMPONENT (clean reuse)
+const Card = ({ img }) => {
+  return (
+    <div
+      className="min-w-[220px] h-[150px] flex items-center justify-center 
+      bg-white/70 backdrop-blur-lg border border-white/40
+      rounded-2xl shadow-lg transition duration-500
+      hover:scale-110 hover:-rotate-1
+      hover:shadow-[0_10px_40px_rgba(0,0,0,0.15)]"
+    >
+      <img
+        src={img}
+        alt="partner"
+        className="max-h-28 object-contain"
+      />
+    </div>
   );
 };
 
