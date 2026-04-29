@@ -112,7 +112,7 @@ const Stories = () => {
       </div>
 
       {/* ================= STORIES ================= */}
-      <div className="max-w-5xl mx-auto px-6 pb-24 space-y-20">
+      <div className="max-w-7xl mx-auto px-6 pb-24 space-y-20">
         {storiesData.map((story, index) => (
           <div key={index}>
             {/* NAME */}

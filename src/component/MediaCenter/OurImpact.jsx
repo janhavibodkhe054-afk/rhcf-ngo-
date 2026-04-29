@@ -106,7 +106,7 @@ const OurImpact = () => {
           </div>
 
           <img
-            src="/impactimg2.jpg"
+            src="/imactbg.jpg"
             className="rounded-3xl shadow-xl w-full"
             alt=""
             data-aos="zoom-in"
@@ -155,7 +155,7 @@ const OurImpact = () => {
       <section
         className="relative py-16 sm:py-20 md:py-24 px-6 md:px-16 text-white bg-cover bg-center bg-no-repeat"
         style={{
-          backgroundImage: "url('/imactbg.jpg')",
+          backgroundImage: "url('https://t4.ftcdn.net/jpg/04/85/19/79/360_F_485197985_WvYk76tNcmHcjW1Nvhbfk6pDWreeVFi2.jpg')",
         }}
         data-aos="zoom-in"
       >

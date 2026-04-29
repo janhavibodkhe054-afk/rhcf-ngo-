@@ -28,7 +28,7 @@ const OurTeamLeader = () => {
     <div>
       <section
         id="team"
-        className="w-full bg-[#f8fafc] py-12 sm:py-16 md:py-20 lg:pt-28 px-4 sm:px-6 md:px-10 lg:px-16"
+        className="w-full bg-[#f8fafc] pb-12 sm:pb-16 md:pb-10 lg:pt-28 px-4 sm:px-6 md:px-10 lg:px-16"
       >
         <div className="max-w-7xl mx-auto">
           {/* SECTION HEADER */}
@@ -63,7 +63,7 @@ const OurTeamLeader = () => {
                 data-aos="zoom-in"
               >
                 <img
-                  src="/founder1.jpeg"
+                  src="/dharmendra.jpeg"
                   alt="Dharmender Singh"
                   className="w-64 h-96 mx-auto rounded-2xl object-cover mb-4 transition duration-500 hover:scale-105"
                 />
@@ -181,12 +181,12 @@ const OurTeamLeader = () => {
                   {
                     name: "Harsh Bhabhra",
                     position: "Operations Supervisor",
-                    photo: "/founder3.jpeg",
+                    photo: "/harsh.jpeg",
                   },
                   {
                     name: "Naveen Sharma",
                     position: "Program Officer",
-                    photo: "/founder4.jpeg",
+                    photo: "/naveen.jpeg",
                   },
                 ].map((member, i) => (
                   <div

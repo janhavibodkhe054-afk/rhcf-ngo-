@@ -18,28 +18,28 @@ const NGOInfoSection = () => {
         {/* Content */}
         <div className="mt-6 sm:mt-8 space-y-5 sm:space-y-6 text-gray-600 text-sm sm:text-base md:text-lg leading-relaxed">
 
-          <p className="max-w-3xl mx-auto">
+          <p className="max-w-6xl mx-auto">
             At Rajasthan Human Care Foundation, we believe that real and lasting 
             change cannot be imposed — it must be built from within. Every 
             initiative we undertake is rooted in participation, where communities 
             are not just beneficiaries, but active partners in their own development journey.
           </p>
 
-          <p className="max-w-3xl mx-auto">
+          <p className="max-w-6xl mx-auto">
             Our approach is centered on dignity, equality, and collective growth. 
             We work to create an environment where individuals are empowered with 
             knowledge, skills, and confidence to make informed decisions and lead 
             better lives.
           </p>
 
-          <p className="max-w-3xl mx-auto">
+          <p className="max-w-6xl mx-auto">
             We emphasize strengthening human potential by nurturing local 
             leadership, encouraging innovation, and promoting a spirit of 
             self-dependence. By doing so, we aim to create communities that are 
             resilient, capable, and prepared to overcome future challenges.
           </p>
 
-          <p className="max-w-3xl mx-auto">
+          <p className="max-w-6xl mx-auto">
             Every step we take is guided by integrity, transparency, and a deep 
             commitment to social justice — ensuring that progress is inclusive, 
             ethical, and sustainable for generations to come.

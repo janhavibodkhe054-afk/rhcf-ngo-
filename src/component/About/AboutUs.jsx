@@ -65,7 +65,6 @@ const AboutUs = () => {
       {/* ===== HERO SECTION ===== */}
       <section className="relative w-full overflow-hidden bg-gradient-to-br from-[#7cb342] via-green-100 to-white">
         <div className="grid grid-cols-1 lg:grid-cols-2 items-stretch min-h-[500px] lg:min-h-[600px]">
-          
           {/* LEFT CONTENT */}
           <div
             className="px-4 sm:px-6 md:px-10 lg:px-16 py-12 sm:py-16 lg:py-24 flex flex-col justify-center text-gray-900"
@@ -80,9 +79,9 @@ const AboutUs = () => {
             <p className="text-gray-700 leading-relaxed mb-6 text-sm sm:text-base md:text-lg lg:text-xl">
               Since 2003, RHCF has been working at the grassroots level to
               empower underserved communities across Rajasthan, Madhya Pradesh,
-              and Uttar Pradesh. Our work includes adopting villages, improving
-              health and sanitation, organizing awareness camps, and promoting
-              rainwater harvesting and environmental conservation.
+              Zharkhand, and Uttar Pradesh. Our work includes adopting villages,
+              improving health and sanitation, organizing awareness camps, and
+              promoting rainwater harvesting and environmental conservation.
             </p>
 
             <p className="text-gray-700 leading-relaxed text-sm sm:text-base md:text-lg lg:text-xl">
@@ -128,11 +127,11 @@ const AboutUs = () => {
             </h2>
 
             <p>
-              RHCF implements programs in child education, healthcare,
-              sanitation, women empowerment, livelihood development, and
-              environmental conservation. We also conduct training sessions,
-              awareness campaigns, and capacity building for local communities
-              and governing bodies.
+              RHCF implements programs in healthcare, sanitation, women
+              empowerment, livelihood development, environmental conservation
+              and child education. We also conduct training sessions, awareness
+              campaigns, and capacity building for local communities and
+              governing bodies.
             </p>
 
             <p>
@@ -200,29 +199,91 @@ const AboutUs = () => {
       {/* ===== CORE VALUES ===== */}
       <section className="w-full bg-white py-12 sm:py-16 lg:py-20 px-4 sm:px-6 md:px-10 lg:px-16">
         <div className="max-w-7xl mx-auto">
-          
-          <div
-            className="flex flex-wrap justify-center gap-4 sm:gap-6 md:gap-8 mb-12 sm:mb-16"
-            data-aos="fade-up"
-          >
-            {values.map((item, i) => (
-              <div
-                key={i}
-                className="relative w-[90px] h-[90px] sm:w-[100px] sm:h-[100px] md:w-[115px] md:h-[115px] lg:w-[125px] lg:h-[125px]"
-              >
-                <div className="absolute inset-0 rounded-full border-[3px] sm:border-[4px] border-[#e6c27a]" />
-                <div className="absolute inset-[8px] rounded-full bg-[#faf7f2] flex flex-col items-center justify-center text-[9px] sm:text-[10px] md:text-[11px] font-semibold text-gray-600 text-center whitespace-pre-line px-1 sm:px-2 gap-1">
-                  <span className="text-[#b08a3c]">{item.icon}</span>
-                  {item.text}
-                </div>
-              </div>
-            ))}
-          </div>
+          <div className="w-full py-14 overflow-x-auto" data-aos="fade-up">
+            <div className="flex items-center justify-center min-w-max gap-5 px-4">
+              {values.slice(0, 5).map((item, i) => (
+                <React.Fragment key={i}>
+                  {/* Circle Card */}
+                  <div
+                    className="group relative shrink-0
+                     w-[95px] h-[95px]
+                     sm:w-[110px] sm:h-[110px]
+                     md:w-[125px] md:h-[125px]
+                     lg:w-[135px] lg:h-[135px]
+                     transition-all duration-500 hover:scale-110 hover:-translate-y-3"
+                    data-aos="zoom-in-up"
+                    data-aos-delay={i * 120}
+                  >
+                    {/* Outer Glow Ring */}
+                    <div className="absolute -inset-1 rounded-full bg-gradient-to-r from-[#f6deb0] via-[#d4af37] to-[#b08a3c] blur-md opacity-40 group-hover:opacity-70 transition-all duration-500" />
 
+                    {/* Main Circle */}
+                    <div
+                      className="relative w-full h-full rounded-full bg-white
+                       border border-[#f4e3b2]
+                       shadow-2xl
+                       flex flex-col items-center justify-center
+                       text-center px-3"
+                    >
+                      {/* Step Badge */}
+                      <div
+                        className="absolute -top-3 left-1/2 -translate-x-1/2
+                         w-7 h-7 rounded-full bg-[#b08a3c]
+                         text-white text-xs font-bold
+                         flex items-center justify-center
+                         shadow-lg"
+                      >
+                        {i + 1}
+                      </div>
+
+                      {/* Icon */}
+                      <div
+                        className="text-[#b08a3c] text-xl sm:text-2xl md:text-3xl mb-1
+                         transition-all duration-500
+                         group-hover:scale-125 group-hover:rotate-6"
+                      >
+                        {item.icon}
+                      </div>
+
+                      {/* Heading */}
+                      <h4 className="text-[10px] sm:text-[11px] md:text-[12px] font-bold text-gray-800 leading-tight">
+                        {item.text}
+                      </h4>
+
+                      {/* Sub Text */}
+                      <p className="text-[8px] sm:text-[9px] text-gray-500 mt-1">
+                        Trusted Quality
+                      </p>
+                    </div>
+                  </div>
+
+                  {/* Connector Arrow */}
+                  {i !== 4 && (
+                    <div className="relative flex items-center shrink-0">
+                      {/* Premium line */}
+                      <div className="w-10 sm:w-12 md:w-14 lg:w-16 h-[2px] bg-gradient-to-r from-[#e6c27a] to-[#b08a3c]" />
+
+                      {/* Arrow Head */}
+                      <div className="text-[#b08a3c] text-lg sm:text-xl animate-pulse ml-1">
+                        ➜
+                      </div>
+
+                      {/* Connector Number */}
+                      <div
+                        className="absolute left-1/2 -translate-x-1/2 -bottom-5
+                         text-[10px] font-semibold text-[#b08a3c]"
+                      >
+                        0{i + 1}
+                      </div>
+                    </div>
+                  )}
+                </React.Fragment>
+              ))}
+            </div>
+          </div>
           {/* LEFT CONTENT + IMAGE */}
           <section className="py-12 sm:py-16 px-4 sm:px-6 md:px-10 lg:px-16 bg-white">
             <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
-              
               <div
                 className="text-gray-700 text-sm sm:text-base md:text-lg lg:text-xl leading-relaxed space-y-6 text-center lg:text-left"
                 data-aos="fade-right"

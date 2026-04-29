@@ -5,23 +5,23 @@ import { useNavigate } from "react-router-dom";
 const slides = [
   {
     image: "/hero1.png",
-    title: "FEED AND EDUCATE",
-    desc: "Rajasthan Human Care Foundation is dedicated to ensuring that no child sleeps hungry or remains deprived of education. Through our initiatives, we provide nutritious meals, access to quality learning, and a safe environment for growth. Our efforts aim to break the cycle of poverty by empowering children with knowledge and opportunities. Together, we nurture hope and build a foundation for a brighter and more secure future.",
+    title: "SAFE WATER FOR EVERY HOME",
+    desc: "Rajasthan Human Care Foundation is transforming rural lives through clean and sustainable water access under Jal Jeevan Mission and Atal Bhujal Yojana. We work to provide safe drinking water, strengthen village water committees, promote rainwater harvesting, and build long-term water security solutions for communities across India.",
   },
   {
     image: "/hero2.png",
-    title: "EMPOWER EVERY CHILD",
-    desc: "We believe every child deserves the chance to dream, learn, and succeed in life. Our programs focus on holistic development, including education, health, and emotional well-being. By supporting children with the right resources and guidance, we help them unlock their true potential. Our mission is to create confident individuals who can shape a better tomorrow for themselves and their communities.",
+    title: "EMPOWERING FARMERS & RURAL LIVELIHOODS",
+    desc: "We empower farmers through sustainable agriculture, soil health testing, irrigation awareness, farmer producer groups, and advanced farming techniques. RHCF supports improved productivity, better market access, and stronger livelihoods for rural families through innovation and community-led development.",
   },
   {
     image: "/hero3.png",
-    title: "SUPPORT COMMUNITIES",
-    desc: "Our work extends beyond individuals to uplift entire communities through sustainable development. We focus on improving access to clean water, healthcare, education, and livelihood opportunities. By working closely with local communities, we ensure long-term impact and self-reliance. Together, we build stronger, healthier, and more resilient societies for future generations.",
+    title: "SANITATION, HEALTH & COMMUNITY DEVELOPMENT",
+    desc: "Our mission extends to sanitation, hygiene awareness, and healthier communities through Swachh Bharat and WASH initiatives. From village sanitation drives to capacity building programs, we work to reduce disease, improve hygiene practices, and create cleaner, safer environments for every family.",
   },
   {
     image: "/hero4.jpg",
-    title: "SPREAD HOPE",
-    desc: "Hope is the driving force behind every positive change we create. Through compassion, collaboration, and dedicated efforts, we bring light into the lives of those in need. Our initiatives aim to restore dignity, inspire confidence, and create new opportunities. Together, we can build a world where every individual has the chance to live with respect, purpose, and hope.",
+    title: "SKILL DEVELOPMENT & SOCIAL IMPACT",
+    desc: "RHCF creates opportunities for youth, women, and vulnerable communities through skill development, education support, and livelihood programs. With impactful training initiatives and community empowerment projects, we are building a future driven by dignity, self-reliance, and sustainable growth.",
   },
 ];
 

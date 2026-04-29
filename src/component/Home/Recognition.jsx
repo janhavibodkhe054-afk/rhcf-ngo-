@@ -26,7 +26,6 @@ const Recognition = () => {
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 md:px-8 lg:px-10">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-10 lg:gap-14 items-center">
-          
           {/* IMAGE */}
           <div
             data-aos="fade-right"
@@ -45,32 +44,30 @@ const Recognition = () => {
             className="bg-white/95 backdrop-blur-md p-6 sm:p-8 md:p-10 lg:p-12 rounded-2xl shadow-2xl"
           >
             <span className="text-[#7cb342] font-semibold uppercase tracking-widest text-xs sm:text-sm">
-              Rajasthan Human Care Foundation
+              Recognized Social Impact Organization
             </span>
 
-            <h2 className="mt-4 text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-800 leading-tight">
-              Transforming Lives Across Rajasthan
+            <h2 className="mt-4 text-2xl sm:text-3xl md:text-4xl lg:text-4xl font-bold text-gray-800 leading-tight">
+              22+ Years of Transforming Communities
             </h2>
 
             <h3 className="text-base sm:text-lg md:text-xl text-gray-600 mt-3 font-semibold">
-              A Grassroots Movement
+              Trusted Across 10 States in India
             </h3>
 
             <p className="mt-5 sm:mt-6 text-gray-600 leading-relaxed text-sm sm:text-base md:text-lg">
-              Rajasthan Human Care Foundation is committed to uplifting
-              underserved communities through education, healthcare,
-              women empowerment, and sustainable livelihood programs.
-              Our mission is to create lasting change that empowers
-              individuals to build a better future.
+              Rajasthan Human Care Foundation has been creating measurable
+              social impact since 2003 through water security, sanitation,
+              farmer empowerment, skill development, and rural transformation
+              initiatives. Recognized as a Key Resource Centre by Jal Shakti
+              Mantralaya, RHCF continues to build sustainable and self-reliant
+              communities across India.
             </p>
-
             <button
               onClick={() => navigate("/stories")}
               className="mt-6 sm:mt-8 px-6 sm:px-7 py-3 bg-[#7cb342] text-white rounded-full font-semibold shadow-md hover:bg-[#689f38] hover:scale-105 transition duration-300"
-              data-aos="zoom-in"
-              data-aos-delay="200"
             >
-              Explore Our Stories
+              View Our Success Stories
             </button>
           </div>
         </div>

@@ -3,7 +3,7 @@ import {
   FaFacebookF,
   FaInstagram,
   FaLinkedinIn,
-  FaYoutube,
+  
   FaXTwitter,
 } from "react-icons/fa6";
 
@@ -23,12 +23,25 @@ const Footer = () => {
     {
       title: "OUR WORK",
       items: [
-        { name: "Education", path: "/education" },
-        { name: "Health Care Program", path: "/health" },
-        { name: "Women Empowerment", path: "/women" },
+        { name: "Water Sanitation & Hygiene management", path: "/hygine" },
+        {
+          name: "Health & hygiene & drinking water management",
+          path: "/water",
+        },
+        { name: "Agriculture & Live", path: "/agri" },
+        { name: "Ground Water", path: "/groundwater" },
         { name: "Skill Development", path: "/skill" },
-        { name: "Child Welfare", path: "/child" },
-        { name: "Community Development", path: "/community" },
+        { name: "Women Empowerment", path: "/women" },
+        { name: "Community Awareness Program", path: "/community" },
+        { name: "Education", path: "/education" },
+      ],
+    },
+    {
+      title: "GET INVOLVED", // ✅ NEW
+      items: [
+        { name: "Donate", path: "/donate" },
+        { name: "Volunteer", path: "/get-involved" },
+        
       ],
     },
     {
@@ -38,6 +51,7 @@ const Footer = () => {
         { name: "Success Stories", path: "/stories" },
         { name: "Testimonials", path: "/testimonials" },
         { name: "Photo Gallery", path: "/photo" },
+        { name: "Newsletter", path: "/newspaper" },
       ],
     },
     {
@@ -46,7 +60,13 @@ const Footer = () => {
         { name: "Annual Reports", path: "/reports" },
         { name: "Publications", path: "/publications" },
         { name: "Policies", path: "/policies" },
-        { name: "Newsletter", path: "/newspaper" }, // ✅ added
+      ],
+    },
+    {
+      title: "CONTACT", // ✅ NEW
+      items: [
+        { name: "Contact Us", path: "/contact" },
+        
       ],
     },
   ];
@@ -76,18 +96,15 @@ const Footer = () => {
       color: "text-[#1DA1F2]",
       hoverBg: "hover:bg-[#1DA1F2]",
     },
-    {
-      icon: FaYoutube,
-      url: "https://youtube.com",
-      color: "text-[#FF0000]",
-      hoverBg: "hover:bg-[#FF0000]",
-    },
+    
   ];
+
   return (
     <footer className="relative bg-gray-900 text-white pt-16 pb-6 overflow-hidden">
       <div className="relative max-w-7xl mx-auto px-6 z-10">
-        {/* TOP GRID */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-sm mb-12">
+
+        {/* 🔷 TOP GRID */}
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 text-sm mb-12">
           {menus.map((menu, index) => (
             <div key={index}>
               <h3 className="text-white font-semibold mb-4 text-sm border-b border-gray-700 pb-1">
@@ -110,8 +127,9 @@ const Footer = () => {
           ))}
         </div>
 
-        {/* CONTACT + CTA */}
+        {/* 🔷 CONTACT + CTA */}
         <div className="grid md:grid-cols-2 gap-10 items-center mb-10">
+
           {/* LEFT */}
           <div className="space-y-4 text-gray-400 text-sm">
             <h3 className="text-xl font-semibold text-white">
@@ -174,14 +192,13 @@ const Footer = () => {
           </div>
         </div>
 
-        {/* BOTTOM */}
+        {/* 🔷 BOTTOM */}
         <div className="border-t border-gray-800 pt-4 flex flex-col md:flex-row justify-between items-center text-sm text-gray-500 gap-3">
           <p>
             © {new Date().getFullYear()} Rajasthan Human Care Foundation. All
             Rights Reserved.
           </p>
 
-          {/* ✅ NEW DESIGN CREDIT */}
           <p className="text-gray-400 text-sm">
             Design & Developed by{" "}
             <span className="text-white font-medium">
@@ -189,6 +206,7 @@ const Footer = () => {
             </span>
           </p>
         </div>
+
       </div>
     </footer>
   );

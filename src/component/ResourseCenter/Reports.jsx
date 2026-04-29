@@ -72,7 +72,7 @@ const Reports = () => {
         "The foundation maintained high standards of transparency and accountability throughout the year. Financial audits, CSR compliance frameworks, and monitoring systems ensured that all programs were executed efficiently and ethically. Regular impact assessments and community feedback mechanisms helped in refining strategies and improving program effectiveness.",
 
       governance: [
-        "FCRA Compliance",
+       
         "CSR Reporting",
         "Audited Financial Reports",
         "Impact Evaluation Systems",

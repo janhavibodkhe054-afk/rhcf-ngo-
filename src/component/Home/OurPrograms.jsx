@@ -1,52 +1,58 @@
 import React, { useEffect } from "react";
-import {
-  BookOpen,
-  HeartPulse,
-  Users,
-  FileText,
-  Leaf,
-  HandHeart,
-} from "lucide-react";
+import { useNavigate } from "react-router-dom";
+
 import { motion } from "framer-motion";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
 const programs = [
   {
-    icon: BookOpen,
-    title: "Education",
-    desc: "Providing bridge education to school dropouts and ensuring 100% literacy in adopted villages.",
-    color: "bg-[#f8cdd1]",
-  },
-  {
-    icon: HeartPulse,
-    title: "Healthcare",
-    desc: "Mobile medical vans and localized health interventions in rural areas.",
+    title: "Water, Sanitation & Hygiene (WASH)",
+    desc: "Ensuring clean water, safe sanitation, and improved hygiene practices.",
     color: "bg-[#7cc4c4]",
+    path: "/hygine",
   },
   {
-    icon: Users,
-    title: "Women Empowerment",
-    desc: "Helping women gain financial independence through skill development.",
-    color: "bg-[#f2b84b]",
+    title: "Health, Hygiene & Drinking Water",
+    desc: "Promoting community health through awareness and safe drinking water access.",
+    color: "bg-[#f8cdd1]",
+    path: "/water",
   },
   {
-    icon: FileText,
-    title: "Livelihoods",
-    desc: "Supporting micro-enterprises and long-term income generation.",
-    color: "bg-[#e39b63]",
-  },
-  {
-    icon: Leaf,
-    title: "Grassroots",
-    desc: "Building sustainable infrastructure for community development.",
+    title: "Agriculture & Livelihood",
+    desc: "Supporting farmers with sustainable practices and income opportunities.",
     color: "bg-[#8fd19e]",
+    path: "/agri",
   },
   {
-    icon: HandHeart,
-    title: "Disaster Response",
-    desc: "Providing relief and support during crises and emergencies.",
+    title: "Ground Water Management",
+    desc: "Encouraging groundwater conservation and efficient water usage methods.",
     color: "bg-[#b79ac8]",
+    path: "/groundwater",
+  },
+  {
+    title: "Skill Development",
+    desc: "Providing skill training to enhance employability and career growth.",
+    color: "bg-[#e39b63]",
+    path: "/skill",
+  },
+  {
+    title: "Women Empowerment",
+    desc: "Empowering women through skills, leadership, and financial independence.",
+    color: "bg-[#f2b84b]",
+    path: "/women",
+  },
+  {
+    title: "Community Awareness Program",
+    desc: "Creating awareness on social issues through campaigns and outreach programs.",
+    color: "bg-[#c8a2c8]",
+    path: "/community",
+  },
+  {
+    title: "Education",
+    desc: "Improving access to quality education and learning opportunities for all.",
+    color: "bg-[#9ad0f5]",
+    path: "/education",
   },
 ];
 
@@ -65,6 +71,8 @@ const cardAnim = {
 };
 
 const OurPrograms = () => {
+  const navigate = useNavigate();
+
   useEffect(() => {
     AOS.init({
       duration: 800,
@@ -75,23 +83,24 @@ const OurPrograms = () => {
 
   return (
     <section className="bg-[#f5f5f5] py-14 sm:py-16 md:py-20 px-4 sm:px-6 md:px-10 lg:px-16">
-      
       <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-14">
-
         {/* LEFT */}
-        <div
-          data-aos="fade-right"
-          className="flex flex-col justify-between"
-        >
+        <div data-aos="fade-right" className="flex flex-col justify-between">
           <div>
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold text-gray-800 leading-snug">
               Our Impact Areas
             </h2>
 
             <p className="text-gray-600 mt-3 sm:mt-4 text-sm sm:text-base md:text-lg leading-relaxed max-w-xl">
-              Rajasthan Human Care Foundation focuses on key areas like education,
-              healthcare, women empowerment, and sustainable livelihoods to bring
-              long-term positive change in underserved communities.
+              Rajasthan Human Care Foundation is dedicated to creating
+              sustainable and inclusive development by focusing on key areas
+              such as education, healthcare, water and sanitation, women
+              empowerment, and livelihood enhancement. Through community-driven
+              initiatives, capacity building, and awareness programs, we aim to
+              improve quality of life, ensure access to essential resources, and
+              empower individuals to become self-reliant. Our approach
+              emphasizes long-term impact by strengthening grassroots systems
+              and fostering resilient communities.
             </p>
           </div>
 
@@ -115,13 +124,7 @@ const OurPrograms = () => {
           initial="hidden"
           whileInView="show"
           viewport={{ once: true }}
-          className="
-            grid 
-            grid-cols-1 
-            sm:grid-cols-2 
-            md:grid-cols-2 
-            lg:grid-cols-3 
-            gap-4 sm:gap-5"
+          className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5"
         >
           {programs.map((item, index) => {
             const Icon = item.icon;
@@ -132,10 +135,11 @@ const OurPrograms = () => {
                 variants={cardAnim}
                 whileHover={{ scale: 1.05, y: -6 }}
                 transition={{ type: "spring", stiffness: 180 }}
-                className={`${item.color} group rounded-2xl p-4 sm:p-5 text-white relative overflow-hidden shadow-md`}
+                onClick={() => navigate(item.path)}
+                className={`${item.color} cursor-pointer group rounded-2xl px-4 py-2 text-white relative overflow-hidden shadow-md`}
               >
-                {/* ICON */}
-                <Icon className="absolute top-3 left-3 opacity-70 text-lg sm:text-xl transition-transform duration-500 group-hover:rotate-12 group-hover:scale-110" />
+                
+                
 
                 {/* TITLE */}
                 <h3 className="text-base sm:text-lg md:text-xl font-bold mt-6">
@@ -153,7 +157,6 @@ const OurPrograms = () => {
             );
           })}
         </motion.div>
-
       </div>
     </section>
   );

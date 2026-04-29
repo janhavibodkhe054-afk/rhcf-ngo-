@@ -33,9 +33,9 @@ const Women = () => {
   return (
     <div className="overflow-hidden">
       {/* HERO SECTION */}
-      <section className="relative w-full h-[220px] sm:h-[280px] md:h-[350px] lg:h-[420px]">
+      <section className="relative w-full h-[220px] sm:h-[280px] md:h-[380px] lg:h-[450px]">
         <img
-          src="https://manavtaawelfare.com/wp-content/uploads/2025/04/slider-1.jpg"
+          src="/women1.jpg"
           className="w-full h-full object-cover hover:scale-105 transition duration-700"
           alt="women"
         />
@@ -61,13 +61,13 @@ const Women = () => {
             data-aos="fade-right"
           >
             <img
-              src="https://cdn-blog.superprof.com/blog_in/wp-content/uploads/2023/01/women-empowerment-through-activities-manav-ekta-mission.jpg"
+              src="/women2.webp"
               className="rounded-xl h-40 sm:h-48 w-full object-cover"
               alt="women support"
             />
 
             <img
-              src="https://smileindiatrust.org/wp-content/uploads/2022/06/15.jpg"
+              src="women3.jpg"
               className="rounded-xl h-40 sm:h-48 w-full object-cover"
               alt="women learning"
             />

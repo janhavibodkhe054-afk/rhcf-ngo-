@@ -5,7 +5,9 @@ import { useNavigate } from "react-router-dom";
 
 const images = Array.from({ length: 31 }, (_, i) => `/news${i + 1}.jpeg`);
 
-export default function NGOGalleryPage() {
+export default function NewsPaper() {
+  const navigate = useNavigate();
+
   useEffect(() => {
     AOS.init({
       duration: 900,
@@ -13,8 +15,6 @@ export default function NGOGalleryPage() {
       offset: 80,
     });
   }, []);
-
-  const navigate = useNavigate();
 
   return (
     <div className="min-h-screen bg-[#f4f8f6] text-[#1a2b24]">
@@ -38,7 +38,7 @@ export default function NGOGalleryPage() {
           <img
             src="/news25.jpeg"
             alt="featured"
-            className="w-full h-[220px] sm:h-[300px] md:h-[400px] object-cover rounded-2xl shadow-lg border-2 border-gray-600 hover:scale-105 transition duration-500"
+            className="w-full h-[220px] sm:h-[300px] md:h-[400px] object-cover rounded-2xl shadow-lg border-2 border-black hover:scale-105 transition duration-500"
           />
         </div>
 
@@ -51,14 +51,16 @@ export default function NGOGalleryPage() {
           </h2>
 
           <p className="text-gray-700 leading-relaxed text-sm sm:text-base">
-            Our NGO works across education, healthcare, and women empowerment.
-            These moments capture real stories of change and the impact we are
+            Our NGO works across education, healthcare, women empowerment,
+            water conservation, and community development. These moments
+            capture real stories of change and the lasting impact we are
             creating at the grassroots level.
           </p>
 
           <button
-          onClick={() => navigate("/contact")}
-          className="w-fit px-5 sm:px-6 py-2 bg-[#2d6a4f] text-white rounded-full hover:bg-[#1b4332] transition duration-300 shadow-md hover:shadow-lg">
+            onClick={() => navigate("/contact")}
+            className="w-fit px-5 sm:px-6 py-2 bg-[#2d6a4f] text-white rounded-full hover:bg-[#1b4332] transition duration-300 shadow-md hover:shadow-lg"
+          >
             Connect With Us
           </button>
         </div>
@@ -79,13 +81,13 @@ export default function NGOGalleryPage() {
               key={index}
               data-aos="zoom-in-up"
               data-aos-delay={(index % 6) * 100}
-              className="break-inside-avoid overflow-hidden rounded-2xl shadow-md hover:shadow-xl transition duration-300 bg-white border border-[#dce8e2]"
+              className="break-inside-avoid overflow-hidden rounded-2xl shadow-md hover:shadow-xl transition duration-300 bg-white border-2 border-gray-400"
             >
               <div className="overflow-hidden">
                 <img
                   src={src}
                   alt={`ngo-${index}`}
-                  className="w-full object-cover hover:scale-110 transition duration-500 border border-gray-300"
+                  className="w-full object-cover border-2 border-[#dce8e2] rounded-t-2xl hover:scale-110 transition duration-500"
                 />
               </div>
 

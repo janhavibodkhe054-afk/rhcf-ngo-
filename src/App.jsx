@@ -6,9 +6,6 @@ import Home from "./pages/Home";
 import Contact from "./pages/Contact";
 import ScrollToTop from "./component/ScrollToTop";
 
-
-
-
 //about
 import AboutUs from "./component/About/AboutUs";
 import VisionMission from "./component/About/VisionMission";
@@ -29,13 +26,20 @@ import Stories from "./component/MediaCenter/Stories";
 import Testimonial from "./component/MediaCenter/Testimonial";
 import Photo from "./component/MediaCenter/Photo";
 import News from "./component/MediaCenter/News";
+import NewsPaper from "./component/MediaCenter/NewsPaper";
 
 //resourse center
 import Reports from "./component/ResourseCenter/Reports";
 import Publication from "./component/ResourseCenter/Publication";
 import Policies from "./component/ResourseCenter/Policies";
 import Donate from "./pages/Donate";
-import NewsPaper from "./component/ResourseCenter/NewsPaper";
+import GetInvolved from "./pages/GetInvolved";
+import WaterSanitation from "./pages/WaterSanitation";
+import Hygiene from "./pages/Hygiene";
+import Agri from "./pages/Agri";
+import GroundWater from "./pages/GroundWater";
+import SuccessStories from "./pages/SuccessStories";
+
 
 const App = () => {
   return (
@@ -47,6 +51,7 @@ const App = () => {
         <Route path="/" element={<Home />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/donate" element={<Donate />} />
+        <Route path="/get-involved" element={<GetInvolved />} />
         
 
         {/* About */}
@@ -63,19 +68,25 @@ const App = () => {
         <Route path="/skill" element={<Skill />} />
         <Route path="/child" element={<Child />} />
         <Route path="/community" element={<Community />} />
+        <Route path="/water" element={<WaterSanitation />} />
+        <Route path="/hygine" element={<Hygiene />} /> 
+        <Route path="/agri" element={<Agri />} />
+        <Route path="/groundwater" element={<GroundWater />} />
 
         {/* media center */}
         <Route path="/impact" element={<OurImpact />} />
-        <Route path="/stories" element={<Stories />} />
+        <Route path="/stories" element={<SuccessStories />} />
+
         <Route path="/testimonials" element={<Testimonial />} />
         <Route path="/photo" element={<Photo />} />
         <Route path="/news" element={<News />} />
+        <Route path="/newspaper" element={<NewsPaper/> } />
 
         {/* Resource center */}
         <Route path="/reports" element={<Reports />} />
         <Route path="/publications" element={<Publication />} />
         <Route path="/policies" element={<Policies />} />
-        <Route path="/newspaper" element={<NewsPaper/> } />
+        
 
       {/* 404 Page */}
         <Route

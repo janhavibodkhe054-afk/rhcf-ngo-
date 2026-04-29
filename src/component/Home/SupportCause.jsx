@@ -3,46 +3,43 @@ import React from "react";
 const SupportCause = () => {
   const causes = [
     {
-      title: "SHIKSHA SETU",
+      title: "SAFE WATER FOR ALL",
       image: "/support1.jpg",
       description:
-        "Through Shiksha Setu, we bring school dropouts back into classrooms, ensuring 100% literacy in our adopted villages by 2030 and giving every child a second chance at education.",
+        "Support clean drinking water access, rainwater harvesting, and village sanitation initiatives under Jal Jeevan Mission for rural communities.",
     },
     {
-      title: "SANJEEVANI HEALTH",
+      title: "FARMER EMPOWERMENT",
       image: "/support2.jpeg",
       description:
-        "Our Mobile Health Vans deliver essential medical care to remote Thar Desert communities, reducing maternal and infant mortality through localized interventions.",
+        "Help farmers improve productivity through soil testing, modern irrigation, and sustainable agriculture support programs.",
     },
     {
       title: "WOMEN EMPOWERMENT",
       image: "/img2.jpeg",
       description:
-        "We are training 50,000 women in vocational skills, transforming them into financially independent leaders and primary breadwinners of their families.",
+        "Empower women through vocational skills, self-reliance programs, and livelihood opportunities that strengthen families and communities.",
     },
     {
-      title: "SUSTAINABLE LIVELIHOODS",
+      title: "SKILL DEVELOPMENT",
       image: "/img12.jpeg",
       description:
-        "From skill development to micro-enterprises, we replace dependency with dignity by building sustainable, community-owned economic models.",
+        "Support youth skill training, digital education, and employment-focused programs that create sustainable livelihoods.",
     },
   ];
 
   return (
     <section className="bg-[#f4f4f4] py-16 sm:py-20 lg:py-24 px-4 sm:px-6">
       <div className="max-w-7xl mx-auto">
-
         {/* Heading */}
         <h2 className="text-center text-2xl sm:text-3xl md:text-4xl font-extrabold uppercase mb-12 sm:mb-16 tracking-wide">
-          Support A Cause
+          Support Our Mission
         </h2>
 
         {/* Responsive Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-10">
-
           {causes.map((cause, index) => (
             <div key={index} className="group">
-
               {/* Image Card */}
               <div className="relative rounded-2xl overflow-hidden shadow-md">
                 <img
@@ -64,10 +61,8 @@ const SupportCause = () => {
               <p className="text-gray-700 text-base sm:text-lg md:text-lg mt-5 leading-relaxed">
                 {cause.description}
               </p>
-
             </div>
           ))}
-
         </div>
       </div>
     </section>

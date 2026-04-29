@@ -19,7 +19,6 @@ const Home = () => {
       <SDGSection/>
       <NgoInfoSection/>
       <Recognition/>
-      
       <SupportCause/>
     </div>
   );

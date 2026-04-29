@@ -22,12 +22,18 @@ const Navbar = () => {
       title: "OUR WORK",
       basePath: "/work",
       items: [
-        { name: "Education", path: "/education" },
-        { name: "Health Care Program", path: "/health" },
-        { name: "Women Empowerment", path: "/women" },
+        { name: "Water Sanitation & Hygiene management", path: "/hygine" },
+        {
+          name: "Health & hygiene & drinking water management",
+          path: "/water",
+        },
+        { name: "Agriculture & Live", path: "/agri" },
+        { name: "Ground Water", path: "/groundwater" },
+
         { name: "Skill Development", path: "/skill" },
-        { name: "Child Welfare", path: "/child" },
-        { name: "Community Development", path: "/community" },
+        { name: "Women Empowerment", path: "/women" },
+        { name: "Community Awareness Program", path: "/community" },
+        { name: "Education", path: "/education" },
       ],
     },
     {
@@ -38,6 +44,7 @@ const Navbar = () => {
         { name: "Success Stories", path: "/stories" },
         { name: "Testimonials", path: "/testimonials" },
         { name: "Photo Gallery", path: "/photo" },
+        { name: "Newsletter", path: "/newspaper" },
       ],
     },
     {
@@ -47,7 +54,6 @@ const Navbar = () => {
         { name: "Annual Reports", path: "/reports" },
         { name: "Publications", path: "/publications" },
         { name: "Policies", path: "/policies" },
-        { name: "Newsletter", path: "/newspaper" },
       ],
     },
   ];
@@ -129,7 +135,9 @@ const Navbar = () => {
                 </div>
               );
             })}
-
+            <NavLink to="/get-involved" className="hover:text-[#7cb342]">
+              GET INVOLVED
+            </NavLink>
             <NavLink to="/contact" className="hover:text-[#7cb342]">
               CONNECT
             </NavLink>
