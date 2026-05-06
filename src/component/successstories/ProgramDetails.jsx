@@ -165,46 +165,64 @@ const ProgramDetails = () => {
             Project Coverage & Impact
           </h3>
 
-          <p className="text-gray-600 mb-6 max-w-4xl leading-relaxed">
+          <p className="text-gray-600 mb-10 max-w-4xl leading-relaxed">
             The Rajasthan Agriculture Competitiveness Project successfully
-            covered multiple districts and blocks, benefiting thousands of
-            farmers and strengthening rural livelihoods. The initiative led to
-            measurable improvements in water management, agricultural
-            productivity, and income generation, contributing to sustainable
-            rural development.
+            expanded across key districts, strengthening agricultural systems
+            and improving livelihoods for thousands of farmers. By focusing on
+            water efficiency, modern farming practices, and market linkages, the
+            project created a measurable and sustainable impact at the
+            grassroots level.
           </p>
 
-          <div className="overflow-x-auto bg-white rounded-xl shadow-md">
-            <table className="w-full text-sm text-left">
-              <thead className="bg-gray-100 text-gray-700">
-                <tr>
-                  <th className="p-4">District</th>
-                  <th className="p-4">Block</th>
-                  <th className="p-4">Gram Panchayats</th>
-                  <th className="p-4">Farmers</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr className="border-t">
-                  <td className="p-4">Jhalawar</td>
-                  <td className="p-4">Manoharthana</td>
-                  <td className="p-4">28 Gram Panchayats</td>
-                  <td className="p-4">7800 Farmers</td>
-                </tr>
-                <tr className="border-t">
-                  <td className="p-4">Dholpur</td>
-                  <td className="p-4">Bari</td>
-                  <td className="p-4">35 Gram Panchayats</td>
-                  <td className="p-4">9600 Farmers</td>
-                </tr>
-                <tr className="border-t bg-gray-50 font-semibold">
-                  <td className="p-4">Total</td>
-                  <td className="p-4">2 Blocks</td>
-                  <td className="p-4">63 Gram Panchayats</td>
-                  <td className="p-4">17,400 Farmers</td>
-                </tr>
-              </tbody>
-            </table>
+          {/* COVERAGE BLOCKS */}
+          <div className="grid md:grid-cols-2 gap-8 mb-10">
+            {/* JHALAWAR */}
+            <div className="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition">
+              <h4 className="text-lg font-semibold text-[#7cb342] mb-2">
+                Jhalawar District
+              </h4>
+              <p className="text-gray-600 text-sm mb-2">
+                <b>Block:</b> Manoharthana
+              </p>
+              <p className="text-gray-600 text-sm mb-2">
+                <b>Coverage:</b> 28 Gram Panchayats
+              </p>
+              <p className="text-gray-600 text-sm">
+                <b>Beneficiaries:</b> 7,800 Farmers
+              </p>
+            </div>
+
+            {/* DHOLPUR */}
+            <div className="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition">
+              <h4 className="text-lg font-semibold text-[#7cb342] mb-2">
+                Dholpur District
+              </h4>
+              <p className="text-gray-600 text-sm mb-2">
+                <b>Block:</b> Bari
+              </p>
+              <p className="text-gray-600 text-sm mb-2">
+                <b>Coverage:</b> 35 Gram Panchayats
+              </p>
+              <p className="text-gray-600 text-sm">
+                <b>Beneficiaries:</b> 9,600 Farmers
+              </p>
+            </div>
+          </div>
+
+          {/* TOTAL IMPACT */}
+          <div className="bg-[#7cb342] text-white p-8 rounded-2xl shadow-lg">
+            <h4 className="text-xl font-semibold mb-3">
+              Overall Project Reach
+            </h4>
+
+            <p className="text-white/90 leading-relaxed">
+              The project collectively covered <b>63 Gram Panchayats</b> across
+              <b> 2 major blocks</b>, directly benefiting more than
+              <b> 17,400 farmers</b>. These interventions significantly enhanced
+              agricultural productivity, promoted efficient water usage, and
+              improved income stability, contributing to long-term rural
+              development.
+            </p>
           </div>
         </div>
       </div>

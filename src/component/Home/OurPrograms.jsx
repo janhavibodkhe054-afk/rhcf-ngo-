@@ -13,7 +13,7 @@ const programs = [
     path: "/hygine",
   },
   {
-    title: "Health, Hygiene & Drinking Water",
+    title: "Health & Drinking Water",
     desc: "Promoting community health through awareness and safe drinking water access.",
     color: "bg-[#f8cdd1]",
     path: "/water",

@@ -11,13 +11,13 @@ const testimonials = [
     text: "Before RHCF introduced rainwater harvesting systems in our village, water scarcity was a yearly struggle. Today our wells remain filled, our crops survive dry seasons, and our farming productivity has improved.",
   },
   {
-    name: "Pushpendra Sharma",
+    name: "Ganesh Sharma",
     role: "Self Help Group Member",
     image: "/impact1.jpeg",
     text: "Through the skill development program, I received training and now run my own business. RHCF gave me independence and dignity.",
   },
   {
-    name: "Naveen Sharma",
+    name: "Raj kumar",
     role: "Rural Parent",
     image: "/img6.jpeg",
     text: "The medical camp helped diagnose my child’s issue early. RHCF has become a trusted organization in our community.",
@@ -25,7 +25,6 @@ const testimonials = [
 ];
 
 const Testimonial = () => {
-
   useEffect(() => {
     AOS.init({
       duration: 1000,
@@ -36,15 +35,10 @@ const Testimonial = () => {
 
   return (
     <section className="bg-[#f5f7f2] overflow-hidden">
-
       {/* ================= HERO ================= */}
       <div className="max-w-7xl mx-auto px-6 py-24 grid md:grid-cols-2 gap-16 items-center">
-
         {/* IMAGE SIDE */}
-        <div
-          data-aos="fade-right"
-          className="relative"
-        >
+        <div data-aos="fade-right" className="relative">
           {/* Main Image */}
           <img
             src="https://media.istockphoto.com/id/537311780/photo/unity-of-indian-children-asia.jpg?s=612x612&w=0&k=20&c=MaI8mTFkStJHG4ZyKXNbynkdSCObejk73qutdW7vS7k="
@@ -89,10 +83,9 @@ const Testimonial = () => {
           </div>
         </div>
       </div>
-
+          
       {/* ================= TESTIMONIALS ================= */}
       <div className="max-w-7xl mx-auto px-6 pb-24">
-
         {/* HEADER */}
         <div className="text-center mb-20" data-aos="fade-up">
           <h2 className="text-5xl font-bold text-[#0f172a] mb-6">
@@ -130,33 +123,36 @@ const Testimonial = () => {
 
         {/* GRID */}
         <div className="grid md:grid-cols-2 gap-10">
-  {testimonials.slice(1).map((t, index) => (
-    <div
-      key={index}
-      data-aos="fade-up"
-      data-aos-delay={index * 150}
-      className="relative bg-gradient-to-br from-[#e6f4ea] to-white border border-[#7cb342]/20 rounded-3xl p-10 shadow-md hover:shadow-2xl transition duration-500 hover:-translate-y-2"
-    >
-      <Quote className="absolute top-6 right-6 text-[#7cb342]/20" size={50} />
+          {testimonials.slice(1).map((t, index) => (
+            <div
+              key={index}
+              data-aos="fade-up"
+              data-aos-delay={index * 150}
+              className="relative bg-gradient-to-br from-[#e6f4ea] to-white border border-[#7cb342]/20 rounded-3xl p-10 shadow-md hover:shadow-2xl transition duration-500 hover:-translate-y-2"
+            >
+              <Quote
+                className="absolute top-6 right-6 text-[#7cb342]/20"
+                size={50}
+              />
 
-      <p className="text-gray-700 leading-relaxed mb-8 text-lg">
-        {t.text}
-      </p>
+              <p className="text-gray-700 leading-relaxed mb-8 text-lg">
+                {t.text}
+              </p>
 
-      <div className="flex items-center gap-4">
-        <img
-          src={t.image}
-          alt=""
-          className="w-14 h-14 rounded-full object-cover border-2 border-[#7cb342]"
-        />
-        <div>
-          <h4 className="font-semibold text-gray-900">{t.name}</h4>
-          <span className="text-sm text-[#7cb342]">{t.role}</span>
+              <div className="flex items-center gap-4">
+                <img
+                  src={t.image}
+                  alt=""
+                  className="w-14 h-14 rounded-full object-cover border-2 border-[#7cb342]"
+                />
+                <div>
+                  <h4 className="font-semibold text-gray-900">{t.name}</h4>
+                  <span className="text-sm text-[#7cb342]">{t.role}</span>
+                </div>
+              </div>
+            </div>
+          ))}
         </div>
-      </div>
-    </div>
-  ))}
-</div>
 
         {/* IMPACT STRIP */}
         <div
@@ -168,7 +164,6 @@ const Testimonial = () => {
             transformation that becomes possible when communities are supported.
           </p>
         </div>
-
       </div>
     </section>
   );

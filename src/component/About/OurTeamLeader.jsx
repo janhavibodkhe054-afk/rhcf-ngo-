@@ -28,7 +28,7 @@ const OurTeamLeader = () => {
     <div>
       <section
         id="team"
-        className="w-full bg-[#f8fafc] pb-12 sm:pb-16 md:pb-10 lg:pt-28 px-4 sm:px-6 md:px-10 lg:px-16"
+        className="w-full bg-[#f8fafc] pb-12 sm:pb-16 md:pb-10 py-10 lg:pt-28 px-4 sm:px-6 md:px-10 lg:px-16"
       >
         <div className="max-w-7xl mx-auto">
           {/* SECTION HEADER */}

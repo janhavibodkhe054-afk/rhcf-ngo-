@@ -17,31 +17,31 @@ const OurJourney = () => {
       year: "2003",
       title: "Registered & Launched",
       desc: "RHCF was registered under the Rajasthan Societies Registration Act and began community work focusing on rural needs like sanitation, health, and education.",
-      image: "/85.jpeg",
+      image: "/register.png",
     },
     {
       year: "2008",
       title: "Community Networks Built",
       desc: "Expanded into Madhya Pradesh & Uttar Pradesh, mobilizing villages, strengthening SHGs, and linking communities to livelihood and WASH programs.",
-      image: "/86.jpeg",
+      image: "https://blog.helpyourngo.com/wp-content/uploads/2023/03/NGO-field-visit-rural-sanitation-unit-Maharashtra-helpyourngo.com_-734x445.jpg",
     },
     {
       year: "2013",
       title: "Capacity Development",
       desc: "Introduced formal capacity building in WASH, PRA methods, and community governance — empowering VWSCs and local leaders to lead change.",
-      image: "/87.jpeg",
+      image: "/journey3.png",
     },
     {
       year: "2018",
       title: "Impact Scaling",
       desc: "Strengthened VAPs, led awareness on health & sanitation, and scaled programs to cover more districts and beneficiaries.",
-      image: "/88.jpeg",
+      image: "/journey4.png",
     },
     {
       year: "2022 – Present",
       title: "Sustainable Transformation",
       desc: "Focusing on long-term sustainability: watershed systems, nutrition, family planning, and child protection integrated into community action.",
-      image: "/89.jpeg",
+      image: "/journey5.png",
     },
   ];
 
@@ -88,7 +88,7 @@ const OurJourney = () => {
                 <motion.img
                   src={item.image}
                   alt={item.title}
-                  className="rounded-2xl md:rounded-3xl shadow-xl w-full h-64 sm:h-72 md:h-80 lg:h-96 object-cover"
+                  className="rounded-2xl md:rounded-3xl shadow-xl w-full h-64 sm:h-72 md:h-80 lg:h-96 object-contain"
                   whileHover={{ scale: 1.03 }}
                   transition={{ duration: 0.3 }}
                 />

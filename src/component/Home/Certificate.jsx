@@ -1,15 +1,11 @@
 import React, { useEffect, useState } from "react";
 
 const certificates = [
-  "/certificate.png",
-  "/certificate2.png",
-  "/certificate3.png",
-  "/certificate4.png",
+  "/certificate1.png",
   "/certificate5.png",
-  "/certificate6.png",
-  "/certificate7.png",
-  "/certificate8.png",
-  "/certificate9.png",
+  "/certificate2.png",
+  
+  
   "/certificate10.jpeg",
   "/certificate11.jpeg",
   "/certificate12.jpeg",

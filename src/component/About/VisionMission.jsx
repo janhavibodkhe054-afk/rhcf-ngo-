@@ -97,7 +97,7 @@ const VisionMission = () => {
               className="overflow-hidden rounded-2xl"
             >
               <img
-                src="/school.jpeg"
+                src="https://content3.jdmagicbox.com/comp/ernakulam/m6/0484px484.x484.230909174054.k9m6/catalogue/righte-foundation-judgemukku-ernakulam-ngos-0klybbjx7c.jpg"
                 alt="Child Education & Community"
                 className="rounded-2xl shadow-lg w-full h-[240px] sm:h-[320px] md:h-[380px] lg:h-full object-cover transition duration-700 hover:scale-110"
               />
@@ -156,7 +156,7 @@ const VisionMission = () => {
               data-aos="zoom-in"
             >
               <img
-                src="/gallery1.jpeg"
+                src="https://webfiles.amrita.edu/2024/10/green-gown-awards-live-in-labs-amrita-img.jpg"
                 alt="Community Engagement & Impact"
                 className="rounded-2xl shadow-lg w-full h-[240px] sm:h-[320px] md:h-[380px] lg:h-full object-cover transition duration-700 hover:scale-110"
               />

@@ -3,7 +3,7 @@ import React from "react";
 const partners = [
   { img: "/doc1.png" },
   { img: "/doc2.png" },
-  { img: "/doc3.png" },
+  
   { img: "/doc4.png" },
   { img: "/doc5.png" },
   { img: "/doc6.png" },
@@ -12,7 +12,7 @@ const partners = [
   { img: "/doc9.png" },
   { img: "/doc10.png" },
   { img: "/doc11.png" },
-  { img: "/doc12.png" },
+  
   { img: "/doc13.png" },
   { img: "/doc14.png" },
   { img: "/doc15.png" },

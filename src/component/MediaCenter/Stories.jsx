@@ -47,31 +47,7 @@ const storiesData = [
       "All 457 households are now connected with safe tap water supply, ensuring clean drinking water is available within every home.",
     impact:
       "This initiative has improved hygiene, reduced water-borne diseases, and enhanced the daily living standards of the entire village community.",
-  },
-
-  {
-    name: "Vijay Devi",
-    location: "Nanaura, Jakhaura, Lalitpur",
-    population: "Village households connected under mission",
-    before:
-      "For years, families relied on traditional water sources such as hand pumps and open water points, which were often unsafe, unreliable, and difficult to access during extreme weather conditions.",
-    after:
-      "With the support of the Jal Jeevan Mission, households now receive regular tap water supply directly at home, ensuring safe and convenient access to clean drinking water.",
-    impact:
-      "The transformation has brought comfort, better hygiene, and improved health outcomes. Women and children save valuable time every day, allowing them to focus on education, family care, and productive activities.",
-  },
-
-  {
-    name: "Kalpana Devi",
-    location: "Rajwara, Gursarai, Jhansi (Uttar Pradesh)",
-    population: "1,390 people • 269 households",
-    before:
-      "Earlier, women had to travel outside the village every day to collect water for drinking, cooking, and household use, making it a physically exhausting and time-consuming task.",
-    after:
-      "Today, all 269 households have functional tap water connections, providing regular access to clean and safe drinking water within their homes.",
-    impact:
-      "This has significantly improved sanitation, reduced health risks, and created a safer and more dignified life for women, children, and the entire village community.",
-  },
+  }, 
 ];
 
 const Stories = () => {
@@ -131,7 +107,7 @@ const Stories = () => {
                 <span className="font-semibold text-red-500">Before: </span>
                 {story.before}
               </p>
-
+              
               <p>
                 <span className="font-semibold text-blue-500">After: </span>
                 {story.after}

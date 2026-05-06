@@ -12,7 +12,8 @@ const WashImpactSection = () => {
           </h2>
           <p className="text-gray-600 mt-4 max-w-2xl mx-auto">
             Our initiatives under SBM(G) have empowered communities across Rajasthan 
-            through structured training, sanitation awareness, and sustainable water practices.
+            through structured training programs, sanitation awareness campaigns, 
+            and sustainable water management practices that directly improve lives.
           </p>
         </div>
 
@@ -20,105 +21,136 @@ const WashImpactSection = () => {
         <div className="grid md:grid-cols-2 gap-10 mb-16">
           
           <div className="bg-white p-8 rounded-2xl shadow-md">
-            <h3 className="text-xl font-semibold mb-4 text-[#2e7d32]">Our Vision</h3>
+            <h3 className="text-xl font-semibold mb-4 text-[#2e7d32]">
+              Our Vision
+            </h3>
             <p className="text-gray-600 leading-relaxed">
-              We envision a society where all communities have access to safe, 
-              protected, and sustainable drinking water and sanitation services, 
-              supported by improved hygiene practices and awareness.
+              We envision a society where every community has access to safe, protected,
+              and sustainable drinking water along with improved sanitation facilities.
+              Our focus is on building long-term behavioral change by strengthening
+              hygiene awareness and ensuring community participation in water governance.
             </p>
           </div>
 
           <div className="bg-white p-8 rounded-2xl shadow-md">
-            <h3 className="text-xl font-semibold mb-4 text-[#2e7d32]">Implementation Strategy</h3>
+            <h3 className="text-xl font-semibold mb-4 text-[#2e7d32]">
+              Implementation Strategy
+            </h3>
             <p className="text-gray-600 leading-relaxed">
-              Our WASH training framework focuses on learning, individual performance, 
-              and improved program execution. Through Community Approach to Sanitation (CAS), 
-              we conduct 1–5 day training programs across Rajasthan to build capacity and 
-              sensitize communities toward hygiene and sanitation practices.
+              Our structured WASH framework is built on three pillars: learning,
+              performance, and impact. Through Community Approach to Sanitation (CAS),
+              we conduct 1–5 day intensive residential and non-residential training
+              programs across Rajasthan, empowering local leaders, frontline workers,
+              and communities to adopt safe hygiene and sanitation practices.
             </p>
           </div>
         </div>
 
-        {/* TABLE 1 */}
+        {/* ================= FIRST DATA BLOCK ================= */}
         <div className="mb-16">
-          <h3 className="text-xl font-semibold mb-6 text-gray-800">
-            Covered Districts under 5 Days Residential Training Program
+          <h3 className="text-xl font-semibold mb-8 text-gray-800 text-center">
+            5-Day Residential Training Program Coverage
           </h3>
 
-          <div className="overflow-x-auto bg-white rounded-xl shadow">
-            <table className="min-w-full text-sm text-left">
-              <thead className="bg-[#e8f5e9] text-gray-700">
-                <tr>
-                  <th className="p-3">District</th>
-                  <th className="p-3">G.P Covered</th>
-                  <th className="p-3">Batches</th>
-                  <th className="p-3">Participants</th>
-                </tr>
-              </thead>
-              <tbody className="text-gray-600">
-                <tr><td className="p-3">Dungarpur</td><td className="p-3">353</td><td className="p-3">93</td><td className="p-3">2807</td></tr>
-                <tr><td className="p-3">Jodhpur</td><td className="p-3">627</td><td className="p-3">81</td><td className="p-3">2462</td></tr>
-                <tr><td className="p-3">Bundi</td><td className="p-3">184</td><td className="p-3">20</td><td className="p-3">614</td></tr>
-                <tr><td className="p-3">Sikar</td><td className="p-3">375</td><td className="p-3">64</td><td className="p-3">1934</td></tr>
-                <tr><td className="p-3">Bharatpur</td><td className="p-3">400</td><td className="p-3">70</td><td className="p-3">2132</td></tr>
-                <tr><td className="p-3">Dausa</td><td className="p-3">284</td><td className="p-3">44</td><td className="p-3">1358</td></tr>
-                <tr><td className="p-3">Chittorgarh</td><td className="p-3">299</td><td className="p-3">50</td><td className="p-3">1536</td></tr>
-                <tr><td className="p-3">Banswara</td><td className="p-3">417</td><td className="p-3">57</td><td className="p-3">1744</td></tr>
-                <tr><td className="p-3">Barmer</td><td className="p-3">686</td><td className="p-3">92</td><td className="p-3">2782</td></tr>
-                <tr><td className="p-3">Hanumangarh</td><td className="p-3">269</td><td className="p-3">38</td><td className="p-3">1164</td></tr>
-                <tr><td className="p-3">Jaipur</td><td className="p-3">489</td><td className="p-3">57</td><td className="p-3">1738</td></tr>
-                <tr><td className="p-3">Ajmer</td><td className="p-3">56</td><td className="p-3">8</td><td className="p-3">254</td></tr>
-              </tbody>
-            </table>
+          <div className="grid md:grid-cols-3 gap-6">
+
+            {[
+              { name: "Dungarpur", gp: 353, batch: 93, participants: 2807 },
+              { name: "Jodhpur", gp: 627, batch: 81, participants: 2462 },
+              { name: "Bundi", gp: 184, batch: 20, participants: 614 },
+              { name: "Sikar", gp: 375, batch: 64, participants: 1934 },
+              { name: "Bharatpur", gp: 400, batch: 70, participants: 2132 },
+              { name: "Dausa", gp: 284, batch: 44, participants: 1358 },
+              { name: "Chittorgarh", gp: 299, batch: 50, participants: 1536 },
+              { name: "Banswara", gp: 417, batch: 57, participants: 1744 },
+              { name: "Barmer", gp: 686, batch: 92, participants: 2782 },
+              { name: "Hanumangarh", gp: 269, batch: 38, participants: 1164 },
+              { name: "Jaipur", gp: 489, batch: 57, participants: 1738 },
+              { name: "Ajmer", gp: 56, batch: 8, participants: 254 },
+            ].map((d, i) => (
+              <div key={i} className="bg-white p-6 rounded-xl shadow hover:shadow-lg transition">
+                <h4 className="text-lg font-semibold text-[#2e7d32] mb-3">
+                  {d.name}
+                </h4>
+
+                <p className="text-sm text-gray-600 mb-1">
+                  <b>Gram Panchayats Covered:</b> {d.gp}
+                </p>
+                <p className="text-sm text-gray-600 mb-1">
+                  <b>Training Batches:</b> {d.batch}
+                </p>
+                <p className="text-sm text-gray-600">
+                  <b>Participants Trained:</b> {d.participants}
+                </p>
+              </div>
+            ))}
+
           </div>
         </div>
 
-        {/* TABLE 2 */}
+        {/* ================= SECOND DATA BLOCK ================= */}
         <div className="mb-16">
-          <h3 className="text-xl font-semibold mb-6 text-gray-800">
-            Additional Training Coverage & Impact
+          <h3 className="text-xl font-semibold mb-8 text-gray-800 text-center">
+            Extended Training Coverage & Large-Scale Impact
           </h3>
 
-          <div className="overflow-x-auto bg-white rounded-xl shadow">
-            <table className="min-w-full text-sm text-left">
-              <thead className="bg-[#e3f2fd] text-gray-700">
-                <tr>
-                  <th className="p-3">District</th>
-                  <th className="p-3">G.P Covered</th>
-                  <th className="p-3">Batches</th>
-                  <th className="p-3">Participants</th>
-                </tr>
-              </thead>
-              <tbody className="text-gray-600">
-                <tr><td className="p-3">Jaipur</td><td className="p-3">85</td><td className="p-3">17</td><td className="p-3">1445</td></tr>
-                <tr><td className="p-3">Churu</td><td className="p-3">120</td><td className="p-3">24</td><td className="p-3">2880</td></tr>
-                <tr><td className="p-3">Chittorgarh</td><td className="p-3">140</td><td className="p-3">28</td><td className="p-3">3920</td></tr>
-                <tr><td className="p-3">Hanumangarh</td><td className="p-3">269</td><td className="p-3">98</td><td className="p-3">26362</td></tr>
-                <tr><td className="p-3">Bharatpur</td><td className="p-3">400</td><td className="p-3">245</td><td className="p-3">98000</td></tr>
-                <tr><td className="p-3">Nagaur</td><td className="p-3">502</td><td className="p-3">121</td><td className="p-3">60742</td></tr>
-                <tr><td className="p-3">Ajmer</td><td className="p-3">254</td><td className="p-3">154</td><td className="p-3">39116</td></tr>
-                <tr><td className="p-3">Barmer</td><td className="p-3">689</td><td className="p-3">117</td><td className="p-3">80613</td></tr>
-              </tbody>
-            </table>
+          <div className="grid md:grid-cols-2 gap-6">
+
+            {[
+              { name: "Jaipur", gp: 85, batch: 17, participants: 1445 },
+              { name: "Churu", gp: 120, batch: 24, participants: 2880 },
+              { name: "Chittorgarh", gp: 140, batch: 28, participants: 3920 },
+              { name: "Hanumangarh", gp: 269, batch: 98, participants: 26362 },
+              { name: "Bharatpur", gp: 400, batch: 245, participants: 98000 },
+              { name: "Nagaur", gp: 502, batch: 121, participants: 60742 },
+              { name: "Ajmer", gp: 254, batch: 154, participants: 39116 },
+              { name: "Barmer", gp: 689, batch: 117, participants: 80613 },
+            ].map((d, i) => (
+              <div key={i} className="bg-white p-6 rounded-xl shadow flex justify-between items-center hover:shadow-lg transition">
+                <div>
+                  <h4 className="text-lg font-semibold text-[#2e7d32]">
+                    {d.name}
+                  </h4>
+                  <p className="text-sm text-gray-500">
+                    {d.gp} GPs • {d.batch} Batches
+                  </p>
+                </div>
+
+                <div className="text-right">
+                  <p className="text-xl font-bold text-gray-800">
+                    {d.participants}
+                  </p>
+                  <p className="text-xs text-gray-500">Participants</p>
+                </div>
+              </div>
+            ))}
+
           </div>
         </div>
 
-        {/* IMPACT */}
+        {/* ================= IMPACT ================= */}
         <div className="bg-white p-8 rounded-2xl shadow-md">
-          <h3 className="text-xl font-semibold mb-6 text-[#2e7d32]">
+          <h3 className="text-xl font-semibold mb-6 text-[#2e7d32] text-center">
             Outcomes & Early Impact
           </h3>
 
-          <ul className="grid md:grid-cols-2 gap-4 text-gray-600">
-            <li>✔ Reduced disease burden (diarrhoea, cholera)</li>
-            <li>✔ Safer water for drinking and cooking</li>
-            <li>✔ Lower open defecation and improved sanitation</li>
-            <li>✔ Better nutrition and reduced child mortality</li>
-            <li>✔ Lower healthcare costs for rural households</li>
-            <li>✔ Improved environmental conditions</li>
-            <li>✔ Increased dignity and safety for women</li>
-            <li>✔ Stronger community awareness and hygiene practices</li>
-          </ul>
+          <div className="grid md:grid-cols-2 gap-6 text-gray-600">
+
+            <div className="space-y-3">
+              <p>✔ Significant reduction in water-borne diseases such as diarrhoea, cholera, and typhoid.</p>
+              <p>✔ Improved access to safe and clean drinking water for daily household use.</p>
+              <p>✔ Decrease in open defecation practices and improved sanitation infrastructure.</p>
+              <p>✔ Better nutrition outcomes due to improved hygiene and water quality.</p>
+            </div>
+
+            <div className="space-y-3">
+              <p>✔ Reduction in healthcare expenses for rural families.</p>
+              <p>✔ Enhanced environmental cleanliness and waste management practices.</p>
+              <p>✔ Increased dignity, safety, and participation of women in community activities.</p>
+              <p>✔ Strengthened community awareness, ownership, and sustainable behavior change.</p>
+            </div>
+
+          </div>
         </div>
 
       </div>

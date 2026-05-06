@@ -1,8 +1,7 @@
 import React, { useEffect } from "react";
-import { useLocation } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import { useNavigate } from "react-router-dom";
 
 const Women = () => {
   const location = useLocation();
@@ -55,31 +54,27 @@ const Women = () => {
       {/* ABOUT SECTION */}
       <section className="bg-[#f9fafb] pb-14 sm:pb-16 pt-16 sm:pt-20 lg:pt-24 px-4 sm:px-6 md:px-10 lg:px-16">
         <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-8 lg:gap-10 items-center">
-          {/* LEFT IMAGES */}
-          <div
-            className="grid grid-cols-2 gap-3 sm:gap-4"
-            data-aos="fade-right"
-          >
+          
+          {/* IMAGES */}
+          <div className="grid grid-cols-2 gap-3 sm:gap-4" data-aos="fade-right">
             <img
               src="/women2.webp"
               className="rounded-xl h-40 sm:h-48 w-full object-cover"
               alt="women support"
             />
-
             <img
-              src="women3.jpg"
+              src="/women3.jpg"
               className="rounded-xl h-40 sm:h-48 w-full object-cover"
               alt="women learning"
             />
-
             <img
-              src="workslide2.jpg"
+              src="/workslide2.jpg"
               className="rounded-xl h-44 sm:h-48 md:h-56 w-full object-cover col-span-2"
               alt="women empowerment"
             />
           </div>
 
-          {/* RIGHT CONTENT */}
+          {/* CONTENT */}
           <div data-aos="fade-left">
             <p className="text-[#7cb342] font-semibold uppercase text-xs sm:text-sm mb-2">
               About Program
@@ -90,9 +85,13 @@ const Women = () => {
             </h2>
 
             <p className="text-gray-600 text-sm sm:text-base md:text-lg leading-7 mb-6">
-              Our women empowerment initiative focuses on creating equal
-              opportunities for women by addressing education gaps, improving
-              healthcare access, and enabling financial independence.
+              Our women empowerment initiative is designed to create long-term,
+              sustainable change by addressing the root causes of gender
+              inequality. We focus on strengthening women's access to education,
+              improving healthcare services, and building pathways for financial
+              independence. Through community-driven interventions, we ensure
+              that women not only gain opportunities but also develop confidence
+              and leadership skills to shape their own futures.
             </p>
 
             {/* FEATURE */}
@@ -107,8 +106,9 @@ const Women = () => {
                 </h4>
 
                 <p className="text-gray-600 text-sm sm:text-base">
-                  Providing essential healthcare services, awareness programs,
-                  and medical support for women in rural and underserved areas.
+                  We provide healthcare support through medical camps, maternal
+                  health awareness, menstrual hygiene education, and access to
+                  essential services to ensure healthier and safer lives.
                 </p>
               </div>
             </div>
@@ -128,26 +128,39 @@ const Women = () => {
         className="py-14 sm:py-16 px-4 sm:px-6 md:px-10 lg:px-16 bg-white"
         data-aos="fade-up"
       >
-        <div className="max-w-6xl mx-auto space-y-5 sm:space-y-6 text-gray-700 text-sm sm:text-base md:text-lg leading-7">
+        <div className="max-w-6xl mx-auto space-y-6 text-gray-700 text-sm sm:text-base md:text-lg leading-7">
           <p>
-            Women in underserved communities often face multiple barriers such
-            as lack of access to education, early marriage, financial
-            dependency, and limited awareness of their rights.
+            Women in rural and underserved communities often face significant
+            challenges including limited access to education, financial
+            dependency, social restrictions, and lack of awareness about their
+            rights.
           </p>
 
           <p>
-            Our programs are designed to break these barriers through a holistic
-            approach that integrates education, health, and economic
-            empowerment.
+            Our programs aim to break these barriers by creating an ecosystem
+            where women are empowered through education, healthcare, and
+            livelihood opportunities.
           </p>
 
           <p>
-            By improving access to healthcare and promoting mental well-being,
-            we ensure that women lead healthier and more fulfilling lives.
+            We collaborate with self-help groups (SHGs), local institutions, and
+            community leaders to ensure inclusive participation and long-term
+            sustainability.
           </p>
 
           <p>
-            Investing in women leads to stronger families, better-educated
+            Special focus is given to adolescent girls to ensure early
+            intervention through education, awareness, and life skills training.
+          </p>
+
+          <p>
+            We also promote digital literacy and financial inclusion, helping
+            women access banking services, government schemes, and income
+            opportunities.
+          </p>
+
+          <p>
+            Empowering women leads to stronger families, better education for
             children, and resilient communities.
           </p>
         </div>
@@ -156,33 +169,30 @@ const Women = () => {
       {/* STEPS */}
       <section className="bg-[#f9fafb] py-14 sm:py-16 px-4 sm:px-6 md:px-10 lg:px-16">
         <div className="max-w-7xl mx-auto">
-          <h3
-            className="text-2xl md:text-3xl font-bold text-gray-900 mb-8 sm:mb-10"
-            data-aos="fade-up"
-          >
+          <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-10">
             Our Empowerment Approach
           </h3>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-5 sm:gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-6">
             {[
               {
                 title: "Awareness & Education",
-                desc: "Literacy programs and awareness sessions help women understand their rights.",
+                desc: "Literacy programs and rights awareness help women understand their role and power in society.",
                 bg: "bg-[#fef7f2]",
               },
               {
                 title: "Skill Development",
-                desc: "Vocational training enables women to achieve financial independence.",
+                desc: "Vocational and digital training enable women to achieve financial independence.",
                 bg: "bg-[#f2fbf7]",
               },
               {
                 title: "Health & Nutrition",
-                desc: "Healthcare camps and hygiene awareness ensure better well-being.",
+                desc: "Healthcare camps and hygiene awareness improve overall well-being.",
                 bg: "bg-[#f3f6ff]",
               },
               {
                 title: "Leadership",
-                desc: "Encouraging participation in leadership builds confidence.",
+                desc: "Encouraging participation builds confidence and decision-making ability.",
                 bg: "bg-[#fff4fb]",
               },
             ].map((item, i) => (
@@ -190,15 +200,10 @@ const Women = () => {
                 key={i}
                 data-aos="zoom-in"
                 data-aos-delay={i * 100}
-                className={`${item.bg} p-5 sm:p-6 rounded-xl shadow hover:-translate-y-2 hover:shadow-xl transition duration-300`}
+                className={`${item.bg} p-6 rounded-xl shadow hover:-translate-y-2 hover:shadow-xl transition duration-300`}
               >
-                <h4 className="font-bold text-base sm:text-lg mb-2">
-                  {item.title}
-                </h4>
-
-                <p className="text-gray-600 text-sm sm:text-base">
-                  {item.desc}
-                </p>
+                <h4 className="font-bold text-lg mb-2">{item.title}</h4>
+                <p className="text-gray-600">{item.desc}</p>
               </div>
             ))}
           </div>

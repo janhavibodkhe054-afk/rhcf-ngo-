@@ -4,25 +4,25 @@ const SupportCause = () => {
   const causes = [
     {
       title: "SAFE WATER FOR ALL",
-      image: "/support1.jpg",
+      image: "https://knowledge.unicef.org/sites/sharex/files/2022-11/fs01.jpg",
       description:
         "Support clean drinking water access, rainwater harvesting, and village sanitation initiatives under Jal Jeevan Mission for rural communities.",
     },
     {
       title: "FARMER EMPOWERMENT",
-      image: "/support2.jpeg",
+      image: "https://eatrevolutionindia.com/wp-content/uploads/elementor/thumbs/farmers-empowerment-2-r64k4st7ymjhiawxzn7thlxi9a66mkrjls2eovk4o0.jpg",
       description:
         "Help farmers improve productivity through soil testing, modern irrigation, and sustainable agriculture support programs.",
     },
     {
       title: "WOMEN EMPOWERMENT",
-      image: "/img2.jpeg",
+      image: "https://d18x2uyjeekruj.cloudfront.net/wp-content/uploads/2022/08/wemp1.jpg",
       description:
         "Empower women through vocational skills, self-reliance programs, and livelihood opportunities that strengthen families and communities.",
     },
     {
       title: "SKILL DEVELOPMENT",
-      image: "/img12.jpeg",
+      image: "https://www.actionaidindia.org/wp-content/uploads/2024/09/Empowering-Tomorrows-Leaders.png",
       description:
         "Support youth skill training, digital education, and employment-focused programs that create sustainable livelihoods.",
     },

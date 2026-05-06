@@ -6,20 +6,23 @@ import {
   TrendingUp,
   BarChart3,
   Handshake,
+  Globe,
+  Leaf,
 } from "lucide-react";
+
 
 const goals = [
   {
-    icon: HeartPulse,
-    title: "Clean Water & Sanitation",
-    number: "SDG #6",
-    color: "#26BDE2",
+    icon: Users,
+    title: "No Poverty",
+    number: "SDG #1",
+    color: "#E5243B",
   },
   {
-    icon: GraduationCap,
-    title: "Quality Education",
-    number: "SDG #4",
-    color: "#C5192D",
+    icon: HeartPulse,
+    title: "Good Health & Well-being",
+    number: "SDG #3",
+    color: "#4C9F38",
   },
   {
     icon: Users,
@@ -28,16 +31,22 @@ const goals = [
     color: "#FF3A21",
   },
   {
+    icon: HeartPulse,
+    title: "Clean Water & Sanitation",
+    number: "SDG #6",
+    color: "#26BDE2",
+  },
+  {
     icon: TrendingUp,
     title: "Decent Work & Growth",
     number: "SDG #8",
     color: "#A21942",
   },
   {
-    icon: BarChart3,
-    title: "Zero Hunger",
-    number: "SDG #2",
-    color: "#DDA63A",
+    icon: Leaf,
+    title: "Climate Action",
+    number: "SDG #13",
+    color: "#3F7E44",
   },
   {
     icon: Handshake,

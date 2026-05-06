@@ -2,10 +2,9 @@ import React, { useState } from "react";
 
 const certificates = [
   { title: "Registration Certificate", img: "/register.png" },
-  { title: "PAN Registration", img: "/pan.png" },
+  
   { title: "ISO Certificate", img: "/iso.png" },
-  { title: "Udyam Registration Certificate", img: "/udyam1.png" },
-  { title: "Udyam Registration Certificate", img: "/udyam2.png" },
+  
   { title: "Devsthan Certificate", img: "/devsthan.png" },
 ];
 
@@ -35,31 +34,26 @@ const CertificatesSection = () => {
           Registration No.- 1210/JAIPUR/2002-03 Dated 02.01.2003.
         </p>
 
-        <p><strong>Permanent Account No.:</strong> AABTR0566R</p>
+        <p><strong>Permanent Account No.</strong></p>
 
         <p>
-          Registered under Section 12-A of Income Tax Act 1961 -
-          Reg. No.- AABTR0566RE2008101
+          Registered under Section 12-A of Income Tax Act 1961 
         </p>
 
         <p>
-          Registered under Section 80-G of Income Tax Act 1961 -
-          Reg. No.- AABTR0566RF2008901
+          Registered under Section 80-G of Income Tax Act 1961
         </p>
 
         <p>
-          Registered on NGO Darpan Portal -
-          Reg. No.- RJ/2009/0022530
+          Registered on NGO Darpan Portal 
         </p>
 
         <p>
-          Registered for CSR funding -
-          Reg. No.- CSR00015568
+          Registered for CSR funding 
         </p>
 
         <p>
-          Registration of GST -
-          08AABTR0566R2ZU
+          Registration of GST 
         </p>
 
       </div>
