@@ -62,7 +62,7 @@ const OurTeamLeader = () => {
     {
       name: "Ghasi Laal Meena",
       role: "Member",
-      desc: "Ghanshyam Lal Meena is deeply connected with rural communities. He works tirelessly to strengthen field-level coordination and ensure successful project outreach. His practical knowledge of local issues and community mobilization makes him an invaluable asset for on-ground program implementation.",
+      desc: "Ghasi Lal Meena is deeply connected with rural communities. He works tirelessly to strengthen field-level coordination and ensure successful project outreach. His practical knowledge of local issues and community mobilization makes him an invaluable asset for on-ground program implementation.",
       photo: "/harsh.jpeg",
     },
   ];
