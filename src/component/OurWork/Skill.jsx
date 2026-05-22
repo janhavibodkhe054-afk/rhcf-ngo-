@@ -85,7 +85,7 @@ const Skill = () => {
       >
         <div className="relative rounded-[2rem] overflow-hidden shadow-2xl group">
           <img
-            src="https://www.nishantratnakar.com/wp-content/gallery/NEST-Centre-by-Mamre-Trust/NGO-Non-profit-Photographer-India-Bangalore-0026.jpg"
+            src="https://aisect.org/wp-content/uploads/2023/09/3-2.png"
             alt="Skill Development Training"
             className="w-full h-[240px] sm:h-[360px] md:h-[460px] lg:h-[560px] object-cover transition-transform duration-700 group-hover:scale-105"
           />

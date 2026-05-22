@@ -12,31 +12,31 @@ const AboutImpact = () => {
 
   const stats = [
     {
-      number: "40+",
+      number: "34+",
       label: "Districts",
       desc: "Driving sustainable development across diverse regions of Rajasthan.",
       icon: <FaMapMarkedAlt />,
     },
     {
-      number: "50+",
+      number: "8000+",
       label: "Villages",
       desc: "Adopted and empowered through community-led transformation.",
       icon: <FaHome />,
     },
     {
-      number: "140+",
+      number: "30+",
       label: "Projects",
       desc: "Focused on water, agriculture, livelihoods, and social upliftment.",
       icon: <FaProjectDiagram />,
     },
     {
-      number: "25K+",
+      number: "30000+",
       label: "Lives Impacted",
       desc: "Enabling dignity, opportunity, and sustainable futures.",
       icon: <FaUsers />,
     },
     {
-      number: "5+",
+      number: "4+",
       label: "States Covered",
       desc: "Expanding impact across multiple regions of India.",
       icon: <FaMapMarkedAlt />,
@@ -103,22 +103,19 @@ const AboutImpact = () => {
           </h2>
 
           {/* Paragraphs */}
-          <p className="text-gray-700 text-base sm:text-lg md:text-xl leading-relaxed mb-6 sm:mb-8">
+          <p className="text-gray-700 text-base sm:text-lg md:text-xl leading-relaxed mb-6 sm:mb-8 text-justify">
             Rajasthan Human Care Foundation (RHCF) is a trusted not-for-profit
             organization working at the grassroots level since 2003, dedicated
             to transforming the lives of marginalized and underserved
             communities across India. With over 22 years of impactful service in
-            10 states, we focus on sustainable rural and urban development
+            4 states, we focus on sustainable rural and urban development
             through safe drinking water, sanitation, agriculture, environmental
             conservation, skill development, and community empowerment.
           </p>
 
-          <p className="text-gray-700 text-base sm:text-lg md:text-xl leading-relaxed mb-6 sm:mb-8">
-            Recognized as a{" "}
-            <span className="text-black font-semibold bg-blue-50 px-1 rounded">
-              Key Resource Centre by Jal Shakti Mantralaya
-            </span>
-            , RHCF has led large-scale initiatives under Jal Jeevan Mission,
+          <p className="text-gray-700 text-base sm:text-lg md:text-xl leading-relaxed mb-6 sm:mb-8 text-justify">
+            Recognized as a Key Resource Centre by Jal Shakti Mantralaya
+          , RHCF has led large-scale initiatives under Jal Jeevan Mission,
             Swachh Bharat Mission, WASH, and Atal Bhujal Yojana. Our work
             includes village adoption, rainwater harvesting, groundwater
             recharge, soil testing laboratories, women empowerment, child
@@ -126,7 +123,7 @@ const AboutImpact = () => {
             measurable and long-lasting impact.
           </p>
 
-          <p className="text-gray-700 text-base sm:text-lg md:text-xl leading-relaxed">
+          <p className="text-gray-700 text-base sm:text-lg md:text-xl leading-relaxed text-justify">
             Driven by transparency, accountability, and community participation,
             RHCF is building self-reliant communities through innovation,
             awareness, and sustainable development practices. Our mission is to

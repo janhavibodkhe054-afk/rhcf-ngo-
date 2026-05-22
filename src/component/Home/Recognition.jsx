@@ -48,14 +48,14 @@ const Recognition = () => {
             </span>
 
             <h2 className="mt-4 text-2xl sm:text-3xl md:text-4xl lg:text-4xl font-bold text-gray-800 leading-tight">
-              22+ Years of Transforming Communities
+              23+ Years of Transforming Communities
             </h2>
 
             <h3 className="text-base sm:text-lg md:text-xl text-gray-600 mt-3 font-semibold">
               Trusted Across 10 States in India
             </h3>
 
-            <p className="mt-5 sm:mt-6 text-gray-600 leading-relaxed text-sm sm:text-base md:text-lg">
+            <p className="mt-5 sm:mt-6 text-gray-600 leading-relaxed text-sm sm:text-base md:text-lg text-justify">
               Rajasthan Human Care Foundation has been creating measurable
               social impact since 2003 through water security, sanitation,
               farmer empowerment, skill development, and rural transformation

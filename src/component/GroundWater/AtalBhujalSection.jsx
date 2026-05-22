@@ -13,10 +13,7 @@ const AtalBhujalSection = () => {
             <span className="text-[#7cb342]"> (Rajasthan & Uttar Pradesh)</span>
           </h2>
 
-          <div className="mt-4 text-gray-500 text-sm md:text-base space-y-1">
-            <p>Uttar Pradesh: Ongoing since May 2021</p>
-            <p>Rajasthan: November 2022 – March 2025</p>
-          </div>
+          
         </div>
 
         {/* ================= VISION ================= */}
@@ -159,7 +156,7 @@ const AtalBhujalSection = () => {
                 Sikar District, Rajasthan
               </h4>
               <p>
-                The program covered <b>79 Gram Panchayats</b>, directly
+                The program covered
                 benefiting around <b>9,885 farmers</b>. Activities focused on
                 groundwater recharge, awareness campaigns, and strengthening
                 water governance institutions.
@@ -171,8 +168,8 @@ const AtalBhujalSection = () => {
                 Hanumangarh District, Rajasthan
               </h4>
               <p>
-                A total of <b>97 Gram Panchayats</b> were covered, reaching
-                approximately <b>12,904 farmers</b>. Interventions emphasized
+                
+                Approximately <b>12,904 farmers</b>. Interventions emphasized
                 efficient irrigation practices and community-led water
                 management systems.
               </p>
@@ -183,7 +180,7 @@ const AtalBhujalSection = () => {
                 Jhansi District, Uttar Pradesh
               </h4>
               <p>
-                The initiative extended to <b>9 Gram Panchayats</b>, benefiting
+                The initiative extended to benefiting
                 around <b>1,629 farmers</b>. The focus here was on pilot-based
                 groundwater conservation models and capacity building.
               </p>
@@ -195,7 +192,7 @@ const AtalBhujalSection = () => {
               </p>
 
               <p className="text-gray-600 mt-2">
-                Overall, the project has covered <b>185 Gram Panchayats</b>
+                Overall, the project has covered 
                 across Rajasthan and Uttar Pradesh, directly benefiting
                 approximately <b>24,418 farmers</b>. The initiative has
                 contributed significantly to groundwater sustainability,

@@ -91,7 +91,7 @@ const OurPrograms = () => {
               Our Impact Areas
             </h2>
 
-            <p className="text-gray-600 mt-3 sm:mt-4 text-sm sm:text-base md:text-lg leading-relaxed max-w-xl">
+            <p className="text-gray-600 mt-3 sm:mt-4 text-sm sm:text-base md:text-lg leading-relaxed max-w-xl text-justify">
               Rajasthan Human Care Foundation is dedicated to creating
               sustainable and inclusive development by focusing on key areas
               such as education, healthcare, water and sanitation, women

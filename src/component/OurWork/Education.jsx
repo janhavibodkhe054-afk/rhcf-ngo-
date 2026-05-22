@@ -21,10 +21,10 @@ const Education = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setCounter((prev) => ({
-        students: prev.students < 6000 ? prev.students + 60 : 6000,
-        schools: prev.schools < 250 ? prev.schools + 3 : 250,
-        digital: prev.digital < 3500 ? prev.digital + 35 : 3500,
-        workshops: prev.workshops < 1000 ? prev.workshops + 10 : 1000,
+        students: prev.students < 2000 ? prev.students + 60 : 2000,
+        schools: prev.schools < 150 ? prev.schools + 3 : 150,
+        digital: prev.digital < 2500 ? prev.digital + 35 : 2500,
+        workshops: prev.workshops < 150 ? prev.workshops + 10 : 150,
       }));
     }, 50);
 
@@ -54,7 +54,7 @@ const Education = () => {
 
           <p className="mt-6 text-white text-base sm:text-lg md:text-xl leading-relaxed">
             We provide access to quality learning, mentorship, and skill-building
-            programs for children and communities across Rajasthan.
+            programs for children and communities across Rajasthan Madhya Pradesh, Uttar Pradesh, Jharkhand.
           </p>
         </div>
       </section>

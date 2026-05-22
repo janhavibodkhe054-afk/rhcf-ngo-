@@ -72,11 +72,11 @@ const WashHero = () => {
         <div className="relative">
           <div className="rounded-[40px] overflow-hidden shadow-xl">
             <img
-              src="/wash.jpg" // ✅ Put this image in PUBLIC folder
+              src="/ourwork1.jpeg" // ✅ Put this image in PUBLIC folder
               alt="Hygiene"
               onError={(e) => {
                 e.target.src =
-                  "https://i.ytimg.com/vi/4qfTaIH9oRY/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLCdPvJV4XhteWHVauey33lQxbW9xA";
+                  "/ourwork1.jpeg";
               }}
               className="w-full h-[320px] sm:h-[380px] md:h-[450px] object-cover"
             />

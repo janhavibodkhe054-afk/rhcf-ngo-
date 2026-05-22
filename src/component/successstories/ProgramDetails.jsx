@@ -12,9 +12,7 @@ const ProgramDetails = () => {
               Rajasthan Agriculture Competitiveness Project (RACP)
             </h2>
 
-            <p className="text-sm text-green-600 font-medium mb-4">
-              Completed: 2016 – 2020
-            </p>
+           
 
             <p className="text-gray-600 leading-relaxed mb-4">
               The Rajasthan Agriculture Competitiveness Project (RACP) was
@@ -36,7 +34,7 @@ const ProgramDetails = () => {
           </div>
           <div className="relative">
             <img
-              src="https://media.istockphoto.com/id/108313157/photo/india-farming.jpg?s=612x612&w=0&k=20&c=eIh5qLq3fmUIKfVVzg1GO-aU2cTXCH_6yjf16zMPEK8="
+              src="https://swarajya.gumlet.io/swarajya/2016-11/4a35a7a7-159e-4062-98c7-6dd4deab6d04/farmers.jpg?w=1200&h=675&auto=format%2Ccompress&fit=max&enlarge=true"
               alt="RACP Project"
               className="w-full h-[320px] object-cover rounded-2xl shadow-lg"
             />
@@ -116,7 +114,7 @@ const ProgramDetails = () => {
           <h3 className="text-2xl md:text-3xl font-bold text-gray-800 mb-6">
             Key Outcomes
           </h3>
-
+          
           <div className="space-y-8">
             <div className="bg-[#eef7f0] p-6 rounded-xl">
               <p className="text-gray-600 leading-relaxed">
@@ -184,9 +182,7 @@ const ProgramDetails = () => {
               <p className="text-gray-600 text-sm mb-2">
                 <b>Block:</b> Manoharthana
               </p>
-              <p className="text-gray-600 text-sm mb-2">
-                <b>Coverage:</b> 28 Gram Panchayats
-              </p>
+              
               <p className="text-gray-600 text-sm">
                 <b>Beneficiaries:</b> 7,800 Farmers
               </p>
@@ -200,15 +196,13 @@ const ProgramDetails = () => {
               <p className="text-gray-600 text-sm mb-2">
                 <b>Block:</b> Bari
               </p>
-              <p className="text-gray-600 text-sm mb-2">
-                <b>Coverage:</b> 35 Gram Panchayats
-              </p>
+              
               <p className="text-gray-600 text-sm">
                 <b>Beneficiaries:</b> 9,600 Farmers
               </p>
             </div>
           </div>
-
+          
           {/* TOTAL IMPACT */}
           <div className="bg-[#7cb342] text-white p-8 rounded-2xl shadow-lg">
             <h4 className="text-xl font-semibold mb-3">

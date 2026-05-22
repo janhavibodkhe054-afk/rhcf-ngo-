@@ -41,12 +41,7 @@ const Photo = () => {
         { src: "/health7.jpeg", title: "Medical Camp" },
         { src: "/health8.jpeg", title: "Medical Camp" },
         { src: "/health9.jpeg", title: "Medical Camp" },
-        { src: "/health10.jpeg", title: "Medical Camp" },
-        { src: "/health11.jpeg", title: "Medical Camp" },
-        { src: "/health12.jpeg", title: "Medical Camp" },
-        { src: "/health13.jpeg", title: "Medical Camp" },
-        { src: "/health14.jpeg", title: "Medical Camp" },
-        { src: "/health15.jpeg", title: "Medical Camp" },
+        
 
       ],
     },
@@ -65,7 +60,7 @@ const Photo = () => {
       ],
     },
     {
-      title: "Skill Development (Jal Jeevan Mission)",
+      title: "Jal Jeevan Mission",
       images: [
         { src: "/jjm1.jpeg", title: "Training Session" },
         { src: "/jjm2.jpeg", title: "Skill Workshop" },

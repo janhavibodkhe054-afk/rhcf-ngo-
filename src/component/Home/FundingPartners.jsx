@@ -1,9 +1,8 @@
 import React from "react";
 
 const partners = [
-  { img: "/doc1.png" },
+  { img: "/doc1.svg" },
   { img: "/doc2.png" },
-  
   { img: "/doc4.png" },
   { img: "/doc5.png" },
   { img: "/doc6.png" },
@@ -12,14 +11,16 @@ const partners = [
   { img: "/doc9.png" },
   { img: "/doc10.png" },
   { img: "/doc11.png" },
-  
-  { img: "/doc13.png" },
-  { img: "/doc14.png" },
+  { img: "/doc13.jpg" },
+  { img: "/doc14.svg" },
   { img: "/doc15.png" },
   { img: "/doc16.png" },
   { img: "/doc17.png" },
   { img: "/doc18.png" },
   { img: "/doc19.png" },
+  { img: "/doc22.png" },
+  { img: "/doc20.jfif" },
+  { img: "/doc21.webp" },
 ];
 
 // 👉 split into 2 rows
@@ -30,13 +31,11 @@ const row2 = partners.slice(half);
 const FundingPartners = () => {
   return (
     <section className="relative py-20 overflow-hidden bg-white">
-
       {/* 🔷 BACKGROUND BLOBS */}
       <div className="absolute top-10 left-10 w-72 h-72 bg-green-200 rounded-full blur-3xl opacity-30"></div>
       <div className="absolute bottom-10 right-10 w-72 h-72 bg-pink-200 rounded-full blur-3xl opacity-30"></div>
 
       <div className="relative max-w-7xl mx-auto px-6">
-
         {/* 🔷 HEADING */}
         <div className="text-center mb-14">
           <h2 className="text-3xl md:text-5xl font-bold text-gray-800">
@@ -75,7 +74,6 @@ const FundingPartners = () => {
             </div>
           </div>
         </div>
-
       </div>
 
       {/* 🔥 ANIMATION */}
@@ -114,11 +112,7 @@ const Card = ({ img }) => {
       hover:scale-110 hover:-rotate-1
       hover:shadow-[0_10px_40px_rgba(0,0,0,0.15)]"
     >
-      <img
-        src={img}
-        alt="partner"
-        className="max-h-28 object-contain"
-      />
+      <img src={img} alt="partner" className="max-h-28 object-contain" />
     </div>
   );
 };

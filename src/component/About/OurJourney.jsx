@@ -14,35 +14,35 @@ const OurJourney = () => {
 
   const timelineData = [
     {
-      year: "2003",
-      title: "Registered & Launched",
-      desc: "RHCF was registered under the Rajasthan Societies Registration Act and began community work focusing on rural needs like sanitation, health, and education.",
-      image: "/register.png",
-    },
+  year: "2003",
+  title: "Registered",
+  desc: "Rajasthan Human Care Foundation (RHCF) was officially registered on 2 January 2003 under the Rajasthan Act Number 28, 1958. The organization started its journey with a mission to improve rural communities through social welfare initiatives focused on sanitation, healthcare, education, women empowerment, and community development.",
+  image: "/register.png",
+},
     {
-      year: "2008",
-      title: "Community Networks Built",
-      desc: "Expanded into Madhya Pradesh & Uttar Pradesh, mobilizing villages, strengthening SHGs, and linking communities to livelihood and WASH programs.",
-      image: "https://blog.helpyourngo.com/wp-content/uploads/2023/03/NGO-field-visit-rural-sanitation-unit-Maharashtra-helpyourngo.com_-734x445.jpg",
-    },
-    {
-      year: "2013",
-      title: "Capacity Development",
-      desc: "Introduced formal capacity building in WASH, PRA methods, and community governance — empowering VWSCs and local leaders to lead change.",
-      image: "/journey3.png",
-    },
-    {
-      year: "2018",
-      title: "Impact Scaling",
-      desc: "Strengthened VAPs, led awareness on health & sanitation, and scaled programs to cover more districts and beneficiaries.",
-      image: "/journey4.png",
-    },
-    {
-      year: "2022 – Present",
-      title: "Sustainable Transformation",
-      desc: "Focusing on long-term sustainability: watershed systems, nutrition, family planning, and child protection integrated into community action.",
-      image: "/journey5.png",
-    },
+  year: "2008",
+  title: "Community Networks Built",
+  desc: "Expanded operations into Madhya Pradesh and Uttar Pradesh by mobilizing rural communities, strengthening Self Help Groups (SHGs), and connecting villages with livelihood opportunities, sanitation facilities, and safe water access through sustainable WASH initiatives.",
+  image: "https://blog.helpyourngo.com/wp-content/uploads/2023/03/NGO-field-visit-rural-sanitation-unit-Maharashtra-helpyourngo.com_-734x445.jpg",
+},
+{
+  year: "2013",
+  title: "Capacity Development",
+  desc: "Launched structured capacity-building programs focused on WASH practices, Participatory Rural Appraisal (PRA), and community governance, empowering Village Water & Sanitation Committees (VWSCs) and local leaders to independently drive grassroots development.",
+  image: "/journey3.png",
+},
+{
+  year: "2018",
+  title: "Impact Scaling",
+  desc: "Scaled awareness campaigns on health, hygiene, and sanitation while strengthening Village Action Plans (VAPs), enabling the organization to expand outreach across multiple districts and positively impact a larger number of rural beneficiaries.",
+  image: "/journey4.png",
+},
+{
+  year: "2022 – Present",
+  title: "Sustainable Transformation",
+  desc: "Driving long-term rural transformation through integrated initiatives focused on watershed management, nutrition improvement, family planning awareness, child protection, and sustainable community-led development systems.",
+  image: "/journey5.png",
+},
   ];
 
   const stats = [

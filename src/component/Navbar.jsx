@@ -19,12 +19,25 @@ const Navbar = () => {
         { name: "Technical Strength", path: "/technical" },
       ],
     },
+
     {
       title: "OUR WORK",
       basePath: "/work",
       items: [
-        { name: "Water Sanitation & Hygiene management", path: "/hygine" },
-        { name: "Health & hygiene & drinking water management", path: "/water" },
+        {
+          name: "Wash",
+          submenu: [
+            {
+              name: "Water Sanitation & Hygiene management",
+              path: "/hygine",
+            },
+            {
+              name: "Health & hygiene & drinking water management",
+              path: "/water",
+            },
+          ],
+        },
+
         { name: "Agriculture & Live", path: "/agri" },
         { name: "Ground Water", path: "/groundwater" },
         { name: "Skill Development", path: "/skill" },
@@ -33,6 +46,7 @@ const Navbar = () => {
         { name: "Education", path: "/education" },
       ],
     },
+
     {
       title: "MEDIA CENTRE",
       basePath: "/media",
@@ -44,6 +58,7 @@ const Navbar = () => {
         { name: "Newsletter", path: "/newspaper" },
       ],
     },
+
     {
       title: "RESOURCE CENTER",
       basePath: "/center",
@@ -60,8 +75,7 @@ const Navbar = () => {
       {/* HEADER */}
       <header className="fixed top-0 left-0 w-full z-50 bg-white shadow-md h-[70px]">
         <div className="flex items-center justify-between px-4 sm:px-6 md:px-10 lg:px-16 h-full">
-
-          {/* 🔷 LOGO */}
+          {/* LOGO */}
           <NavLink to="/" className="flex items-center gap-3 min-w-[180px]">
             <img
               src="/logo.png"
@@ -69,18 +83,18 @@ const Navbar = () => {
               className="h-12 sm:h-14 md:h-16 object-contain"
             />
 
-            {/* ALWAYS SINGLE LINE */}
             <div className="whitespace-nowrap leading-tight">
               <span className="text-sm sm:text-base md:text-lg font-bold text-gray-800">
                 Rajasthan Human Care
               </span>
-              <span className="text-xs sm:text-sm text-gray-600 block">
+
+              <span className="text-sm sm:text-base md:text-lg text-gray-800 font-bold block">
                 Foundation
               </span>
             </div>
           </NavLink>
 
-          {/* 🔷 DESKTOP MENU (ONLY XL AND ABOVE) */}
+          {/* DESKTOP MENU */}
           <nav className="hidden xl:flex items-center gap-6 font-semibold text-gray-700">
             {menus.map((menu, index) => {
               const isActive = location.pathname.startsWith(menu.basePath);
@@ -101,21 +115,50 @@ const Navbar = () => {
                     <ChevronDown size={14} />
                   </button>
 
+                  {/* DROPDOWN */}
                   <div
-                    className={`absolute left-0 top-full w-[260px] bg-white shadow-xl rounded-xl mt-3 p-3 transition-all ${
+                    className={`absolute left-0 top-full w-[280px] bg-white shadow-xl rounded-xl mt-3 p-3 transition-all ${
                       openMenu === index
                         ? "opacity-100 visible"
                         : "opacity-0 invisible"
                     }`}
                   >
                     {menu.items.map((item, i) => (
-                      <NavLink
-                        key={i}
-                        to={item.path}
-                        className="block px-3 py-2 text-sm hover:bg-gray-100 hover:text-[#7cb342]"
-                      >
-                        {item.name}
-                      </NavLink>
+                      <div key={i} className="relative group">
+                        {/* NORMAL MENU */}
+                        {!item.submenu ? (
+                          <NavLink
+                            to={item.path}
+                            className="block px-3 py-2 text-sm hover:bg-gray-100 hover:text-[#7cb342]"
+                          >
+                            {item.name}
+                          </NavLink>
+                        ) : (
+                          <>
+                            {/* SUBMENU BUTTON */}
+                            <div className="flex items-center justify-between px-3 py-2 text-sm hover:bg-gray-100 cursor-pointer rounded-md">
+                              {item.name}
+                              <ChevronDown
+                                size={14}
+                                className="-rotate-90"
+                              />
+                            </div>
+
+                            {/* SIDE DROPDOWN */}
+                            <div className="absolute top-0 left-full ml-2 w-[320px] bg-white shadow-xl rounded-xl p-3 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all">
+                              {item.submenu.map((sub, subIndex) => (
+                                <NavLink
+                                  key={subIndex}
+                                  to={sub.path}
+                                  className="block px-3 py-2 text-sm hover:bg-gray-100 hover:text-[#7cb342] rounded-md"
+                                >
+                                  {sub.name}
+                                </NavLink>
+                              ))}
+                            </div>
+                          </>
+                        )}
+                      </div>
                     ))}
                   </div>
                 </div>
@@ -138,7 +181,7 @@ const Navbar = () => {
             </NavLink>
           </nav>
 
-          {/* 🔷 MOBILE BUTTON (VISIBLE BELOW XL) */}
+          {/* MOBILE MENU BUTTON */}
           <button
             className="xl:hidden"
             onClick={() => setMobileOpen(!mobileOpen)}
@@ -148,9 +191,9 @@ const Navbar = () => {
         </div>
       </header>
 
-      {/* 🔷 MOBILE MENU */}
+      {/* MOBILE MENU */}
       <div
-        className={`fixed top-[70px] left-0 w-full h-[calc(100vh-70px)] bg-white z-40 transform transition ${
+        className={`fixed top-[70px] left-0 w-full h-[calc(100vh-70px)] bg-white z-40 transform transition duration-300 ${
           mobileOpen ? "translate-x-0" : "translate-x-full"
         } xl:hidden`}
       >
@@ -162,39 +205,73 @@ const Navbar = () => {
                 onClick={() => setOpenMenu(openMenu === index ? null : index)}
               >
                 {menu.title}
+
                 <ChevronDown
                   size={16}
-                  className={openMenu === index ? "rotate-180" : ""}
+                  className={`transition ${
+                    openMenu === index ? "rotate-180" : ""
+                  }`}
                 />
               </button>
 
               {openMenu === index && (
-                <div className="pl-4 space-y-2">
+                <div className="pl-4 space-y-3">
                   {menu.items.map((item, i) => (
-                    <NavLink
-                      key={i}
-                      to={item.path}
-                      onClick={() => setMobileOpen(false)}
-                      className="block text-gray-600 hover:text-[#7cb342]"
-                    >
-                      {item.name}
-                    </NavLink>
+                    <div key={i}>
+                      {!item.submenu ? (
+                        <NavLink
+                          to={item.path}
+                          onClick={() => setMobileOpen(false)}
+                          className="block text-gray-600 hover:text-[#7cb342]"
+                        >
+                          {item.name}
+                        </NavLink>
+                      ) : (
+                        <div>
+                          <p className="font-semibold text-gray-800 mb-2">
+                            {item.name}
+                          </p>
+
+                          <div className="pl-4 space-y-2">
+                            {item.submenu.map((sub, subIndex) => (
+                              <NavLink
+                                key={subIndex}
+                                to={sub.path}
+                                onClick={() => setMobileOpen(false)}
+                                className="block text-gray-600 hover:text-[#7cb342]"
+                              >
+                                {sub.name}
+                              </NavLink>
+                            ))}
+                          </div>
+                        </div>
+                      )}
+                    </div>
                   ))}
                 </div>
               )}
             </div>
           ))}
 
-          <NavLink to="/get-involved" className="block font-semibold">
+          <NavLink
+            to="/get-involved"
+            onClick={() => setMobileOpen(false)}
+            className="block font-semibold"
+          >
             GET INVOLVED
           </NavLink>
 
-          <NavLink to="/contact" className="block font-semibold">
+          <NavLink
+            to="/contact"
+            onClick={() => setMobileOpen(false)}
+            className="block font-semibold"
+          >
             CONNECT
           </NavLink>
 
           <NavLink
             to="/donate"
+            onClick={() => setMobileOpen(false)}
             className="block text-center py-3 bg-[#7cb342] text-white rounded-full font-semibold"
           >
             DONATE

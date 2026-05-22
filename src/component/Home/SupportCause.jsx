@@ -22,7 +22,7 @@ const SupportCause = () => {
     },
     {
       title: "SKILL DEVELOPMENT",
-      image: "https://www.actionaidindia.org/wp-content/uploads/2024/09/Empowering-Tomorrows-Leaders.png",
+      image: "https://www.lakshyam.co.in/wp-content/uploads/2021/12/Rooh-Main-Picture.jpg",
       description:
         "Support youth skill training, digital education, and employment-focused programs that create sustainable livelihoods.",
     },

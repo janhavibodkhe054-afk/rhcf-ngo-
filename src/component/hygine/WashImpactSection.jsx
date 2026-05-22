@@ -55,30 +55,25 @@ const WashImpactSection = () => {
           <div className="grid md:grid-cols-3 gap-6">
 
             {[
-              { name: "Dungarpur", gp: 353, batch: 93, participants: 2807 },
-              { name: "Jodhpur", gp: 627, batch: 81, participants: 2462 },
-              { name: "Bundi", gp: 184, batch: 20, participants: 614 },
-              { name: "Sikar", gp: 375, batch: 64, participants: 1934 },
-              { name: "Bharatpur", gp: 400, batch: 70, participants: 2132 },
+              { name: "Dungarpur", participants: 2807 },
+              { name: "Jodhpur",  participants: 2462 },
+              { name: "Bundi", participants: 614 },
+              { name: "Sikar", participants: 1934 },
+              { name: "Bharatpur", participants: 2132 },
               { name: "Dausa", gp: 284, batch: 44, participants: 1358 },
-              { name: "Chittorgarh", gp: 299, batch: 50, participants: 1536 },
-              { name: "Banswara", gp: 417, batch: 57, participants: 1744 },
-              { name: "Barmer", gp: 686, batch: 92, participants: 2782 },
-              { name: "Hanumangarh", gp: 269, batch: 38, participants: 1164 },
-              { name: "Jaipur", gp: 489, batch: 57, participants: 1738 },
-              { name: "Ajmer", gp: 56, batch: 8, participants: 254 },
+              { name: "Chittorgarh", participants: 1536 },
+              { name: "Banswara", participants: 1744 },
+              { name: "Barmer", participants: 2782 },
+              { name: "Hanumangarh", participants: 1164 },
+              { name: "Jaipur", participants: 1738 },
+              { name: "Ajmer", participants: 254 },
             ].map((d, i) => (
               <div key={i} className="bg-white p-6 rounded-xl shadow hover:shadow-lg transition">
                 <h4 className="text-lg font-semibold text-[#2e7d32] mb-3">
                   {d.name}
                 </h4>
 
-                <p className="text-sm text-gray-600 mb-1">
-                  <b>Gram Panchayats Covered:</b> {d.gp}
-                </p>
-                <p className="text-sm text-gray-600 mb-1">
-                  <b>Training Batches:</b> {d.batch}
-                </p>
+                
                 <p className="text-sm text-gray-600">
                   <b>Participants Trained:</b> {d.participants}
                 </p>
@@ -97,14 +92,14 @@ const WashImpactSection = () => {
           <div className="grid md:grid-cols-2 gap-6">
 
             {[
-              { name: "Jaipur", gp: 85, batch: 17, participants: 1445 },
-              { name: "Churu", gp: 120, batch: 24, participants: 2880 },
-              { name: "Chittorgarh", gp: 140, batch: 28, participants: 3920 },
-              { name: "Hanumangarh", gp: 269, batch: 98, participants: 26362 },
-              { name: "Bharatpur", gp: 400, batch: 245, participants: 98000 },
-              { name: "Nagaur", gp: 502, batch: 121, participants: 60742 },
-              { name: "Ajmer", gp: 254, batch: 154, participants: 39116 },
-              { name: "Barmer", gp: 689, batch: 117, participants: 80613 },
+              { name: "Jaipur",  batch: 17, participants: 1445 },
+              { name: "Churu",  batch: 24, participants: 2880 },
+              { name: "Chittorgarh",  batch: 28, participants: 3920 },
+              { name: "Hanumangarh", batch: 98, participants: 26362 },
+              { name: "Bharatpur",  batch: 245, participants: 98000 },
+              { name: "Nagaur", batch: 121, participants: 60742 },
+              { name: "Ajmer",  batch: 154, participants: 39116 },
+              { name: "Barmer",  batch: 117, participants: 80613 },
             ].map((d, i) => (
               <div key={i} className="bg-white p-6 rounded-xl shadow flex justify-between items-center hover:shadow-lg transition">
                 <div>
@@ -112,7 +107,7 @@ const WashImpactSection = () => {
                     {d.name}
                   </h4>
                   <p className="text-sm text-gray-500">
-                    {d.gp} GPs • {d.batch} Batches
+                    • {d.batch} Batches
                   </p>
                 </div>
 

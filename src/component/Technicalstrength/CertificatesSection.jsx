@@ -2,9 +2,9 @@ import React, { useState } from "react";
 
 const certificates = [
   { title: "Registration Certificate", img: "/register.png" },
-  
+
   { title: "ISO Certificate", img: "/iso.png" },
-  
+
   { title: "Devsthan Certificate", img: "/devsthan.png" },
 ];
 
@@ -27,34 +27,116 @@ const CertificatesSection = () => {
       </p>
 
       {/* REGISTRATION INFO */}
-      <div className="max-w-4xl mx-auto mt-8 text-left text-sm text-gray-800 leading-relaxed space-y-3 bg-white p-6 rounded-lg shadow-sm border">
+      <div className="max-w-6xl mx-auto mt-8 bg-white p-6 md:p-8 rounded-2xl shadow-sm border">
 
-        <p>
-          Registered Under Rajasthan Societies Act 1958 (Rajasthan Act Number 28, 1958) Vide
-          Registration No.- 1210/JAIPUR/2002-03 Dated 02.01.2003.
-        </p>
+        {/* MAIN REGISTRATION DETAILS */}
+        <div className="text-left text-sm text-gray-800 leading-relaxed space-y-3 border-b pb-6 mb-6">
 
-        <p><strong>Permanent Account No.</strong></p>
+          <p>
+            Registered Under Rajasthan Societies Act 1958 (Rajasthan Act Number 28, 1958) Vide
+            Registration No.- 1210/JAIPUR/2002-03 Dated 02.01.2003.
+          </p>
 
-        <p>
-          Registered under Section 12-A of Income Tax Act 1961 
-        </p>
+          <p>
+            <strong>Permanent Account No.</strong>
+          </p>
 
-        <p>
-          Registered under Section 80-G of Income Tax Act 1961
-        </p>
+          <p>
+            Registered under Section 12-A of Income Tax Act 1961
+          </p>
 
-        <p>
-          Registered on NGO Darpan Portal 
-        </p>
+          <p>
+            Registered under Section 80-G of Income Tax Act 1961
+          </p>
 
-        <p>
-          Registered for CSR funding 
-        </p>
+          <p>
+            Registered on NGO Darpan Portal
+          </p>
 
-        <p>
-          Registration of GST 
-        </p>
+          <p>
+            Registered for CSR funding
+          </p>
+
+          <p>
+            Registration of GST
+          </p>
+
+        </div>
+
+        {/* DOCUMENT LIST */}
+        <div className="grid md:grid-cols-2 gap-6 text-left">
+
+          {/* LEFT SIDE */}
+          <div className="space-y-3 text-sm text-gray-800 leading-relaxed">
+
+            <p>
+              <strong>1.</strong> Registration Certificate
+            </p>
+
+            <p>
+              <strong>2.</strong> PAN
+            </p>
+
+            <p>
+              <strong>3.</strong> GST
+            </p>
+
+            <p>
+              <strong>4.</strong> TAN
+            </p>
+
+            <p>
+              <strong>5.</strong> UDYAM - MSME
+            </p>
+
+            <p>
+              <strong>6.</strong> NGO Darpan
+            </p>
+
+            <p>
+              <strong>7.</strong> ISO Certificate
+            </p>
+
+            <p>
+              <strong>8.</strong> CSR-1
+            </p>
+
+          </div>
+
+          {/* RIGHT SIDE */}
+          <div className="space-y-3 text-sm text-gray-800 leading-relaxed">
+
+            <p>
+              <strong>9.</strong> 12A Registration
+            </p>
+
+            <p>
+              <strong>10.</strong> 80G Certificate
+            </p>
+
+            <p>
+              <strong>11.</strong> Audit Report
+            </p>
+
+            <p>
+              <strong>12.</strong> Annual Report
+            </p>
+
+            <p>
+              <strong>13.</strong> Devsthan Certificate
+            </p>
+
+            <p>
+              <strong>14.</strong> Work Orders
+            </p>
+
+            <p>
+              <strong>15.</strong> AOA & MOA
+            </p>
+
+          </div>
+
+        </div>
 
       </div>
 

@@ -27,7 +27,7 @@ const VisionMission = () => {
               Building Stronger Communities
             </h2>
 
-            <p className="text-gray-600 max-w-3xl mx-auto mt-4 text-base sm:text-lg md:text-xl leading-6 sm:leading-7 md:leading-8">
+            <p className="text-gray-600 max-w-3xl mx-auto mt-4 text-base sm:text-lg md:text-xl leading-6 sm:leading-7 md:leading-8 text-justify">
               Rajasthan Human Care Foundation works at the grassroots to create sustainable
               change for individuals, families, and communities. We focus on health, education,
               livelihoods, women empowerment, and environmental initiatives to improve lives.
@@ -45,14 +45,14 @@ const VisionMission = () => {
                 Our Vision
               </h3>
 
-              <p className="text-gray-700 text-base sm:text-lg leading-7">
+              <p className="text-gray-700 text-base sm:text-lg leading-7 text-justify">
                 Our vision is to build an inclusive and empowered society where every individual,
                 regardless of their background, has equal access to opportunities, dignity, and
                 a better quality of life. We envision communities that are self-reliant, resilient,
                 and capable of driving their own sustainable development.
               </p>
 
-              <p className="text-gray-700 text-base sm:text-lg leading-7 mt-4">
+              <p className="text-gray-700 text-base sm:text-lg leading-7 mt-4 text-justify">
                 We strive for a future where children receive quality education, women are empowered
                 to lead change, families live with security and health, and communities actively
                 participate in shaping their own progress.
@@ -68,12 +68,12 @@ const VisionMission = () => {
                 Our Mission
               </h3>
 
-              <p className="text-gray-700 text-base sm:text-lg leading-7 mb-4">
+              <p className="text-gray-700 text-base sm:text-lg leading-7 mb-4 text-justify">
                 Our mission is to implement impactful, sustainable, and community-driven programs
                 that address the root causes of poverty, inequality, and social challenges.
               </p>
 
-              <ul className="space-y-2 text-gray-700 text-sm sm:text-base list-disc list-inside">
+              <ul className="space-y-2 text-gray-700 text-sm sm:text-base list-disc list-inside text-justify">
                 <li>Provide access to quality education for children and youth</li>
                 <li>Improve healthcare, nutrition, and sanitation awareness</li>
                 <li>Empower women through leadership and livelihood initiatives</li>
@@ -82,7 +82,7 @@ const VisionMission = () => {
                 <li>Strengthen community participation and grassroots leadership</li>
               </ul>
 
-              <p className="text-gray-700 text-base sm:text-lg leading-7 mt-4">
+              <p className="text-gray-700 text-base sm:text-lg leading-7 mt-4 text-justify">
                 Through collaboration, innovation, and transparency, we aim to create long-term
                 positive impact and bring meaningful change in the lives of underserved communities.
               </p>
@@ -109,14 +109,14 @@ const VisionMission = () => {
                 Empowering Children and Families
               </h3>
 
-              <p className="text-gray-700 text-base sm:text-lg md:text-xl leading-6 sm:leading-7 md:leading-8 mb-4">
+              <p className="text-gray-700 text-base sm:text-lg md:text-xl leading-6 sm:leading-7 md:leading-8 mb-4 text-justify">
                 RHCF works to ensure every child has access to quality education while supporting
                 families through health, nutrition, and livelihood programs. We believe education
                 alone is not enough—children thrive when their families and communities are strong
                 and empowered.
               </p>
 
-              <p className="text-gray-700 text-base sm:text-lg md:text-xl leading-6 sm:leading-7 md:leading-8">
+              <p className="text-gray-700 text-base sm:text-lg md:text-xl leading-6 sm:leading-7 md:leading-8 text-justify">
                 By combining learning initiatives with health awareness, community mobilization,
                 and skill development, we help create a resilient society where children and
                 families can flourish.
@@ -135,13 +135,13 @@ const VisionMission = () => {
                 Strengthening Communities
               </h3>
 
-              <p className="text-gray-700 text-base sm:text-lg md:text-xl leading-6 sm:leading-7 md:leading-8 mb-4">
+              <p className="text-gray-700 text-base sm:text-lg md:text-xl leading-6 sm:leading-7 md:leading-8 mb-4 text-justify">
                 At RHCF, we implement sustainable programs in women empowerment, skill development,
                 environmental conservation, and community mobilization. Our work reaches underserved
                 villages and marginalized groups to create equitable opportunities.
               </p>
 
-              <ul className="space-y-2 text-gray-700 text-sm sm:text-base md:text-lg list-disc list-inside">
+              <ul className="space-y-2 text-gray-700 text-sm sm:text-base md:text-lg list-disc list-inside text-justify">
                 <li>Support child education and youth leadership programs</li>
                 <li>Improve health, sanitation, and nutrition awareness</li>
                 <li>Promote livelihood, skill-building, and self-help groups</li>

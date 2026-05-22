@@ -58,12 +58,12 @@ const Women = () => {
           {/* IMAGES */}
           <div className="grid grid-cols-2 gap-3 sm:gap-4" data-aos="fade-right">
             <img
-              src="/women2.webp"
+              src="https://img.etimg.com/thumb/width-1200,height-900,imgsize-140528,resizemode-75,msid-95954842/small-biz/entrepreneurship/data-collection-might-be-the-key-to-access-to-finance-for-women-entrepreneurs.jpg"
               className="rounded-xl h-40 sm:h-48 w-full object-cover"
               alt="women support"
             />
             <img
-              src="/women3.jpg"
+              src="https://images.yourstory.com/cs/4/8e7cc4102d6c11e9aa979329348d4c3e/HSNewspiece16022024FeatureImage-1708060882484.jpeg?mode=crop&crop=faces&ar=2%3A1&format=auto&w=1920&q=75"
               className="rounded-xl h-40 sm:h-48 w-full object-cover"
               alt="women learning"
             />

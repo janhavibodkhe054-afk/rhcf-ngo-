@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { useNavigate } from "react-router-dom";
@@ -7,6 +7,8 @@ const images = Array.from({ length: 31 }, (_, i) => `/news${i + 1}.jpeg`);
 
 export default function NewsPaper() {
   const navigate = useNavigate();
+
+  const [selectedImage, setSelectedImage] = useState(null);
 
   useEffect(() => {
     AOS.init({
@@ -43,7 +45,6 @@ export default function NewsPaper() {
           animation: scrollRight 40s linear infinite;
         }
 
-        /* ✨ gradient fade edges */
         .fade-left {
           position: absolute;
           left: 0;
@@ -81,8 +82,12 @@ export default function NewsPaper() {
 
       {/* FEATURED */}
       <section className="max-w-7xl mx-auto px-6 py-12 grid md:grid-cols-2 gap-10">
-        
-        <div data-aos="zoom-in-right" className="relative group">
+
+        <div
+          data-aos="zoom-in-right"
+          className="relative group cursor-pointer"
+          onClick={() => setSelectedImage("/news25.jpeg")}
+        >
           <img
             src="/news25.jpeg"
             alt="featured"
@@ -92,7 +97,7 @@ export default function NewsPaper() {
           {/* overlay */}
           <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition flex items-center justify-center rounded-3xl">
             <p className="text-white text-lg font-semibold">
-              Featured Impact Story
+              View Full Image
             </p>
           </div>
         </div>
@@ -140,7 +145,8 @@ export default function NewsPaper() {
               {[...row1, ...row1].map((src, i) => (
                 <div
                   key={i}
-                  className="relative group rounded-2xl overflow-hidden border-2 border-black shadow-lg"
+                  onClick={() => setSelectedImage(src)}
+                  className="relative group rounded-2xl overflow-hidden border-2 border-black shadow-lg cursor-pointer"
                 >
                   <img
                     src={src}
@@ -151,7 +157,7 @@ export default function NewsPaper() {
                   {/* overlay */}
                   <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition flex items-center justify-center">
                     <p className="text-white text-sm font-semibold">
-                      Impact #{i + 1}
+                      Click to View
                     </p>
                   </div>
                 </div>
@@ -167,7 +173,8 @@ export default function NewsPaper() {
               {[...row2, ...row2].map((src, i) => (
                 <div
                   key={i}
-                  className="relative group rounded-2xl overflow-hidden border-2 border-black shadow-lg"
+                  onClick={() => setSelectedImage(src)}
+                  className="relative group rounded-2xl overflow-hidden border-2 border-black shadow-lg cursor-pointer"
                 >
                   <img
                     src={src}
@@ -177,7 +184,7 @@ export default function NewsPaper() {
 
                   <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition flex items-center justify-center">
                     <p className="text-white text-sm font-semibold">
-                      Story #{i + 1}
+                      Click to View
                     </p>
                   </div>
                 </div>
@@ -188,6 +195,29 @@ export default function NewsPaper() {
 
         </div>
       </section>
+
+      {/* IMAGE MODAL */}
+      {selectedImage && (
+        <div className="fixed inset-0 bg-black/90 z-50 flex items-center justify-center p-4">
+
+          {/* CLOSE BUTTON */}
+          <button
+            onClick={() => setSelectedImage(null)}
+            className="absolute top-5 right-5 text-white text-4xl font-bold hover:scale-110 transition"
+          >
+            ×
+          </button>
+
+          {/* BIG IMAGE */}
+          <img
+            src={selectedImage}
+            alt="Preview"
+            className="max-w-[95vw] max-h-[90vh] object-contain rounded-2xl shadow-2xl border-4 border-white"
+          />
+
+        </div>
+      )}
+
     </div>
   );
 }

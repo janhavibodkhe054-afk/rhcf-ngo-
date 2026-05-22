@@ -76,7 +76,7 @@ const AboutUs = () => {
 
             <div className="w-20 h-1 bg-[#7cb342] mb-6 rounded-full"></div>
 
-            <p className="text-gray-700 leading-relaxed mb-6 text-sm sm:text-base md:text-lg lg:text-xl">
+            <p className="text-gray-700 leading-relaxed mb-6 text-sm sm:text-base md:text-lg lg:text-xl text-justify">
               Since 2003, RHCF has been working at the grassroots level to
               empower underserved communities across Rajasthan, Madhya Pradesh,
               Jharkhand, and Uttar Pradesh. Our work includes adopting villages,
@@ -84,7 +84,7 @@ const AboutUs = () => {
               promoting rainwater harvesting and environmental conservation.
             </p>
 
-            <p className="text-gray-700 leading-relaxed text-sm sm:text-base md:text-lg lg:text-xl">
+            <p className="text-gray-700 leading-relaxed text-sm sm:text-base md:text-lg lg:text-xl text-justify">
               As a Key Resource Centre recognized by Jal Shakti Mantralay, RHCF
               actively supports agriculture, horticulture, women empowerment,
               child education, skill development, and community
@@ -126,7 +126,7 @@ const AboutUs = () => {
               Our Work
             </h2>
 
-            <p>
+            <p className="text-justify">
               RHCF implements programs in healthcare, sanitation, women
               empowerment, livelihood development, environmental conservation
               and child education. We also conduct training sessions, awareness
@@ -134,7 +134,7 @@ const AboutUs = () => {
               governing bodies.
             </p>
 
-            <p>
+            <p className="text-justify">
               The foundation has successfully reached thousands of villages,
               forming Village Water Sanitation Committees, creating Village
               Action Plans, and supporting sustainable development initiatives
@@ -179,7 +179,7 @@ const AboutUs = () => {
           className="bg-gray-100 py-12 sm:py-16 lg:py-20 px-4 sm:px-6 md:px-12 lg:px-20 text-center"
           data-aos="fade-up"
         >
-          <div className="max-w-5xl mx-auto space-y-5 sm:space-y-6 text-gray-700 leading-relaxed text-sm sm:text-base md:text-lg lg:text-xl">
+          <div className="max-w-5xl mx-auto space-y-5 sm:space-y-6 text-gray-700 leading-relaxed text-sm sm:text-base md:text-lg lg:text-xl text-justify">
             <p>
               RHCF focuses on empowerment, accountability, and equitable
               development through initiatives like skill building, self-help
@@ -288,18 +288,18 @@ const AboutUs = () => {
                 className="text-gray-700 text-sm sm:text-base md:text-lg lg:text-xl leading-relaxed space-y-6 text-center lg:text-left"
                 data-aos="fade-right"
               >
-                <p>
+                <p className="text-justify">
                   RHCF’s holistic programs integrate education, healthcare,
                   skill development, and women empowerment to strengthen
                   communities and promote sustainable growth.
                 </p>
-                <p>
+                <p className="text-justify">
                   By engaging stakeholders, facilitating capacity building, and
                   ensuring transparency, RHCF enables equitable opportunities
                   and meaningful impact for children, women, and marginalized
                   groups.
                 </p>
-                <p>
+                <p className="text-justify">
                   Our initiatives ensure that every community has access to
                   knowledge, resources, and support needed to thrive, building a
                   foundation for long-term social change.

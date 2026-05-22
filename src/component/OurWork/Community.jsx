@@ -79,7 +79,7 @@ const Community = () => {
           data-aos="zoom-in"
         >
           <img
-            src="https://outreach-international.org/wp-content/uploads/2023/03/India-Community-Development.jpg"
+            src="/community.jpg"
             alt="Community Development"
             className="w-full h-full object-cover transition-transform duration-[6000ms] ease-linear hover:scale-110 scale-105"
           />
