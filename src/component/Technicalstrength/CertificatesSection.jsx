@@ -13,7 +13,6 @@ const CertificatesSection = () => {
 
   return (
     <section className="bg-[#f5f5f5] py-16 px-6 md:px-20 text-center">
-
       {/* HEADING */}
       <h2 className="text-3xl font-bold text-[#8DB154] uppercase tracking-wide">
         Certificates
@@ -21,58 +20,41 @@ const CertificatesSection = () => {
 
       {/* DESCRIPTION */}
       <p className="max-w-4xl mx-auto mt-4 text-gray-700 text-sm md:text-base leading-relaxed">
-        RHCF-NGO is registered under various statutory bodies including 12A & 80G
-        of the Income Tax Act and is eligible for CSR funding. The organization
-        ensures transparency, compliance, and accountability in all its operations.
+        RHCF-NGO is registered under various statutory bodies including 12A &
+        80G of the Income Tax Act and is eligible for CSR funding. The
+        organization ensures transparency, compliance, and accountability in all
+        its operations.
       </p>
 
       {/* REGISTRATION INFO */}
       <div className="max-w-6xl mx-auto mt-8 bg-white p-6 md:p-8 rounded-2xl shadow-sm border">
-
         {/* MAIN REGISTRATION DETAILS */}
         <div className="text-left text-sm text-gray-800 leading-relaxed space-y-3 border-b pb-6 mb-6">
-
           <p>
-            Registered Under Rajasthan Societies Act 1958 (Rajasthan Act Number 28, 1958) Vide
-            Registration No.- 1210/JAIPUR/2002-03 Dated 02.01.2003.
+            Registered Under Rajasthan Societies Act 1958 (Rajasthan Act Number
+            28, 1958) Vide Registration No.- 1210/JAIPUR/2002-03 Dated
+            02.01.2003.
           </p>
 
           <p>
             <strong>Permanent Account No.</strong>
           </p>
 
-          <p>
-            Registered under Section 12-A of Income Tax Act 1961
-          </p>
+          <p>Registered under Section 12-A of Income Tax Act 1961</p>
 
-          <p>
-            Registered under Section 80-G of Income Tax Act 1961
-          </p>
+          <p>Registered under Section 80-G of Income Tax Act 1961</p>
 
-          <p>
-            Registered on NGO Darpan Portal
-          </p>
+          <p>Registered on NGO Darpan Portal</p>
 
-          <p>
-            Registered for CSR funding
-          </p>
+          <p>Registered for CSR funding</p>
 
-          <p>
-            Registration of GST
-          </p>
-
+          <p>Registration of GST</p>
         </div>
 
         {/* DOCUMENT LIST */}
         <div className="grid md:grid-cols-2 gap-6 text-left">
-
           {/* LEFT SIDE */}
           <div className="space-y-3 text-sm text-gray-800 leading-relaxed">
-
-            <p>
-              <strong>1.</strong> Registration Certificate
-            </p>
-
             <p>
               <strong>2.</strong> PAN
             </p>
@@ -90,30 +72,12 @@ const CertificatesSection = () => {
             </p>
 
             <p>
-              <strong>6.</strong> NGO Darpan
-            </p>
-
-            <p>
               <strong>7.</strong> ISO Certificate
             </p>
-
-            <p>
-              <strong>8.</strong> CSR-1
-            </p>
-
           </div>
 
           {/* RIGHT SIDE */}
           <div className="space-y-3 text-sm text-gray-800 leading-relaxed">
-
-            <p>
-              <strong>9.</strong> 12A Registration
-            </p>
-
-            <p>
-              <strong>10.</strong> 80G Certificate
-            </p>
-
             <p>
               <strong>11.</strong> Audit Report
             </p>
@@ -133,11 +97,8 @@ const CertificatesSection = () => {
             <p>
               <strong>15.</strong> AOA & MOA
             </p>
-
           </div>
-
         </div>
-
       </div>
 
       {/* SUBTEXT */}
@@ -147,13 +108,11 @@ const CertificatesSection = () => {
 
       {/* CERTIFICATE GRID */}
       <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-8 mt-10 max-w-6xl mx-auto">
-
         {certificates.map((item, index) => (
           <div
             key={index}
             className="bg-white rounded-xl shadow-sm border hover:shadow-md transition overflow-hidden text-left"
           >
-
             {/* IMAGE */}
             <div
               className="cursor-pointer"
@@ -168,9 +127,7 @@ const CertificatesSection = () => {
 
             {/* CONTENT */}
             <div className="p-5">
-              <h3 className="text-gray-800 font-medium mb-4">
-                {item.title}
-              </h3>
+              <h3 className="text-gray-800 font-medium mb-4">{item.title}</h3>
 
               <button
                 onClick={() => setSelected(item.img)}
@@ -179,16 +136,13 @@ const CertificatesSection = () => {
                 View Certificate
               </button>
             </div>
-
           </div>
         ))}
-
       </div>
 
       {/* MODAL */}
       {selected && (
         <div className="fixed inset-0 bg-black/80 flex items-center justify-center z-50 p-4">
-
           {/* CLOSE BUTTON */}
           <button
             className="absolute top-5 right-5 text-white text-3xl font-bold"
@@ -203,10 +157,8 @@ const CertificatesSection = () => {
             alt="Certificate"
             className="max-h-[90vh] max-w-[90vw] object-contain bg-white p-4 rounded shadow-lg"
           />
-
         </div>
       )}
-
     </section>
   );
 };

@@ -22,7 +22,7 @@ const OurJourney = () => {
     {
   year: "2008",
   title: "Community Networks Built",
-  desc: "Expanded operations into Madhya Pradesh and Uttar Pradesh by mobilizing rural communities, strengthening Self Help Groups (SHGs), and connecting villages with livelihood opportunities, sanitation facilities, and safe water access through sustainable WASH initiatives.",
+  desc: "Expanded operations into Rajasthan, Madhya Pradesh and Uttar Pradesh by mobilizing rural communities, strengthening Self Help Groups (SHGs), and connecting villages with livelihood opportunities, sanitation facilities, and safe water access through sustainable WASH initiatives.",
   image: "https://blog.helpyourngo.com/wp-content/uploads/2023/03/NGO-field-visit-rural-sanitation-unit-Maharashtra-helpyourngo.com_-734x445.jpg",
 },
 {

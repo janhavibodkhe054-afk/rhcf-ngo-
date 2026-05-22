@@ -25,45 +25,45 @@ const OurTeamLeader = () => {
   const executiveLeaders = [
     {
       name: "Dharmendra Kumar",
-      role: "President | 20 Years Experience",
-      desc: "Provides strategic direction and ensures ethical oversight. Guides RHCF to be a sustainable, community-driven organization.",
+      role: "President | 22 Years Experience",
+      desc: "With over 22 years of visionary leadership, Dharmendra Kumar has been the driving force behind Rajasthan Human Care Foundation’s growth from a small initiative to a multi-state organization impacting millions. ",
       photo: "/dharmendra.jpeg",
     },
     {
       name: "Divya Kanwar",
       role: "Member",
-      desc: "Actively contributes towards social welfare initiatives and organizational development.",
+      desc: "Divya Kanwar brings dynamic energy and a strong focus on social welfare initiatives. She actively contributes to program strategy, women empowerment, and community development.",
       photo: "https://img.magnific.com/free-photo/closeup-smiling-young-beautiful-indian-woman_1262-2261.jpg?semt=ais_hybrid&w=740&q=80",
     },
     {
       name: "Rinku Verma",
       role: "Vice President",
-      desc: "Oversees daily operations and ensures program effectiveness. Bridges strategy with on-ground execution efficiently.",
+      desc: "Rinku Verma plays a pivotal role in overseeing daily operations and program effectiveness. With her excellent managerial skills and deep commitment to social justice, she ensures smooth coordination across all verticals",
       photo: "/founder2.jpeg",
     },
     {
       name: "Naveen Sharma",
       role: "Secretary",
-      desc: "Supports implementation of field programs and strengthens community engagement activities.",
+      desc: "Naveen Sharma is a passionate development professional with expertise in field implementation and community engagement. He excels at building strong partnerships with government departments, local bodies, and stakeholders. ",
       photo: "/naveen.jpeg",
     },
     {
       name: "Pramod Kumar Gupta",
       role: "Member",
-      desc: "Provides strategic guidance and supports operational excellence across projects.",
-      photo: "https://plus.unsplash.com/premium_photo-1722682239201-21c8173e776b?fm=jpg&q=60&w=3000&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTd8fGluZGlhbiUyMHBlb3BsZXxlbnwwfHwwfHx8MA%3D%3D",
+      desc: "Pramod Kumar Gupta provides valuable strategic guidance and operational excellence across multiple projects. His rich experience in project planning and execution ensures that RHCF delivers high-quality results in rural development, WASH, and livelihood programs with efficiency and accountability.",
+      photo: "/pramod.jpeg",
     },
     {
       name: "Harsh Bhabhra",
       role: "Treasuror",
-      desc: "Ensures smooth coordination and management of field-level activities.",
-      photo: "/harsh.jpeg",
+      desc: "- Harsh Bhabhra brings strong financial acumen and transparency to the organization. He ensures meticulous financial management, compliance with statutory requirements, and optimal utilization of funds. His disciplined approach plays a critical role in maintaining RHCF’s credibility with donors, government agencies, and CSR partners.",
+      photo: "/harsh.png",
     },
     {
-      name: "Ghasi Laal Meena",
+      name: "Ghanshyam Laal Meena",
       role: "Member",
-      desc: "Works closely with local communities to ensure successful program outreach.",
-      photo: "https://static.vecteezy.com/system/resources/thumbnails/065/707/127/small/a-man-in-a-sweater-vest-and-tie-free-photo.jpeg",
+      desc: "Ghanshyam Lal Meena is deeply connected with rural communities. He works tirelessly to strengthen field-level coordination and ensure successful project outreach. His practical knowledge of local issues and community mobilization makes him an invaluable asset for on-ground program implementation.",
+      photo: "/harsh.jpeg",
     },
   ];
 
@@ -71,17 +71,20 @@ const OurTeamLeader = () => {
     {
       name: "Pushpendra Sharma",
       position: "Project Manager",
+      desc:"Pushpendra Kumar is a seasoned development professional with extensive experience in managing large-scale social projects. He oversees end-to-end project operations and logistics, ensuring timely and efficient delivery of resources to remote villages. He has played a key role in the successful implementation of major initiatives such as Jal Jeevan Mission (covering 9 districts & 11 lakh+ households), Swachh Bharat Mission, Atal Bhujal Yojana, and Rajasthan Agriculture Competitiveness Project.",
       photo: "https://img.magnific.com/free-photo/handsome-smiling-man-wearing-green-shirt-standing-against-blue-background_662251-587.jpg",
     },
     {
       name: "Bharat Kumawat",
       position: "Accountant",
+      desc:"Bharat Kumawat is a dedicated and detail-oriented finance professional responsible for managing all financial operations of the organization. He handles budgeting, financial reporting, auditing compliance, fund utilization tracking, and maintaining transparent accounts as per government and donor guidelines. ",
       photo: "https://img.magnific.com/premium-photo/smiling-indian-business-man-executive-isolated-gray-vertical-portrait_562687-3165.jpg",
     },
     {
       name: "Arti Singh",
       position: " Project Coordinator",
-      photo: "https://img.magnific.com/free-photo/portrait-smiling-indian-person-posing-front-camera_482257-122324.jpg?semt=ais_hybrid&w=740&q=80",
+      desc:"Arti Singh is a tech-savvy and creative professional who efficiently manages office operations using modern AI tools and digital platforms. She specializes in project proposal development, documentation, designing (presentations, reports, banners, and social media creative’s), content creation, and streamlining administrative workflows. ",
+      photo: "/arti.png",
     },
   ];
 
@@ -141,7 +144,7 @@ const OurTeamLeader = () => {
                     {leader.role}
                   </p>
 
-                  <p className="text-gray-700 text-base sm:text-lg mt-2 leading-6">
+                  <p className="text-gray-700 text-base sm:text-lg mt-2 leading-6 text-justify">
                     {leader.desc}
                   </p>
                 </div>
@@ -172,7 +175,7 @@ const OurTeamLeader = () => {
                       {leader.role}
                     </p>
 
-                    <p className="text-gray-700 text-base sm:text-lg mt-2 leading-6">
+                    <p className="text-gray-700 text-base sm:text-lg mt-2 leading-6 text-justify">
                       {leader.desc}
                     </p>
                   </div>
@@ -274,6 +277,9 @@ const OurTeamLeader = () => {
 
                     <p className="text-sm sm:text-base text-[#2f855a] font-semibold mt-1">
                       {member.position}
+                    </p>
+                    <p className="text-gray-700 text-base sm:text-lg mt-2 leading-6 text-justify">
+                      {member.desc}
                     </p>
                   </div>
                 ))}
