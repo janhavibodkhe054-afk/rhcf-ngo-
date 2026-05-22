@@ -60,7 +60,7 @@ const OurTeamLeader = () => {
       photo: "/harsh.png",
     },
     {
-      name: "Ghanshyam Laal Meena",
+      name: "Ghasi Laal Meena",
       role: "Member",
       desc: "Ghanshyam Lal Meena is deeply connected with rural communities. He works tirelessly to strengthen field-level coordination and ensure successful project outreach. His practical knowledge of local issues and community mobilization makes him an invaluable asset for on-ground program implementation.",
       photo: "/harsh.jpeg",
@@ -82,7 +82,7 @@ const OurTeamLeader = () => {
     },
     {
       name: "Arti Singh",
-      position: " Project Coordinator",
+      position: "Digital & Design Coordinator",
       desc:"Arti Singh is a tech-savvy and creative professional who efficiently manages office operations using modern AI tools and digital platforms. She specializes in project proposal development, documentation, designing (presentations, reports, banners, and social media creative’s), content creation, and streamlining administrative workflows. ",
       photo: "/arti.png",
     },
