@@ -56,16 +56,7 @@ const WashHero = () => {
             </div>
           </div>
 
-          <div className="mt-10 flex gap-4 flex-wrap">
-            <button
-              onClick={() => navigate("/donate")}
-              className="px-6 py-3 rounded-full bg-[#7cb342] text-white font-semibold shadow-md hover:scale-105 transition"
-            >
-              Donate Now
-            </button>
-
-            
-          </div>
+          
         </div>
 
         {/* RIGHT IMAGE */}

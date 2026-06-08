@@ -38,11 +38,11 @@ export default function NewsPaper() {
         }
 
         .animate-scroll-left {
-          animation: scrollLeft 40s linear infinite;
+          animation: scrollLeft 90s linear infinite;
         }
 
         .animate-scroll-right {
-          animation: scrollRight 40s linear infinite;
+          animation: scrollRight 90s linear infinite;
         }
 
         .fade-left {

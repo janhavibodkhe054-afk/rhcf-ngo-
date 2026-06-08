@@ -118,9 +118,7 @@ ${message}
               </p>
 
               <p className="text-gray-600">
-                21, Champa Nagar, Gurjar Ki Thadi,
-                New Sanganer Road, Jaipur,
-                Rajasthan – 302019
+                 81, Panchwati Colony, Gurjar ki Thadi, new Sanganer Road, Jaipur - 302019
               </p>
             </div>
 
@@ -167,11 +165,7 @@ ${message}
                 empowerment to underserved communities.
               </p>
 
-              <button
-              onClick={() => navigate("/donate")}
-              className="bg-white text-[#7cb342] font-semibold px-5 py-2 rounded-md hover:bg-gray-100 transition">
-                Donate Now
-              </button>
+              
             </div>
 
           </motion.div>

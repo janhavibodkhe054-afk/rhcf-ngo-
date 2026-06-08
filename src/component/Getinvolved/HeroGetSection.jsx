@@ -73,13 +73,7 @@ const navigate = useNavigate();
             Volunteer Now
           </button>
 
-          {/* Donate Button → you can scroll or navigate */}
-          <button
-           onClick={() => navigate("/donate")}
-            className="px-8 py-3 rounded-full border border-white/30 text-white backdrop-blur-md bg-white/10 hover:bg-white hover:text-black transition duration-300 hover:scale-105 shadow-md"
-          >
-            Donate Today
-          </button>
+          
         </motion.div>
       </div>
 

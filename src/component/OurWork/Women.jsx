@@ -113,12 +113,7 @@ const Women = () => {
               </div>
             </div>
 
-            <button
-              onClick={() => navigate("/donate")}
-              className="bg-[#7cb342] text-white px-5 sm:px-6 py-3 rounded-full font-semibold hover:bg-[#689f38] transition duration-300"
-            >
-              Donate Now
-            </button>
+            
           </div>
         </div>
       </section>

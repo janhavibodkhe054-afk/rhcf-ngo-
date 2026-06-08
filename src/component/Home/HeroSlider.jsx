@@ -95,12 +95,7 @@ export default function HeroSlider() {
                 transition={{ delay: 0.5 }}
                 className="flex justify-center md:justify-end gap-3 sm:gap-4 mt-5 sm:mt-6 flex-wrap"
               >
-                <button
-                  onClick={() => navigate("/donate")}
-                  className="bg-[#7cb342] hover:bg-[#689f38] text-white px-5 sm:px-6 py-2.5 sm:py-3 rounded-full font-semibold shadow-lg transition"
-                >
-                  Donate Now
-                </button>
+                
 
                 <button
                   onClick={() => navigate("/aboutus")}

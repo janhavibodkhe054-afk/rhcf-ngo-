@@ -40,7 +40,7 @@ const Footer = () => {
     {
       title: "GET INVOLVED", // ✅ NEW
       items: [
-        { name: "Donate", path: "/donate" },
+        
         { name: "Volunteer", path: "/get-involved" },
         
       ],
@@ -166,10 +166,10 @@ const Footer = () => {
             </p>
 
             <Link
-              to="/donate"
+              to="/contact"
               className="bg-white text-black font-semibold px-7 py-3 rounded-full transition hover:bg-gray-200"
             >
-              Donate Now
+              Connect Now
             </Link>
 
             {/* SOCIAL ICONS */}

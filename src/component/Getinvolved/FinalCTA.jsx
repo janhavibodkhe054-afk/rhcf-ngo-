@@ -46,12 +46,8 @@ const FinalCTA = () => {
             Join Now
           </button>
 
-          {/* Secondary */}
-          <button
-          onClick={() => navigate("/donate")}
-          className="px-8 py-3 rounded-full border border-white text-white font-semibold hover:bg-white hover:text-[#7cb342] transition duration-300 shadow-lg">
-            Donate
-          </button>
+          
+          
         </motion.div>
       </div>
     </section>

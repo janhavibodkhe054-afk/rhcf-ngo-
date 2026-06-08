@@ -2,10 +2,12 @@ import { useState } from "react";
 import { NavLink, useLocation } from "react-router-dom";
 import { ChevronDown, Menu, X } from "lucide-react";
 
+
 const Navbar = () => {
   const [openMenu, setOpenMenu] = useState(null);
   const [mobileOpen, setMobileOpen] = useState(false);
   const location = useLocation();
+  const [showDonateImage, setShowDonateImage] = useState(false);
 
   const menus = [
     {
@@ -138,10 +140,7 @@ const Navbar = () => {
                             {/* SUBMENU BUTTON */}
                             <div className="flex items-center justify-between px-3 py-2 text-sm hover:bg-gray-100 cursor-pointer rounded-md">
                               {item.name}
-                              <ChevronDown
-                                size={14}
-                                className="-rotate-90"
-                              />
+                              <ChevronDown size={14} className="-rotate-90" />
                             </div>
 
                             {/* SIDE DROPDOWN */}
@@ -173,12 +172,12 @@ const Navbar = () => {
               CONNECT
             </NavLink>
 
-            <NavLink
-              to="/donate"
-              className="px-5 py-2 rounded-full text-white bg-[#7cb342]"
+            <button
+              onClick={() => setShowDonateImage(true)}
+              className="px-2 py-2 rounded-full text-white bg-[#7cb342]"
             >
               DONATE
-            </NavLink>
+            </button>
           </nav>
 
           {/* MOBILE MENU BUTTON */}
@@ -269,15 +268,41 @@ const Navbar = () => {
             CONNECT
           </NavLink>
 
-          <NavLink
-            to="/donate"
-            onClick={() => setMobileOpen(false)}
-            className="block text-center py-3 bg-[#7cb342] text-white rounded-full font-semibold"
+          <button
+            onClick={() => {
+              setShowDonateImage(true);
+              setMobileOpen(false);
+            }}
+            className="block w-full text-center py-3 bg-[#7cb342] text-white rounded-full font-semibold"
           >
             DONATE
-          </NavLink>
+          </button>
         </div>
       </div>
+      {showDonateImage && (
+        <div
+          className="fixed inset-0 bg-black/70 z-[9999] flex items-center justify-center p-4"
+          onClick={() => setShowDonateImage(false)}
+        >
+          <div
+            className="relative bg-white rounded-2xl p-4 max-w-lg w-full"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <button
+              onClick={() => setShowDonateImage(false)}
+              className="absolute top-2 right-2 text-xl font-bold"
+            >
+              ✕
+            </button>
+
+            <img
+              src="/logo.png"
+              alt="Donate QR"
+              className="w-full rounded-xl"
+            />
+          </div>
+        </div>
+      )}
     </>
   );
 };
