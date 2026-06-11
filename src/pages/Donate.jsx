@@ -132,36 +132,14 @@ Message: ${formData.message}
         <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-12">
           {/* AMOUNT SECTION */}
 
-          <div className="bg-white p-8 rounded-xl shadow">
-            <h2 className="text-2xl font-bold mb-6">Select Donation Amount</h2>
+          {/* DONATION IMAGE */}
 
-            <div className="grid grid-cols-2 gap-4 mb-6">
-              {presetAmounts.map((amt) => (
-                <button
-                  key={amt}
-                  type="button"
-                  onClick={() => setAmount(amt)}
-                  className={`py-3 rounded-lg border font-semibold ${
-                    amount === amt
-                      ? "bg-[#7cb342] text-white"
-                      : "bg-white hover:bg-gray-100"
-                  }`}
-                >
-                  ₹ {amt}
-                </button>
-              ))}
-            </div>
-
-            <input
-              type="number"
-              placeholder="Enter custom amount"
-              className="w-full border p-3 rounded-lg mb-4"
-              onChange={(e) => setAmount(e.target.value)}
+          <div className="bg-white rounded-xl shadow overflow-hidden">
+            <img
+              src="/logo.png"
+              alt="Donate"
+              className="w-full h-full object-cover min-h-[500px]"
             />
-
-            <p className="text-gray-600 text-sm">
-              Selected Amount: <span className="font-bold">₹ {amount}</span>
-            </p>
           </div>
 
           {/* DONOR DETAILS */}

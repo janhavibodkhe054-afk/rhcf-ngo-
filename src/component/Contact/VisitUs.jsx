@@ -135,7 +135,7 @@ const VisitUs = () => {
       <div className="w-full h-[450px] md:h-[550px]">
         <iframe
           title="Rajasthan Human Care Foundation Location"
-          src="https://www.google.com/maps?q=21,Champa+Nagar,Gurjar+ki+Thadi,New+Sanganer+Road,Jaipur,Rajasthan,302019&output=embed"
+           src="https://www.google.com/maps?q=81%20Panchwati%20Colony%20Gurjar%20Ki%20Thadi%20New%20Sanganer%20Road%20Jaipur%20302019&output=embed"
           className="w-full h-full border-0"
           loading="lazy"
           allowFullScreen

@@ -7,7 +7,7 @@ const Navbar = () => {
   const [openMenu, setOpenMenu] = useState(null);
   const [mobileOpen, setMobileOpen] = useState(false);
   const location = useLocation();
-  const [showDonateImage, setShowDonateImage] = useState(false);
+  
 
   const menus = [
     {
@@ -172,12 +172,12 @@ const Navbar = () => {
               CONNECT
             </NavLink>
 
-            <button
-              onClick={() => setShowDonateImage(true)}
+            <NavLink
+              to="/donate"
               className="px-2 py-2 rounded-full text-white bg-[#7cb342]"
             >
               DONATE
-            </button>
+            </NavLink>
           </nav>
 
           {/* MOBILE MENU BUTTON */}
@@ -268,41 +268,19 @@ const Navbar = () => {
             CONNECT
           </NavLink>
 
-          <button
+          <NavLink
+          to="/donate"
             onClick={() => {
-              setShowDonateImage(true);
+              
               setMobileOpen(false);
             }}
             className="block w-full text-center py-3 bg-[#7cb342] text-white rounded-full font-semibold"
           >
             DONATE
-          </button>
+          </NavLink>
         </div>
       </div>
-      {showDonateImage && (
-        <div
-          className="fixed inset-0 bg-black/70 z-[9999] flex items-center justify-center p-4"
-          onClick={() => setShowDonateImage(false)}
-        >
-          <div
-            className="relative bg-white rounded-2xl p-4 max-w-lg w-full"
-            onClick={(e) => e.stopPropagation()}
-          >
-            <button
-              onClick={() => setShowDonateImage(false)}
-              className="absolute top-2 right-2 text-xl font-bold"
-            >
-              ✕
-            </button>
-
-            <img
-              src="/logo.png"
-              alt="Donate QR"
-              className="w-full rounded-xl"
-            />
-          </div>
-        </div>
-      )}
+      
     </>
   );
 };

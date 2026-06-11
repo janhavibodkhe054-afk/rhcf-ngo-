@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { Home } from "lucide-react";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import emailjs from "@emailjs/browser";
 
 const Contact = () => {
   const navigate = useNavigate();
@@ -22,36 +23,38 @@ const Contact = () => {
   };
 
   // Submit form to WhatsApp
-  const handleSubmit = (e) => {
-    e.preventDefault();
+  const handleSubmit = async (e) => {
+  e.preventDefault();
 
-    const { name, phone, email, message } = formData;
+  try {
+    const response = await emailjs.send(
+      "service_27gkj36", // Your Service ID
+      "template_3s063ms", // Your Template ID
+      {
+        from_name: formData.name,
+        from_email: formData.email,
+        phone: formData.phone,
+        message: formData.message,
+      },
+      "o4hj1z9sBi99JfEUp" // Your Public Key
+    );
 
-    const whatsappMessage = `
-New Contact Form Message
+    console.log("SUCCESS!", response.status, response.text);
 
-Name: ${name}
-Phone: ${phone}
-Email: ${email}
+    alert("Message sent successfully!");
 
-Message:
-${message}
-    `;
-
-    const url = `https://wa.me/916378920544?text=${encodeURIComponent(
-      whatsappMessage
-    )}`;
-
-    window.open(url, "_blank");
-
-    // reset form
     setFormData({
       name: "",
       phone: "",
       email: "",
       message: "",
     });
-  };
+  } catch (error) {
+    console.error("FAILED...", error);
+
+    alert("Failed to send message. Please try again.");
+  }
+};
 
   return (
     <div className="bg-[#f5f5f5] min-h-screen">
@@ -62,8 +65,7 @@ ${message}
         <div
           className="absolute inset-0 bg-cover bg-center"
           style={{
-            backgroundImage:
-              "url('/contactform.png')",
+            backgroundImage: "url('/contactform.png')",
           }}
         ></div>
 
@@ -96,7 +98,6 @@ ${message}
 
       <div className="max-w-6xl mx-auto px-6 py-16">
         <div className="grid lg:grid-cols-2 gap-20">
-
           {/* LEFT SIDE */}
 
           <motion.div
@@ -106,31 +107,25 @@ ${message}
             viewport={{ once: true }}
             className="grid gap-6"
           >
-
             {/* Address */}
             <div className="bg-white p-6 rounded-xl shadow-md hover:shadow-xl transition">
               <h3 className="text-xl font-bold mb-3 text-[#7cb342]">
                 Visit Our Office
               </h3>
 
-              <p className="text-gray-700">
-                Rajasthan Human Care Foundation
-              </p>
+              <p className="text-gray-700">Rajasthan Human Care Foundation</p>
 
               <p className="text-gray-600">
-                 81, Panchwati Colony, Gurjar ki Thadi, new Sanganer Road, Jaipur - 302019
+                81, Panchwati Colony, Gurjar ki Thadi, new Sanganer Road, Jaipur
+                - 302019
               </p>
             </div>
 
             {/* Phone */}
             <div className="bg-white p-6 rounded-xl shadow-md hover:shadow-xl transition">
-              <h3 className="text-xl font-bold mb-3 text-[#7cb342]">
-                Call Us
-              </h3>
+              <h3 className="text-xl font-bold mb-3 text-[#7cb342]">Call Us</h3>
 
-              <p className="text-gray-700">
-                +91 6378920544
-              </p>
+              <p className="text-gray-700">+91 6378920544</p>
 
               <p className="text-gray-600">
                 Monday – Saturday
@@ -145,9 +140,7 @@ ${message}
                 Email Us
               </h3>
 
-              <p className="text-gray-700">
-                rhcfoffice@gmail.com
-              </p>
+              <p className="text-gray-700">rhcfoffice@gmail.com</p>
 
               <p className="text-gray-600">
                 We usually respond within 24 hours.
@@ -156,18 +149,13 @@ ${message}
 
             {/* Donation */}
             <div className="bg-[#7cb342] text-white p-6 rounded-xl shadow-md">
-              <h3 className="text-xl font-bold mb-3">
-                Support Our Mission
-              </h3>
+              <h3 className="text-xl font-bold mb-3">Support Our Mission</h3>
 
               <p className="mb-4">
                 Your donation helps us provide education, healthcare and
                 empowerment to underserved communities.
               </p>
-
-              
             </div>
-
           </motion.div>
 
           {/* RIGHT SIDE FORM */}
@@ -178,17 +166,13 @@ ${message}
             transition={{ duration: 0.7 }}
             viewport={{ once: true }}
           >
-
-            <h3 className="text-lg font-bold tracking-wide mb-4">
-              HELPDESK
-            </h3>
+            <h3 className="text-lg font-bold tracking-wide mb-4">HELPDESK</h3>
 
             <p className="text-gray-700 mb-8 text-base sm:text-lg md:text-xl">
               For any grievance, suggestions and queries kindly write to us.
             </p>
 
             <form onSubmit={handleSubmit} className="space-y-6">
-
               {/* Name */}
 
               <div>
@@ -210,7 +194,6 @@ ${message}
               {/* Phone + Email */}
 
               <div className="grid md:grid-cols-2 gap-6">
-
                 <div>
                   <label className="block text-sm font-semibold mb-2">
                     Phone <span className="text-red-500">*</span>
@@ -241,7 +224,6 @@ ${message}
                     className="w-full border border-gray-400 px-4 py-3 bg-white focus:outline-none focus:border-green-600 transition"
                   />
                 </div>
-
               </div>
 
               {/* Message */}
@@ -270,11 +252,8 @@ ${message}
               >
                 SUBMIT
               </button>
-
             </form>
-
           </motion.div>
-
         </div>
       </div>
     </div>
