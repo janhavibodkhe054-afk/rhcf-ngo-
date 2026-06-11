@@ -89,7 +89,7 @@ export default function NewsPaper() {
           onClick={() => setSelectedImage("/news25.jpeg")}
         >
           <img
-            src="/news25.jpeg"
+            src="/news.jpg"
             alt="featured"
             className="w-full h-[350px] object-cover rounded-3xl shadow-xl border-2 border-black"
           />
